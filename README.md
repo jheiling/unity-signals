@@ -42,7 +42,7 @@ public class FloatSignalEditor : SignalEditor<float, FloatEvent>
 By default the signal's value will be just shown in the editor when the application is running. 
 Overriding the ValueField method allows you to change the signal's value.
 ## Implementing A SignalListener
-By inheriting from SignalListener you can create a Component that listenes to a signal's OnChanged event and propagates it:
+By inheriting from SignalListener you can create a Component that listens to a signal's OnChanged event and propagates it:
 ```c#
 public class FloatSignalListener : SignalListener<float, FloatEvent, FloatSignal> { }
 ```
