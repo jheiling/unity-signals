@@ -1,6 +1,12 @@
 # Signals For Unity3D
 ## What Are Signals?
 A Signal is a [ScriptableObject](https://docs.unity3d.com/ScriptReference/ScriptableObject.html) which holds a value and triggers a [UnityEvent](https://docs.unity3d.com/ScriptReference/Events.UnityEvent_1.html) when a new value is assigned.
+## Why Should I Use Them?
+Because ScriptableObjects are a good choice to create a sane architecture for games made with Unity.
+They allow you to nicely decouple systems and avoid direct references between scene objects. 
+For an in depth explanation I would highly recommend watching [Richard Fine's](https://www.youtube.com/watch?v=6vmRwLYWNRo) and [Ryan Hipple's](https://www.youtube.com/watch?v=raQ3iHhE_Kk) talks.
+The reasoning behind signals is that you often want to be notified when a referenced value changes, and also it's often useful to keep the last value some event was invoked with around.
+Signals are a solution for both use cases.
 ## How To Use Signals
 First you need to create a class for the UnityEvent:
 ```c#
