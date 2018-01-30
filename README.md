@@ -53,5 +53,5 @@ public class FloatValueReferenceDrawer : ValueReferenceDrawer { }
 ## Examples
 In the Common folder you will find the source for FloatEvent, FloatSignal, FloatSignalEditor, FloatSignalListener, FloatValueReference, and FloatValueReferenceDrawer.
 ## Credits
-Signals was inspired by [Ryan Hipple's talk](https://www.youtube.com/watch?v=raQ3iHhE_Kk). 
+Signals was inspired by Ryan Hipple's [talk](https://www.youtube.com/watch?v=raQ3iHhE_Kk) about game architecture with ScriptableObjects. 
 I also nicked a bit of his code for the ValueReferenceDrawer class. You can find the source [here](https://github.com/roboryantron/Unite2017).
