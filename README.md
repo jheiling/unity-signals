@@ -8,8 +8,8 @@ For an in depth explanation I would highly recommend watching [Richard Fine's](h
 
 The reasoning behind signals is that you often want to be notified when a referenced value changes, and also it's often useful to keep the last value some event was invoked with around.
 Signals are a solution for both use cases.
-## How To Use Signals
-First you need to create a class for the UnityEvent:
+## Implementing A Signal
+First you need to create a class for the signal's OnChanged event:
 ```c#
 [System.Serializable]
 public class FloatEvent : UnityEvent<float> { }
@@ -39,13 +39,14 @@ public class FloatSignalEditor : SignalEditor<float, FloatEvent>
     }
 }
 ```
-By default the signal's value will be just shown in the editor when the application is running. By overriding the ValueField method you can change the signal's value in the editor.
-## Using SignalListener
+By default the signal's value will be just shown in the editor when the application is running. 
+Overriding the ValueField method allows you to change the signal's value.
+## Implementing A SignalListener
 By inheriting from SignalListener you can create a Component that listenes to a signal's OnChanged event and propagates it:
 ```c#
 public class FloatSignalListener : SignalListener<float, FloatEvent, FloatSignal> { }
 ```
-## Using ValueReference
+## Implementing A ValueReference
 By inheriting from ValueReference you can use serializable fields in your scripts that can either hold a local value or a reference to a signal's value:
 ```c#
 [System.Serializable]
