@@ -8,7 +8,7 @@ namespace Signals
     public abstract class SignalListener<T, ET, ST> : MonoBehaviour where ET : UnityEvent<T>, new() where ST : Signal<T, ET>
     {
 #if UNITY_EDITOR
-        [Multiline] public string Description = "";
+        [SerializeField] [Multiline] string _description = "";
 #endif
         [SerializeField] ST _signal;
         [SerializeField] ET _onChanged;
