@@ -77,5 +77,10 @@ namespace Signals
         {
             _onChanged.RemoveAllListeners();
         }
+
+        public static implicit operator T(Signal<T, ET> signal)
+        {
+            return signal.Value;
+        }
     }
 }
