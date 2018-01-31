@@ -41,6 +41,7 @@ namespace Signals
         [SerializeField] T _initialValue;
         T _value;
         [SerializeField] ET _onChanged;
+        [SerializeField] bool _useValidation = true;
 
         /// <summary>
         /// The initial value of the Signal.
@@ -61,7 +62,7 @@ namespace Signals
         /// <summary>
         /// The current value of the Signal. 
         /// Setting the value triggers the <see cref="OnChanged"/> event. 
-        /// If you want to add a check before setting the value and triggering the event override the <see cref="ValidateValue"/> method.
+        /// If you want to add a check before setting the value and triggering the event override the <see cref="ValidateValue"/> method and make sure <see cref="UseValidation"/> is true.
         /// </summary>
         public T Value
         {
@@ -72,7 +73,7 @@ namespace Signals
 
             set
             {
-                if (ValidateValue(value))
+                if (!_useValidation || ValidateValue(value))
                 {
 #if UNITY_EDITOR
                     if (SerializeChanges) _initialValue = value;
@@ -95,8 +96,24 @@ namespace Signals
         }
 
         /// <summary>
+        /// True if new values are validated, false otherwise.
+        /// </summary>
+        public bool UseValidation
+        {
+            get
+            {
+                return _useValidation;
+            }
+
+            set
+            {
+                _useValidation = value;
+            }
+        }
+
+        /// <summary>
         /// Override this method to check whether a value is valid and/or if it has changed. 
-        /// The <see cref="Value"/> is set and the <see cref="OnChanged"/> event is invoked only if this method returns true.
+        /// If <see cref="UseValidation"/> is true the <see cref="Value"/> is set and the <see cref="OnChanged"/> event is invoked only if this method returns true.
         /// </summary>
         /// <param name="value">The new value.</param>
         /// <returns>True if the <see cref="Value"/> shoud be updated and the <see cref="OnChanged"/> event should be triggered, false otherwise.</returns>
