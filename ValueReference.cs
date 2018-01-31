@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 
@@ -96,7 +97,7 @@ namespace Signals
                 }
                 else
                 {
-                    if (!_signal) throw new System.NullReferenceException();
+                    if (!_signal) throw new NullReferenceException();
                     return _signal;
                 }
             }
@@ -110,7 +111,7 @@ namespace Signals
                 }
                 else
                 {
-                    if (!_signal) throw new System.NullReferenceException();
+                    if (!_signal) throw new NullReferenceException();
                     _signal.Value = value;
                 }
             }
