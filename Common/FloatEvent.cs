@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 
 
-namespace Signals
+namespace Signals.Common
 {
     [Serializable]
     public class FloatEvent : UnityEvent<float> { }

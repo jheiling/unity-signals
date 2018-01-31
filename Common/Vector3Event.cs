@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 
 
-namespace Signals
+namespace Signals.Common
 {
     [Serializable]
     public class Vector3Event : UnityEvent<Vector3> { }

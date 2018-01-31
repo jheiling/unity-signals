@@ -2,7 +2,7 @@
 
 
 
-namespace Signals
+namespace Signals.Common
 {
     [CustomEditor(typeof(FloatSignal))]
     public class FloatSignalEditor : SignalEditor<float, FloatEvent>

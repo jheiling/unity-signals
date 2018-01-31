@@ -3,7 +3,7 @@ using UnityEditor;
 
 
 
-namespace Signals
+namespace Signals.Common
 {
     [CustomEditor(typeof(Vector3Signal))]
     public class Vector3SignalEditor : SignalEditor<Vector3, Vector3Event>

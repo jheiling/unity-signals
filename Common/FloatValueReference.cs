@@ -2,7 +2,7 @@
 
 
 
-namespace Signals
+namespace Signals.Common
 {
     [Serializable]
     public class FloatValueReference : ValueReference<float, FloatEvent, FloatSignal> { }
