@@ -5,21 +5,19 @@ using UnityEngine.Events;
 
 namespace Signals
 {
-    public interface ISignal<T>
+    public interface ISignal<T, ET> where ET : UnityEvent<T>, new()
     {
         T Value { get; set; }
-        void AddListener(UnityAction<T> call);
-        void RemoveListener(UnityAction<T> call);
-        void RemoveAllListeners();
+        ET OnChanged { get; }
     }
 
 
 
-    public abstract class Signal<T, ET> : ScriptableObject, ISignal<T> where ET : UnityEvent<T>, new()
+    public abstract class Signal<T, ET> : ScriptableObject, ISignal<T, ET> where ET : UnityEvent<T>, new()
     {
 #if UNITY_EDITOR
         [Multiline] public string Description = "";
-        [SerializeField] bool _serializeChanges;
+        public bool SerializeChanges;
 #endif
         [SerializeField] T _initialValue;
         T _value;
@@ -31,6 +29,11 @@ namespace Signals
             {
                 return _initialValue;
             }
+
+            set
+            {
+                _initialValue = value;
+            }
         }
 
         public T Value
@@ -39,16 +42,25 @@ namespace Signals
             {
                 return _value;
             }
+
             set
             {
                 if (HasChanged(value))
                 {
 #if UNITY_EDITOR
-                    if (_serializeChanges) _initialValue = value;
+                    if (SerializeChanges) _initialValue = value;
 #endif
                     _value = value;
                     _onChanged.Invoke(value);
                 }
+            }
+        }
+
+        public ET OnChanged
+        {
+            get
+            {
+                return _onChanged;
             }
         }
 
@@ -61,21 +73,6 @@ namespace Signals
         {
             _value = _initialValue;
             if (_onChanged == null) _onChanged = new ET();
-        }
-
-        public void AddListener(UnityAction<T> call)
-        {
-            _onChanged.AddListener(call);
-        }
-
-        public void RemoveListener(UnityAction<T> call)
-        {
-            _onChanged.RemoveListener(call);
-        }
-
-        public void RemoveAllListeners()
-        {
-            _onChanged.RemoveAllListeners();
         }
 
         public static implicit operator T(Signal<T, ET> signal)

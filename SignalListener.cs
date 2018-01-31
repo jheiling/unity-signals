@@ -19,23 +19,42 @@ namespace Signals
             {
                 return _signal;
             }
+
             set
             {
-                if (_signal) _signal.RemoveListener(_onChanged.Invoke);
-                if (value) value.AddListener(_onChanged.Invoke);
+                RemoveListener();
                 _signal = value;
+                AddListener();
+            }
+        }
+
+        public ET OnChanged
+        {
+            get
+            {
+                return _onChanged;
             }
         }
 
         void OnEnable()
         {
             if (_onChanged == null) _onChanged = new ET();
-            if (_signal) _signal.AddListener(_onChanged.Invoke);
+            AddListener();
         }
 
         void OnDisable()
         {
-            if (_signal) _signal.RemoveListener(_onChanged.Invoke);
+            RemoveListener();
+        }
+
+        void AddListener()
+        {
+            if (_signal) _signal.OnChanged.AddListener(_onChanged.Invoke);
+        }
+
+        void RemoveListener()
+        {
+            if (_signal) _signal.OnChanged.RemoveListener(_onChanged.Invoke);
         }
     }
 }

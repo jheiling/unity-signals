@@ -10,29 +10,84 @@ namespace Signals
 #if UNITY_EDITOR
         [Multiline] public string Description = "";
 #endif
-        public bool UseLocalValue;
-        public ST Signal;
-        public T LocalValue;
+        [SerializeField] bool _useLocalValue;
+        [SerializeField] ST _signal;
+        [SerializeField] T _localValue;
 
         public ValueReference() { }
 
         public ValueReference(T localValue)
         {
-            LocalValue = localValue;
+            _useLocalValue = true;
+            _localValue = localValue;
+        }
+
+        public bool UseLocalValue
+        {
+            get
+            {
+                return _useLocalValue;
+            }
+
+            set
+            {
+                _useLocalValue = value;
+            }
+        }
+
+        public ST Signal
+        {
+            get
+            {
+                return _signal;
+            }
+
+            set
+            {
+                _signal = value;
+            }
+        }
+
+        public T LocalValue
+        {
+            get
+            {
+                return _localValue;
+            }
+
+            set
+            {
+                _localValue = value;
+            }
         }
 
         public T Value
         {
             get
             {
-                return UseLocalValue ? LocalValue : Signal;
+                if (_useLocalValue)
+                {
+                    return _localValue;
+                }
+                else
+                {
+                    if (!_signal) throw new System.NullReferenceException();
+                    return _signal;
+                }
             }
 
             set
             {
 
-                if (UseLocalValue) LocalValue = value;
-                else Signal.Value = value;
+                if (_useLocalValue)
+                {
+                    _localValue = value;
+                }
+                else
+                {
+                    if (!_signal) throw new System.NullReferenceException();
+                    _signal.Value = value;
+                }
             }
         }
 
