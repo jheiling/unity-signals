@@ -8,7 +8,8 @@ For an in depth explanation I would highly recommend watching [Richard Fine's](h
 
 The reasoning behind signals is that you often want to be notified when a referenced value changes, and also it's often useful to keep the last value some event was invoked with around.
 Signals are a solution for both use cases.
-## Implementing A Signal
+## Usage
+### Implementing A Signal
 First you need to create a class for the signal's OnChanged event:
 ```c#
 [System.Serializable]
@@ -42,12 +43,12 @@ public class FloatSignalEditor : SignalEditor<float, FloatEvent>
 ```
 By default the signal's value will be just shown in the editor when the application is running. 
 Overriding the ValueField method allows you to change the signal's value.
-## Implementing A SignalListener
+### Implementing A SignalListener
 By inheriting from SignalListener you can create a Component that listens to a signal's OnChanged event and propagates it:
 ```c#
 public class FloatSignalListener : SignalListener<float, FloatEvent, FloatSignal> { }
 ```
-## Implementing A ValueReference
+### Implementing A ValueReference
 By inheriting from ValueReference you can use serializable fields in your scripts that can either hold a local value or a reference to a signal's value:
 ```c#
 [System.Serializable]
@@ -59,7 +60,7 @@ And to make it look nice in the editor:
 [UnityEditor.CustomPropertyDrawer(typeof(FloatValueReference))]
 public class FloatValueReferenceDrawer : ValueReferenceDrawer { }
 ```
-## Examples
+### Examples
 In the Common folder you will find the source for FloatEvent, FloatSignal, FloatSignalEditor, FloatSignalListener, FloatValueReference, and FloatValueReferenceDrawer.
 ## Credits
 Signals was inspired by Ryan Hipple's [talk](https://www.youtube.com/watch?v=raQ3iHhE_Kk) about game architecture with ScriptableObjects. 
