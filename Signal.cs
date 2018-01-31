@@ -18,7 +18,7 @@ namespace Signals
     public abstract class Signal<T, ET> : ScriptableObject, ISignal<T> where ET : UnityEvent<T>, new()
     {
 #if UNITY_EDITOR
-        [SerializeField] [Multiline] string _description = "";
+        [Multiline] public string Description = "";
         [SerializeField] bool _serializeChanges;
 #endif
         [SerializeField] T _initialValue;

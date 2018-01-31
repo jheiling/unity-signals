@@ -8,7 +8,7 @@ namespace Signals
     public abstract class ValueReference<T, ET, ST> where ET : UnityEvent<T>, new() where ST : Signal<T, ET>
     {
 #if UNITY_EDITOR
-        [SerializeField] [Multiline] string _description = "";
+        [Multiline] public string Description = "";
 #endif
         public bool UseLocalValue;
         public ST Signal;
