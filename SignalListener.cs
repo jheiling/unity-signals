@@ -5,6 +5,12 @@ using UnityEngine.Events;
 
 namespace Signals
 {
+    /// <summary>
+    /// Abstract base class for MonoBehaviours which propagate a <see cref="Signal.OnChanged"/> event.
+    /// </summary>
+    /// <typeparam name="T">The type of the <see cref="Signal.Value"/>.</typeparam>
+    /// <typeparam name="ET">The type of the <see cref="Signal.OnChanged"/> event.</typeparam>
+    /// <typeparam name="ST">The type of the Signal.</typeparam>
     public abstract class SignalListener<T, ET, ST> : MonoBehaviour where ET : UnityEvent<T>, new() where ST : Signal<T, ET>
     {
 #if UNITY_EDITOR
@@ -13,6 +19,9 @@ namespace Signals
         [SerializeField] ST _signal;
         [SerializeField] ET _onChanged;
 
+        /// <summary>
+        /// The signal whose <see cref="Signal.OnChanged"/> event is propagated.
+        /// </summary>
         public ST Signal
         {
             get
@@ -22,12 +31,15 @@ namespace Signals
 
             set
             {
-                RemoveListener();
+                if (enabled) RemoveListener();
                 _signal = value;
-                AddListener();
+                if (enabled) AddListener();
             }
         }
 
+        /// <summary>
+        /// Invoked when the <see cref="Signal.Value"/> of the signal has changed.
+        /// </summary>
         public ET OnChanged
         {
             get

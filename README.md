@@ -20,13 +20,14 @@ Next create a class for the signal:
 [UnityEngine.CreateAssetMenu]
 public class FloatSignal : Signal<float, FloatEvent>
 {
-    protected override bool HasChanged(float value)
+    protected override bool ValidateValue(float value)
     {
         return Value != value;
     }
 }
 ```
-By default signals will trigger the OnChanged event whenever a new value is assigned. By overriding the HasChanged method you can add a check to avoid unnecessarily triggering the event.
+By default signals will trigger the OnChanged event whenever a new value is assigned. 
+By overriding the ValidateValue method you can validate the value and/or add a check to avoid unnecessarily triggering the event.
 
 Then create an editor class for your signal:
 ```c#

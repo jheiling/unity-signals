@@ -7,7 +7,7 @@ namespace Signals
     [CreateAssetMenu(menuName = "Signals/FloatSignal")]
     public class FloatSignal : Signal<float, FloatEvent>
     {
-        protected override bool HasChanged(float value)
+        protected override bool ValidateValue(float value)
         {
             return Value != value;
         }

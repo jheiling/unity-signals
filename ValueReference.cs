@@ -5,6 +5,12 @@ using UnityEngine.Events;
 
 namespace Signals
 {
+    /// <summary>
+    /// Abstract base class for serializable classes referencing either a <see cref="LocalValue"/> or a <see cref="Signal.Value"/>.
+    /// </summary>
+    /// <typeparam name="T">The type of the <see cref="Signal.Value"/>.</typeparam>
+    /// <typeparam name="ET">The type of the <see cref="Signal.OnChanged"/> event.</typeparam>
+    /// <typeparam name="ST">The type of the Signal.</typeparam>
     public abstract class ValueReference<T, ET, ST> where ET : UnityEvent<T>, new() where ST : Signal<T, ET>
     {
 #if UNITY_EDITOR
@@ -14,14 +20,24 @@ namespace Signals
         [SerializeField] ST _signal;
         [SerializeField] T _localValue;
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
         public ValueReference() { }
 
+        /// <summary>
+        /// Constructor for a ValueReference which uses a <see cref="LocalValue"/>.
+        /// </summary>
+        /// <param name="localValue">The local value.</param>
         public ValueReference(T localValue)
         {
             _useLocalValue = true;
             _localValue = localValue;
         }
 
+        /// <summary>
+        /// False if a <see cref="Signal"/>'s <see cref="Signal.Value"/> is used, true if <see cref="LocalValue"/> is used.
+        /// </summary>
         public bool UseLocalValue
         {
             get
@@ -35,6 +51,9 @@ namespace Signals
             }
         }
 
+        /// <summary>
+        /// The Signal whose <see cref="Signal.Value"/> is used if <see cref="UseLocalValue"/> is false.
+        /// </summary>
         public ST Signal
         {
             get
@@ -48,6 +67,9 @@ namespace Signals
             }
         }
 
+        /// <summary>
+        /// The value which is used if <see cref="UseLocalValue"/> is true.
+        /// </summary>
         public T LocalValue
         {
             get
@@ -61,6 +83,9 @@ namespace Signals
             }
         }
 
+        /// <summary>
+        /// The <see cref="Signal.Value"/> of the <see cref="Signal"/> if <see cref="UseLocalValue"/> is false, the <see cref="LocalValue"/> otherwise.
+        /// </summary>
         public T Value
         {
             get
@@ -91,6 +116,10 @@ namespace Signals
             }
         }
 
+        /// <summary>
+        /// Implicit cast from the ValueReference to it's <see cref="Value"/>.
+        /// </summary>
+        /// <param name="reference">The ValueReference.</param>
         public static implicit operator T(ValueReference<T, ET, ST> reference)
         {
             return reference.Value;

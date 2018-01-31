@@ -5,6 +5,9 @@ using UnityEditor;
 
 namespace Signals
 {
+    /// <summary>
+    /// Abstract base class for custom drawers for classes inheriting from <see cref="ValueReference"/>.
+    /// </summary>
     public abstract class ValueReferenceDrawer : PropertyDrawer
     {
         readonly static string[] popupOptions = { "Use Signal Value", "Use Local Value" };
