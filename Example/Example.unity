@@ -545,7 +545,6 @@ GameObject:
   - component: {fileID: 788368552}
   - component: {fileID: 788368557}
   - component: {fileID: 788368559}
-  - component: {fileID: 788368558}
   - component: {fileID: 788368556}
   m_Layer: 0
   m_Name: Player
@@ -636,8 +635,8 @@ MonoBehaviour:
   _onChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 788368558}
-        m_MethodName: MoveTo
+      - m_Target: {fileID: 788368557}
+        m_MethodName: set_destination
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -671,17 +670,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &788368558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 788368551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb4bb24e4c77c3c4aa2dd3eea359a8cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &788368559
 MonoBehaviour:
   m_ObjectHideFlags: 0
