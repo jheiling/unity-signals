@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfa3b054480d6af489d6c207645cd994, type: 3}
-  m_Name: UnderMousePointer
+  m_Name: LookingAt
   m_EditorClassIdentifier: 
   Description: 
   SerializeChanges: 0

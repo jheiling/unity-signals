@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 747196918}
   - component: {fileID: 747196917}
   m_Layer: 5
-  m_Name: UnderMousePointerPanel
+  m_Name: LookingAtPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -986,7 +986,7 @@ GameObject:
   - component: {fileID: 2005121117}
   - component: {fileID: 2005121116}
   m_Layer: 5
-  m_Name: MovementInputPanel
+  m_Name: DestinationPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
