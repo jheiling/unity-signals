@@ -6,17 +6,17 @@ using Signals.Common;
 
 namespace Signals.Example
 {
-    [AddComponentMenu("Signals/Example/PlayerInput")]
-    public class PlayerInput : MonoBehaviour
+    [AddComponentMenu("Signals/Example/InputSystem")]
+    public class InputSystem : MonoBehaviour
     {
-        public StringSignal UnderMousePointerSignal;
-        public Vector3Signal MovementInputSignal;
+        public StringSignal LookingAtSignal;
+        public Vector3Signal DestinationSignal;
 
         void Update()
         {
             if(EventSystem.current && EventSystem.current.IsPointerOverGameObject())
             {
-                UnderMousePointerSignal.Value = "";
+                LookingAtSignal.Value = "";
             }
             else
             {
@@ -24,9 +24,9 @@ namespace Signals.Example
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out target, Mathf.Infinity))
                 {
                     var name = target.transform.GetComponent<Name>();
-                    UnderMousePointerSignal.Value = target.transform.GetComponent<Name>() ? name.Value : "";
+                    LookingAtSignal.Value = target.transform.GetComponent<Name>() ? name.Value : "";
 
-                    if (Input.GetMouseButtonDown(0)) MovementInputSignal.Value = target.point;
+                    if (Input.GetMouseButton(0)) DestinationSignal.Value = target.point;
                 }
             }
         }

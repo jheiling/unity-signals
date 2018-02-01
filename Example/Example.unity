@@ -1053,7 +1053,7 @@ GameObject:
   - component: {fileID: 1064793886}
   - component: {fileID: 1064793885}
   m_Layer: 0
-  m_Name: Input
+  m_Name: InputSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1070,10 +1070,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453f0d535f6958a4d9e607d96b8a95f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnderMousePointerSignal: {fileID: 11400000, guid: 6f1c73932d73c534aa4902c3afd564e3,
-    type: 2}
-  MovementInputSignal: {fileID: 11400000, guid: cbc6c60aea74f1a4bbae11198e8221bd,
-    type: 2}
+  LookingAtSignal: {fileID: 11400000, guid: 6f1c73932d73c534aa4902c3afd564e3, type: 2}
+  DestinationSignal: {fileID: 11400000, guid: cbc6c60aea74f1a4bbae11198e8221bd, type: 2}
 --- !u!4 &1064793886
 Transform:
   m_ObjectHideFlags: 0
