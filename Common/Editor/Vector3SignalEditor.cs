@@ -10,7 +10,8 @@ namespace Signals.Common
     {
         protected override void ValueField(Signal<Vector3, Vector3Event> signal)
         {
-            signal.Value = EditorGUILayout.Vector3Field("", signal.Value);
+            var value = EditorGUILayout.Vector3Field("", signal);
+            if (value != signal) signal.Value = value;
         }
     }
 }

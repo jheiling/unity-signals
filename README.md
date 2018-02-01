@@ -38,7 +38,8 @@ public class FloatSignalEditor : SignalEditor<float, FloatEvent>
 {
     protected override void ValueField(Signal<float, FloatEvent> signal)
     {
-        signal.Value = UnityEditor.EditorGUILayout.DelayedFloatField(signal.Value);
+        var value = EditorGUILayout.DelayedFloatField(signal);
+        if (value != signal) signal.Value = value;
     }
 }
 ```

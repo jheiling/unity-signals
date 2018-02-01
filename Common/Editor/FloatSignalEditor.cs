@@ -9,7 +9,8 @@ namespace Signals.Common
     {
         protected override void ValueField(Signal<float, FloatEvent> signal)
         {
-            signal.Value = EditorGUILayout.DelayedFloatField(signal.Value);
+            var value = EditorGUILayout.DelayedFloatField(signal);
+            if (value != signal) signal.Value = value;
         }
     }
 }
