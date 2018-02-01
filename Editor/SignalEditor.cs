@@ -36,5 +36,10 @@ namespace Signals
         {
             GUILayout.Label(signal.Value.ToString());
         }
+
+        public override bool RequiresConstantRepaint()
+        {
+            return true;
+        }
     }
 }
