@@ -18,6 +18,7 @@ namespace Signals
 #endif
         [SerializeField] ST _signal;
         [SerializeField] ET _onChanged;
+        [SerializeField] bool _invokeImmediately;
 
         /// <summary>
         /// The signal whose <see cref="Signal.OnChanged"/> event is propagated.
@@ -48,6 +49,22 @@ namespace Signals
             }
         }
 
+        /// <summary>
+        /// If true the OnChanged event will also be invoked when the SignalListener is enabled or <see cref="Signal"/> is set.
+        /// </summary>
+        public bool InvokeImmediately
+        {
+            get
+            {
+                return _invokeImmediately;
+            }
+
+            set
+            {
+                _invokeImmediately = value;
+            }
+        }
+
         void OnEnable()
         {
             if (_onChanged == null) _onChanged = new ET();
@@ -61,7 +78,11 @@ namespace Signals
 
         void AddListener()
         {
-            if (_signal) _signal.OnChanged.AddListener(_onChanged.Invoke);
+            if (_signal)
+            {
+                _signal.OnChanged.AddListener(_onChanged.Invoke);
+                if (_invokeImmediately) _onChanged.Invoke(_signal);
+            }
         }
 
         void RemoveListener()
