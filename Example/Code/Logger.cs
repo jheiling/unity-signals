@@ -11,5 +11,10 @@ namespace Signals.Example
         {
             Debug.Log("MovementInput: " + position.ToString());
         }
+
+        public void LogUnderMousePointer(string name)
+        {
+            Debug.Log("UnderMousePointer: " + name);
+        }
     }
 }
