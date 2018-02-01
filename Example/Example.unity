@@ -904,10 +904,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 970310057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9958dff1197bb24c947f84a890be90e, type: 3}
+  m_Script: {fileID: 11500000, guid: e594909e16f3d2f49bbb8d30fe0e3117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Signal: {fileID: 11400000, guid: 6667cbec9243f6f4d8788a4c679ee5fd, type: 2}
+  _signal: {fileID: 11400000, guid: 6667cbec9243f6f4d8788a4c679ee5fd, type: 2}
 --- !u!114 &970310059
 MonoBehaviour:
   m_ObjectHideFlags: 0
