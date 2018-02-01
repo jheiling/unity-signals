@@ -26,9 +26,9 @@ namespace Signals
 
             EditorGUI.BeginChangeCheck();
 
-            var useLocalValue = property.FindPropertyRelative("UseLocalValue");
-            var signal = property.FindPropertyRelative("Signal");
-            var localValue = property.FindPropertyRelative("LocalValue");
+            var useLocalValue = property.FindPropertyRelative("_useLocalValue");
+            var signal = property.FindPropertyRelative("_signal");
+            var localValue = property.FindPropertyRelative("_localValue");
 
             var buttonRect = new Rect(position);
             buttonRect.yMin += popupStyle.margin.top;
@@ -38,7 +38,7 @@ namespace Signals
             var indent = EditorGUI.indentLevel;
             EditorGUI.indentLevel = 0;
 
-            useLocalValue.boolValue = EditorGUI.Popup(buttonRect, useLocalValue.boolValue ? 0 : 1, popupOptions, popupStyle) == 1;
+            useLocalValue.boolValue = EditorGUI.Popup(buttonRect, useLocalValue.boolValue ? 1 : 0, popupOptions, popupStyle) == 1;
 
             EditorGUI.PropertyField(position, useLocalValue.boolValue ? localValue : signal, GUIContent.none);
 
