@@ -44,7 +44,8 @@ public class FloatSignalEditor : SignalEditor<float, FloatEvent>
 }
 ```
 Overriding the ValueField method allows you to change the signal's value in the editor when the application is running.
-By default the value will be shown, but isn't editable.
+By default the value will be shown, but isn't editable.  
+You must check whether the value was really changed to avoid unnecessary value updates.
 ### Implementing A SignalListener
 By inheriting from SignalListener you can create a Component that listens to a signal's OnChanged event and propagates it:
 ```c#
@@ -62,8 +63,8 @@ And to make it look nice in the editor:
 [UnityEditor.CustomPropertyDrawer(typeof(FloatValueReference))]
 public class FloatValueReferenceDrawer : ValueReferenceDrawer { }
 ```
-### Examples
-In the Common folder you will find the source for FloatEvent, FloatSignal, FloatSignalEditor, FloatSignalListener, FloatValueReference, and FloatValueReferenceDrawer.
+### Example
+See Example folder.
 ## Credits
 Signals was inspired by Ryan Hipple's [talk](https://www.youtube.com/watch?v=raQ3iHhE_Kk) about game architecture with ScriptableObjects.
 I also nicked a bit of his code for the ValueReferenceDrawer class. You can find the source [here](https://github.com/roboryantron/Unite2017).
