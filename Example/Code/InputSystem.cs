@@ -24,7 +24,7 @@ namespace Signals.Example
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out target, Mathf.Infinity))
                 {
                     var name = target.transform.GetComponent<Name>();
-                    LookingAtSignal.Value = target.transform.GetComponent<Name>() ? name.Value : "";
+                    LookingAtSignal.Value = name ? name.Value : "";
 
                     if (Input.GetMouseButton(0)) DestinationSignal.Value = target.point;
                 }
