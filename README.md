@@ -1,4 +1,6 @@
 # Signals For Unity3D
+## Documentation
+You can find the API documentation [here](https://jheiling.github.io/unity-signals/) or in the docs folder.
 ## What Are Signals?
 A Signal is a [ScriptableObject](https://docs.unity3d.com/ScriptReference/ScriptableObject.html) which holds a value and triggers a [UnityEvent](https://docs.unity3d.com/ScriptReference/Events.UnityEvent_1.html) when a new value is assigned.
 ## Why Should I Use Them?
