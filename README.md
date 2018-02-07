@@ -12,7 +12,7 @@ If you store a value in a ScriptableObject you might want to get notified when t
 On the other hand it can be useful to keep the last value an event was invoked with around.
 Signals are a solution for both use cases.
 ## Installation
-Copy everything except for the docs folder (the .js files confuse Unity) somewhere into your project's Asset folder.
+Copy everything somewhere into your project's Asset folder.
 ## Usage
 ### Implementing A Signal
 First you need to create a class for the signal's OnChanged event:
