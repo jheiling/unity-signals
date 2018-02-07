@@ -67,6 +67,8 @@ And to make it look nice in the editor:
 [UnityEditor.CustomPropertyDrawer(typeof(FloatValueReference))]
 public class FloatValueReferenceDrawer : ValueReferenceDrawer { }
 ```
+### Code Generation
+You can find a simple code generator that can save you a lot of work [here](https://github.com/jheiling/unity-signals-generator).
 ### Example
 See Example folder.
 ## Credits
