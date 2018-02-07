@@ -13,6 +13,18 @@ var dir_4ab6b4cc6a7edbff49100e9123df213f =
     [ "FloatValueReference.cs", "_float_value_reference_8cs.html", [
       [ "FloatValueReference", "class_signals_1_1_common_1_1_float_value_reference.html", null ]
     ] ],
+    [ "IntEvent.cs", "_int_event_8cs.html", [
+      [ "IntEvent", "class_signals_1_1_common_1_1_int_event.html", null ]
+    ] ],
+    [ "IntSignal.cs", "_int_signal_8cs.html", [
+      [ "IntSignal", "class_signals_1_1_common_1_1_int_signal.html", "class_signals_1_1_common_1_1_int_signal" ]
+    ] ],
+    [ "IntSignalListener.cs", "_int_signal_listener_8cs.html", [
+      [ "IntSignalListener", "class_signals_1_1_common_1_1_int_signal_listener.html", null ]
+    ] ],
+    [ "IntValueReference.cs", "_int_value_reference_8cs.html", [
+      [ "IntValueReference", "class_signals_1_1_common_1_1_int_value_reference.html", null ]
+    ] ],
     [ "StringEvent.cs", "_string_event_8cs.html", [
       [ "StringEvent", "class_signals_1_1_common_1_1_string_event.html", null ]
     ] ],

@@ -2,6 +2,7 @@ var searchData=
 [
   ['valuereference',['ValueReference',['../class_signals_1_1_value_reference.html',1,'Signals']]],
   ['valuereference_3c_20float_2c_20floatevent_2c_20floatsignal_20_3e',['ValueReference&lt; float, FloatEvent, FloatSignal &gt;',['../class_signals_1_1_value_reference.html',1,'Signals']]],
+  ['valuereference_3c_20int_2c_20intevent_2c_20intsignal_20_3e',['ValueReference&lt; int, IntEvent, IntSignal &gt;',['../class_signals_1_1_value_reference.html',1,'Signals']]],
   ['valuereference_3c_20string_2c_20stringevent_2c_20stringsignal_20_3e',['ValueReference&lt; string, StringEvent, StringSignal &gt;',['../class_signals_1_1_value_reference.html',1,'Signals']]],
   ['valuereference_3c_20vector3_2c_20vector3event_2c_20vector3signal_20_3e',['ValueReference&lt; Vector3, Vector3Event, Vector3Signal &gt;',['../class_signals_1_1_value_reference.html',1,'Signals']]],
   ['valuereferencedrawer',['ValueReferenceDrawer',['../class_signals_1_1_value_reference_drawer.html',1,'Signals']]],

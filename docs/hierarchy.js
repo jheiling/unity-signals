@@ -16,6 +16,7 @@ var hierarchy =
     [ "PropertyDrawer", null, [
       [ "Signals.ValueReferenceDrawer", "class_signals_1_1_value_reference_drawer.html", [
         [ "Signals.Common.FloatValueReferenceDrawer", "class_signals_1_1_common_1_1_float_value_reference_drawer.html", null ],
+        [ "Signals.Common.IntValueReferenceDrawer", "class_signals_1_1_common_1_1_int_value_reference_drawer.html", null ],
         [ "Signals.Common.StringValueReferenceDrawer", "class_signals_1_1_common_1_1_string_value_reference_drawer.html", null ],
         [ "Signals.Common.Vector3ValueReferenceDrawer", "class_signals_1_1_common_1_1_vector3_value_reference_drawer.html", null ]
       ] ]
@@ -27,6 +28,9 @@ var hierarchy =
     [ "Signals.Signal< float, FloatEvent >", "class_signals_1_1_signal.html", [
       [ "Signals.Common.FloatSignal", "class_signals_1_1_common_1_1_float_signal.html", null ]
     ] ],
+    [ "Signals.Signal< int, IntEvent >", "class_signals_1_1_signal.html", [
+      [ "Signals.Common.IntSignal", "class_signals_1_1_common_1_1_int_signal.html", null ]
+    ] ],
     [ "Signals.Signal< string, StringEvent >", "class_signals_1_1_signal.html", [
       [ "Signals.Common.StringSignal", "class_signals_1_1_common_1_1_string_signal.html", null ]
     ] ],
@@ -35,6 +39,9 @@ var hierarchy =
     ] ],
     [ "Signals.SignalEditor< float, FloatEvent >", "class_signals_1_1_signal_editor.html", [
       [ "Signals.Common.FloatSignalEditor", "class_signals_1_1_common_1_1_float_signal_editor.html", null ]
+    ] ],
+    [ "Signals.SignalEditor< int, IntEvent >", "class_signals_1_1_signal_editor.html", [
+      [ "Signals.Common.IntSignalEditor", "class_signals_1_1_common_1_1_int_signal_editor.html", null ]
     ] ],
     [ "Signals.SignalEditor< string, StringEvent >", "class_signals_1_1_signal_editor.html", [
       [ "Signals.Common.StringSignalEditor", "class_signals_1_1_common_1_1_string_signal_editor.html", null ]
@@ -45,6 +52,9 @@ var hierarchy =
     [ "Signals.SignalListener< float, FloatEvent, FloatSignal >", "class_signals_1_1_signal_listener.html", [
       [ "Signals.Common.FloatSignalListener", "class_signals_1_1_common_1_1_float_signal_listener.html", null ]
     ] ],
+    [ "Signals.SignalListener< int, IntEvent, IntSignal >", "class_signals_1_1_signal_listener.html", [
+      [ "Signals.Common.IntSignalListener", "class_signals_1_1_common_1_1_int_signal_listener.html", null ]
+    ] ],
     [ "Signals.SignalListener< string, StringEvent, StringSignal >", "class_signals_1_1_signal_listener.html", [
       [ "Signals.Common.StringSignalListener", "class_signals_1_1_common_1_1_string_signal_listener.html", null ]
     ] ],
@@ -53,12 +63,16 @@ var hierarchy =
     ] ],
     [ "UnityEvent", null, [
       [ "Signals.Common.FloatEvent", "class_signals_1_1_common_1_1_float_event.html", null ],
+      [ "Signals.Common.IntEvent", "class_signals_1_1_common_1_1_int_event.html", null ],
       [ "Signals.Common.StringEvent", "class_signals_1_1_common_1_1_string_event.html", null ],
       [ "Signals.Common.Vector3Event", "class_signals_1_1_common_1_1_vector3_event.html", null ]
     ] ],
     [ "Signals.ValueReference< T, ET, ST >", "class_signals_1_1_value_reference.html", null ],
     [ "Signals.ValueReference< float, FloatEvent, FloatSignal >", "class_signals_1_1_value_reference.html", [
       [ "Signals.Common.FloatValueReference", "class_signals_1_1_common_1_1_float_value_reference.html", null ]
+    ] ],
+    [ "Signals.ValueReference< int, IntEvent, IntSignal >", "class_signals_1_1_value_reference.html", [
+      [ "Signals.Common.IntValueReference", "class_signals_1_1_common_1_1_int_value_reference.html", null ]
     ] ],
     [ "Signals.ValueReference< string, StringEvent, StringSignal >", "class_signals_1_1_value_reference.html", [
       [ "Signals.Common.StringValueReference", "class_signals_1_1_common_1_1_string_value_reference.html", null ]
