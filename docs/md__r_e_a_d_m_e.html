@@ -90,7 +90,8 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html','');});
 <div class="title"><a class="el" href="namespace_signals.html">Signals</a> For Unity3D </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>What Are <a class="el" href="namespace_signals.html">Signals</a>?</h2>
+<div class="textblock"><h2>Documentation</h2>
+<p>You can find the API documentation <a href="https://jheiling.github.io/unity-signals/">here</a> or in the docs folder. </p><h2>What Are <a class="el" href="namespace_signals.html">Signals</a>?</h2>
 <p>A Signal is a <a href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</a> which holds a value and triggers a <a href="https://docs.unity3d.com/ScriptReference/Events.UnityEvent_1.html">UnityEvent</a> when a new value is assigned. </p><h2>Why Should I Use Them?</h2>
 <p>Because ScriptableObjects are a good choice to create a sane architecture for games made with Unity. They allow you to nicely decouple systems and avoid direct references between scene objects. For an in depth explanation I would highly recommend watching <a href="https://www.youtube.com/watch?v=6vmRwLYWNRo">Richard Fine's</a> and <a href="https://www.youtube.com/watch?v=raQ3iHhE_Kk">Ryan Hipple's</a> talks.</p>
 <p>If you store a value in a ScriptableObject you might want to get notified when the value changes. On the other hand it can be useful to keep the last value an event was invoked with around. <a class="el" href="namespace_signals.html">Signals</a> are a solution for both use cases. </p><h2>Usage</h2>
