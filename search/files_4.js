@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['positiontracker_2ecs',['PositionTracker.cs',['../_position_tracker_8cs.html',1,'']]]
+  ['logger_2ecs',['Logger.cs',['../_logger_8cs.html',1,'']]]
 ];
