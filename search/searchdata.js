@@ -1,9 +1,9 @@
 var indexSectionsWithContent =
 {
-  0: "bcdfilnopqrsuv",
-  1: "bcfilnpqsv",
+  0: "bcdefilnopqrsuv",
+  1: "bcefilnpqrsv",
   2: "s",
-  3: "bcfilnpqrsv",
+  3: "bcefilnpqrsv",
   4: "lorsv",
   5: "dlv",
   6: "ilosuv",

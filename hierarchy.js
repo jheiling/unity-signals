@@ -11,7 +11,9 @@ var hierarchy =
       [ "Signals.Example.Name", "class_signals_1_1_example_1_1_name.html", null ],
       [ "Signals.Example.Vector3Text", "class_signals_1_1_example_1_1_vector3_text.html", null ],
       [ "Signals.SignalListener< T, ET, ST >", "class_signals_1_1_signal_listener.html", null ],
-      [ "Signals.Utils.PositionTracker", "class_signals_1_1_utils_1_1_position_tracker.html", null ]
+      [ "Signals.Utils.EulerAnglesTracker", "class_signals_1_1_utils_1_1_euler_angles_tracker.html", null ],
+      [ "Signals.Utils.PositionTracker", "class_signals_1_1_utils_1_1_position_tracker.html", null ],
+      [ "Signals.Utils.RotationTracker", "class_signals_1_1_utils_1_1_rotation_tracker.html", null ]
     ] ],
     [ "PropertyDrawer", null, [
       [ "Signals.ValueReferenceDrawer", "class_signals_1_1_value_reference_drawer.html", [

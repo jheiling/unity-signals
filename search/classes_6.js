@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['positiontracker',['PositionTracker',['../class_signals_1_1_utils_1_1_position_tracker.html',1,'Signals::Utils']]]
+  ['name',['Name',['../class_signals_1_1_example_1_1_name.html',1,'Signals::Example']]]
 ];

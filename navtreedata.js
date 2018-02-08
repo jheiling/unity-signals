@@ -24,7 +24,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "UnitySignals", "index.html", [
-    [ "Signals For Unity3D", "md__r_e_a_d_m_e.html", null ],
+    [ "Signals For Unity3D v1.0.0", "md__r_e_a_d_m_e.html", null ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ]
     ] ],
