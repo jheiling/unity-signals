@@ -6,18 +6,17 @@ using Signals.Common;
 namespace Signals.Utils
 {
     /// <summary>
-    /// Tracks the position of a GameObject.
-    /// Useful for things like a camera following the player's position from a fixed angle.
+    /// Tracks the rotation of a GameObject in euler angles.
     /// </summary>
-    [AddComponentMenu("Signals/Utils/PositionTracker")]
-    public class PositionTracker : MonoBehaviour
+    [AddComponentMenu("Signals/Utils/EulerAnglesTracker")]
+    public class EulerAnglesTracker : MonoBehaviour
     {
         [SerializeField] Vector3Signal _signal;
         [SerializeField] bool _local;
         Transform _transform;
 
         /// <summary>
-        /// The signal that keeps track of the position.
+        /// The signal that keeps track of the rotation.
         /// </summary>
         public Vector3Signal Signal
         {
@@ -33,7 +32,7 @@ namespace Signals.Utils
         }
 
         /// <summary>
-        /// True to track local instead of global position.
+        /// True to track local instead of global rotation.
         /// </summary>
         public bool Local
         {
@@ -55,7 +54,7 @@ namespace Signals.Utils
 
         void Update()
         {
-            if(_signal) _signal.Value = _local ? _transform.localPosition : _transform.position;
+            if(_signal) _signal.Value = _local ? _transform.localEulerAngles : _transform.eulerAngles;
         }
     }
 }
