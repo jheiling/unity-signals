@@ -1,0 +1,15 @@
+using UnityEngine;
+
+
+
+namespace Signals.Common
+{
+    [CreateAssetMenu(menuName = "Signals/BoolSignal")]
+    public class BoolSignal : Signal<bool, BoolEvent>
+    {
+        protected override bool ValidateValue(bool value)
+        {
+            return Value != value;
+        }
+    }
+}
