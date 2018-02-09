@@ -14,9 +14,6 @@ namespace Signals
     /// <typeparam name="ST">The type of the Signal.</typeparam>
     public abstract class ValueReference<T, ET, ST> where ET : UnityEvent<T>, new() where ST : Signal<T, ET>
     {
-#if UNITY_EDITOR
-        [Multiline] public string Description = "";
-#endif
         [SerializeField] bool _useLocalValue;
         [SerializeField] ST _signal;
         [SerializeField] T _localValue;

@@ -35,8 +35,10 @@ namespace Signals
     public abstract class Signal<T, ET> : ScriptableObject, ISignal<T, ET> where ET : UnityEvent<T>, new()
     {
 #if UNITY_EDITOR
-        [Multiline] public string Description = "";
-        public bool SerializeChanges;
+#pragma warning disable
+        [SerializeField] [Multiline] string _description = "";
+#pragma warning restore
+        [SerializeField] bool _serializeChanges;
 #endif
         [SerializeField] T _initialValue;
         T _value;
@@ -76,7 +78,7 @@ namespace Signals
                 if (!_useValidation || ValidateValue(value))
                 {
 #if UNITY_EDITOR
-                    if (SerializeChanges) _initialValue = value;
+                    if (_serializeChanges) _initialValue = value;
 #endif
                     _value = value;
                     _onChanged.Invoke(value);

@@ -11,5 +11,16 @@ namespace Signals.Utils.Engine
         {
             return Value != value;
         }
+
+        public void SetToCurrent()
+        {
+            if (Value == null) Value = PhysicsSettings.GetCurrent();
+            else Value.SetToCurrent();
+        }
+
+        public void Apply()
+        {
+            if (Value != null) Value.Apply();
+        }
     }
 }
