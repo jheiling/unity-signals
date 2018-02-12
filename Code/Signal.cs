@@ -121,7 +121,7 @@ namespace Signals
         /// <returns>True if the <see cref="Value"/> shoud be updated and the <see cref="OnChanged"/> event should be triggered, false otherwise.</returns>
         protected virtual bool ValidateValue(T value)
         {
-            return true;
+            return !_value.Equals(value);
         }
 
         void OnEnable()
