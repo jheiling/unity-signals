@@ -3,9 +3,9 @@ using Signals.Common;
 
 
 
-namespace Signals.Example
+namespace Signals.Examples
 {
-    [AddComponentMenu("Signals/Example/Name")]
+    [AddComponentMenu("Signals/Examples/Name")]
     public class Name : MonoBehaviour
     {
         public StringValueReference Value;

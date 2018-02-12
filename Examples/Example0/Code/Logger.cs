@@ -2,9 +2,9 @@
 
 
 
-namespace Signals.Example
+namespace Signals.Examples
 {
-    [CreateAssetMenu(menuName = "Signals/Example/Logger")]
+    [CreateAssetMenu(menuName = "Signals/Examples/Logger")]
     public class Logger : ScriptableObject
     {
         public void LogMovementInput(Vector3 position)

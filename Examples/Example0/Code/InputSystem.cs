@@ -4,9 +4,9 @@ using Signals.Common;
 
 
 
-namespace Signals.Example
+namespace Signals.Examples
 {
-    [AddComponentMenu("Signals/Example/InputSystem")]
+    [AddComponentMenu("Signals/Examples/InputSystem")]
     public class InputSystem : MonoBehaviour
     {
         public StringSignal LookingAtSignal;

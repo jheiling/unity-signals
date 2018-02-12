@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d94c0afa72eb246b95604416d89171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Description: 
+  _description: 
   _signal: {fileID: 11400000, guid: 6f1c73932d73c534aa4902c3afd564e3, type: 2}
   _onChanged:
     m_PersistentCalls:
@@ -317,7 +317,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Value:
-    Description: 
     _useLocalValue: 1
     _signal: {fileID: 0}
     _localValue: green grass
@@ -628,7 +627,7 @@ GameObject:
   - component: {fileID: 821908607}
   - component: {fileID: 821908606}
   m_Layer: 5
-  m_Name: GUI
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -804,7 +803,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Value:
-    Description: 
     _useLocalValue: 0
     _signal: {fileID: 11400000, guid: 85ed4441e5ffa8149b4f594f24db9685, type: 2}
     _localValue: 
@@ -908,6 +906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _signal: {fileID: 11400000, guid: 6667cbec9243f6f4d8788a4c679ee5fd, type: 2}
+  _local: 0
 --- !u!114 &970310059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -919,7 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e652788deb33312439b5430dd8fd6ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Description: 
+  _description: 
   _signal: {fileID: 11400000, guid: cbc6c60aea74f1a4bbae11198e8221bd, type: 2}
   _onChanged:
     m_PersistentCalls:
@@ -950,7 +949,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Value:
-    Description: 
     _useLocalValue: 0
     _signal: {fileID: 11400000, guid: 4268775d2dcaab843abf99b06a6a64a0, type: 2}
     _localValue: 
@@ -1188,7 +1186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e652788deb33312439b5430dd8fd6ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Description: 
+  _description: 
   _signal: {fileID: 11400000, guid: 6667cbec9243f6f4d8788a4c679ee5fd, type: 2}
   _onChanged:
     m_PersistentCalls:
@@ -1252,7 +1250,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Value:
-    Description: 
     _useLocalValue: 0
     _signal: {fileID: 11400000, guid: 85ed4441e5ffa8149b4f594f24db9685, type: 2}
     _localValue: 
@@ -1353,7 +1350,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Value:
-    Description: 
     _useLocalValue: 0
     _signal: {fileID: 11400000, guid: 85ed4441e5ffa8149b4f594f24db9685, type: 2}
     _localValue: 
@@ -1538,7 +1534,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2015111838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e85af8c986425144e96339f5cdeb1d8b, type: 3}
+  m_Script: {fileID: 11500000, guid: b60a62300a1f8a64182aeffe1798a8ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2015111841
@@ -1591,7 +1587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e652788deb33312439b5430dd8fd6ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Description: 
+  _description: 
   _signal: {fileID: 11400000, guid: cbc6c60aea74f1a4bbae11198e8221bd, type: 2}
   _onChanged:
     m_PersistentCalls:

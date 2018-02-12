@@ -1,4 +1,4 @@
-# Signals For Unity3D v1.0.0
+# Signals For Unity3D
 ## Documentation
 You can find the API documentation [here](https://jheiling.github.io/unity-signals/).
 ## What Are Signals?
@@ -24,16 +24,11 @@ public class FloatEvent : UnityEvent<float> { }
 Next create a class for the signal:
 ```c#
 [UnityEngine.CreateAssetMenu]
-public class FloatSignal : Signal<float, FloatEvent>
-{
-    protected override bool ValidateValue(float value)
-    {
-        return Value != value;
-    }
-}
+public class FloatSignal : Signal<float, FloatEvent> { }
 ```
 By default signals will trigger the OnChanged event whenever a new value is assigned.
 By overriding the ValidateValue method you can validate the value and/or add a check to avoid unnecessarily triggering the event.
+By default ValidateValue will use the Equals method for this check.
 
 Then create an editor class for your signal:
 ```c#
@@ -69,8 +64,8 @@ public class FloatValueReferenceDrawer : ValueReferenceDrawer { }
 ```
 ### Code Generation
 You can find a simple code generator that can save you a lot of work [here](https://github.com/jheiling/unity-signals-generator).
-### Example
-See Example folder.
+### Examples
+See Examples folder.
 ## Credits
 Signals was inspired by Ryan Hipple's [talk](https://www.youtube.com/watch?v=raQ3iHhE_Kk) about game architecture with ScriptableObjects.
 I also nicked a bit of his code for the ValueReferenceDrawer class. You can find the source [here](https://github.com/roboryantron/Unite2017).
