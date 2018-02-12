@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Signals.Utils.Engine
 {
     [Serializable]
-    public class PhysicsSettings
+    public class PhysicsSettings : ISettings
     {
         [SerializeField] Vector3 _gravity = new Vector3(0f, -9.81f, 0f);
         [SerializeField] float _bounceThreshold = 2f;
@@ -207,13 +207,6 @@ namespace Signals.Utils.Engine
             Physics.autoSyncTransforms = _autoSyncTransforms;
             Physics.interCollisionDistance = _interCollisionDistance;
             Physics.interCollisionStiffness = _interCollisionStiffness;
-        }
-
-        public static PhysicsSettings GetCurrent()
-        {
-            var settings = new PhysicsSettings();
-            settings.SetToCurrent();
-            return settings;
         }
     }
 }

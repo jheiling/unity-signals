@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4039937738773196}
   - component: {fileID: 114136788496006860}
   m_Layer: 0
-  m_Name: PhysicsSetup
+  m_Name: EngineSetup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,8 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _settings:
-    Description: 
-    _useLocalValue: 0
+    _useLocalValue: 1
     _signal: {fileID: 0}
     _localValue:
       _gravity: {x: 0, y: -9.81, z: 0}

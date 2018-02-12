@@ -20,6 +20,19 @@ namespace Signals.Utils.Engine
             }
         }
 
+        public float GravityY
+        {
+            get
+            {
+                return Gravity.y;
+            }
+
+            set
+            {
+                Gravity = new Vector3(Gravity.x, value, Gravity.z);
+            }
+        }
+
         public float BounceThreshold
         {
             get
