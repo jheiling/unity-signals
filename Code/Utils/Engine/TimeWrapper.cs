@@ -4,7 +4,7 @@
 
 namespace Signals.Utils.Engine
 {
-    [CreateAssetMenu(menuName = "Signals/Utils/Engine/TimeWrapper")]
+    [CreateAssetMenu(fileName = "Time", menuName = "Signals/Utils/Engine/TimeWrapper")]
     public class TimeWrapper : ScriptableObject
     {
         public float FixedDeltaTime

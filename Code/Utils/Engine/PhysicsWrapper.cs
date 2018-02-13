@@ -4,7 +4,7 @@
 
 namespace Signals.Utils.Engine
 {
-    [CreateAssetMenu(menuName = "Signals/Utils/Engine/PhysicsWrapper")]
+    [CreateAssetMenu(fileName = "Physics", menuName = "Signals/Utils/Engine/PhysicsWrapper")]
     public class PhysicsWrapper : ScriptableObject
     {
         public Vector3 Gravity
