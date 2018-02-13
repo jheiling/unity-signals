@@ -8,15 +8,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 622e7b0117bb3a54aa748468b5e47be5, type: 3}
-  m_Name: Position
+  m_Script: {fileID: 11500000, guid: d98b7b64514c4c446b6c4e5fcad7a5f0, type: 3}
+  m_Name: TimeScale
   m_EditorClassIdentifier: 
   _description: 
   _serializeChanges: 0
-  _initialValue: {x: 0, y: 0, z: 0}
+  _initialValue: 0
   _onChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Signals.Common.Vector3Event, Signals, Version=0.0.0.0, Culture=neutral,
+    m_TypeName: Signals.Common.FloatEvent, Signals, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   _useValidation: 1

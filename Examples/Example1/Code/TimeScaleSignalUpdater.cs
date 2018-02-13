@@ -5,8 +5,8 @@ using Signals.Common;
 
 namespace Signals.Examples
 {
-    [AddComponentMenu("Signals/Examples/GravityYSignalUpdater")]
-    public class GravityYSignalUpdater : MonoBehaviour
+    [AddComponentMenu("Signals/Examples/TimeScaleSignalUpdater")]
+    public class TimeScaleSignalUpdater : MonoBehaviour
     {
         public FloatSignal Signal;
 
@@ -22,7 +22,7 @@ namespace Signals.Examples
 
         void UpdateSignal()
         {
-            Signal.Value = Physics.gravity.y;
+            Signal.Value = Time.timeScale;
         }
     }
 }
