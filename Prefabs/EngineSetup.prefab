@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4039937738773196}
+  - component: {fileID: 114371468365317956}
   - component: {fileID: 114136788496006860}
   - component: {fileID: 114608416324585012}
   m_Layer: 0
@@ -68,6 +69,25 @@ MonoBehaviour:
       _autoSyncTransforms: 1
       _interCollisionDistance: 0
       _interCollisionStiffness: 0
+  _applyOnStart: 1
+--- !u!114 &114371468365317956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1405742099653582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e6e3390459e254ca1527f5476eeb73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _settings:
+    _useLocalValue: 1
+    _signal: {fileID: 0}
+    _localValue:
+      _targetFrameRate: -1
+      _runInBackground: 0
+      _backgroundLoadingPriority: 1
   _applyOnStart: 1
 --- !u!114 &114608416324585012
 MonoBehaviour:

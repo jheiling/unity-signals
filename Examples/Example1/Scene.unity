@@ -1995,6 +1995,11 @@ Prefab:
       propertyPath: _settings._localValue._timeScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114371468365317956, guid: cc2075f60294e8243890aa678086a8e5,
+        type: 2}
+      propertyPath: _settings._localValue._targetFrameRate
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc2075f60294e8243890aa678086a8e5, type: 2}
   m_IsPrefabParent: 0
