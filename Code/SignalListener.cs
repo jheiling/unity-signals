@@ -15,7 +15,7 @@ namespace Signals
     {
 #if UNITY_EDITOR
 #pragma warning disable
-        [SerializeField] [Multiline] string _description = "";
+        [SerializeField] [Multiline] string _description;
 #pragma warning restore
 #endif
         [SerializeField] ST _signal;
