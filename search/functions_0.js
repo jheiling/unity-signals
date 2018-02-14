@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['logmovementinput',['LogMovementInput',['../class_signals_1_1_example_1_1_logger.html#ab1fb6c774178ab723ca6c7bfff093df1',1,'Signals::Example::Logger']]],
-  ['logundermousepointer',['LogUnderMousePointer',['../class_signals_1_1_example_1_1_logger.html#acd40ffb77fb674a1956911fb18e5a8ca',1,'Signals::Example::Logger']]]
+  ['apply',['Apply',['../class_signals_1_1_utils_1_1_engine_1_1_application_settings.html#a9a355e492236172beabfea72b2d1b3de',1,'Signals.Utils.Engine.ApplicationSettings.Apply()'],['../interface_signals_1_1_utils_1_1_engine_1_1_i_settings.html#af54fd3a588421339bbcdabf454354758',1,'Signals.Utils.Engine.ISettings.Apply()'],['../class_signals_1_1_utils_1_1_engine_1_1_physics_settings.html#aac490b0a104322e815c1e79e70f855e6',1,'Signals.Utils.Engine.PhysicsSettings.Apply()'],['../class_signals_1_1_utils_1_1_engine_1_1_settings_signal.html#a4c334c4d06cf7535a4e807ca386b4e13',1,'Signals.Utils.Engine.SettingsSignal.Apply()'],['../class_signals_1_1_utils_1_1_engine_1_1_setup.html#a0630468a606a32b30e5cbd63179d8a10',1,'Signals.Utils.Engine.Setup.Apply()'],['../class_signals_1_1_utils_1_1_engine_1_1_time_settings.html#a3bd7dd60d03fc8b126a78bd3f1e46ebf',1,'Signals.Utils.Engine.TimeSettings.Apply()']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UnitySignals: Signals For Unity3D v1.0.0</title>
+<title>UnitySignals: Signals For Unity3D v1.1.0</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title"><a class="el" href="namespace_signals.html">Signals</a> For Unity3D v1.0.0 </div>  </div>
+<div class="title"><a class="el" href="namespace_signals.html">Signals</a> For Unity3D v1.1.0 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h2>Documentation</h2>
@@ -97,13 +97,13 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html','');});
 <p>If you store a value in a ScriptableObject you might want to get notified when the value changes. On the other hand it can be useful to keep the last value an event was invoked with around. <a class="el" href="namespace_signals.html">Signals</a> are a solution for both use cases. </p><h2>Installation</h2>
 <p>Copy everything somewhere into your project's Asset folder. </p><h2>Usage</h2>
 <h3>Implementing A Signal</h3>
-<p>First you need to create a class for the signal's OnChanged event: </p><div class="fragment"><div class="line">{c#}</div><div class="line">[System.Serializable]</div><div class="line">public class FloatEvent : UnityEvent&lt;float&gt; { }</div></div><!-- fragment --><p>Next create a class for the signal: </p><div class="fragment"><div class="line">{c#}</div><div class="line">[UnityEngine.CreateAssetMenu]</div><div class="line">public class FloatSignal : Signal&lt;float, FloatEvent&gt;</div><div class="line">{</div><div class="line">    protected override bool ValidateValue(float value)</div><div class="line">    {</div><div class="line">        return Value != value;</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p> By default signals will trigger the OnChanged event whenever a new value is assigned. By overriding the ValidateValue method you can validate the value and/or add a check to avoid unnecessarily triggering the event.</p>
+<p>First you need to create a class for the signal's OnChanged event: </p><div class="fragment"><div class="line">{c#}</div><div class="line">[System.Serializable]</div><div class="line">public class FloatEvent : UnityEvent&lt;float&gt; { }</div></div><!-- fragment --><p>Next create a class for the signal: </p><div class="fragment"><div class="line">{c#}</div><div class="line">[UnityEngine.CreateAssetMenu]</div><div class="line">public class FloatSignal : Signal&lt;float, FloatEvent&gt; { }</div></div><!-- fragment --><p> By default signals will trigger the OnChanged event whenever a new value is assigned. By overriding the ValidateValue method you can validate the value and/or add a check to avoid unnecessarily triggering the event. By default ValidateValue will use the Equals method for this check.</p>
 <p>Then create an editor class for your signal: </p><div class="fragment"><div class="line">{c#}</div><div class="line">[UnityEditor.CustomEditor(typeof(FloatSignal))]</div><div class="line">public class FloatSignalEditor : SignalEditor&lt;float, FloatEvent&gt;</div><div class="line">{</div><div class="line">    protected override void ValueField(Signal&lt;float, FloatEvent&gt; signal)</div><div class="line">    {</div><div class="line">        var value = EditorGUILayout.DelayedFloatField(signal);</div><div class="line">        if (value != signal) signal.Value = value;</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p> Overriding the ValueField method allows you to change the signal's value in the editor when the application is running. By default the value will be shown, but isn't editable. <br />
 You must check whether the value was really changed to avoid unnecessary value updates. </p><h3>Implementing A SignalListener</h3>
 <p>By inheriting from SignalListener you can create a Component that listens to a signal's OnChanged event and propagates it: </p><div class="fragment"><div class="line">{c#}</div><div class="line">public class FloatSignalListener : SignalListener&lt;float, FloatEvent, FloatSignal&gt; { }</div></div><!-- fragment --> <h3>Implementing A ValueReference</h3>
 <p>By inheriting from ValueReference you can use serializable fields in your scripts that can either hold a local value or a reference to a signal's value: </p><div class="fragment"><div class="line">{c#}</div><div class="line">[System.Serializable]</div><div class="line">public class FloatValueReference : ValueReference&lt;float, FloatEvent, FloatSignal&gt; { }</div></div><!-- fragment --><p>And to make it look nice in the editor: </p><div class="fragment"><div class="line">{c#}</div><div class="line">[UnityEditor.CustomPropertyDrawer(typeof(FloatValueReference))]</div><div class="line">public class FloatValueReferenceDrawer : ValueReferenceDrawer { }</div></div><!-- fragment --> <h3>Code Generation</h3>
-<p>You can find a simple code generator that can save you a lot of work <a href="https://github.com/jheiling/unity-signals-generator">here</a>. </p><h3>Example</h3>
-<p>See Example folder. </p><h2>Credits</h2>
+<p>You can find a simple code generator that can save you a lot of work <a href="https://github.com/jheiling/unity-signals-generator">here</a>. </p><h3>Examples</h3>
+<p>See Examples folder. </p><h2>Credits</h2>
 <p><a class="el" href="namespace_signals.html">Signals</a> was inspired by Ryan Hipple's <a href="https://www.youtube.com/watch?v=raQ3iHhE_Kk">talk</a> about game architecture with ScriptableObjects. I also nicked a bit of his code for the ValueReferenceDrawer class. You can find the source <a href="https://github.com/roboryantron/Unite2017">here</a>. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['signal_2ecs',['Signal.cs',['../_signal_8cs.html',1,'']]],
-  ['signaleditor_2ecs',['SignalEditor.cs',['../_signal_editor_8cs.html',1,'']]],
-  ['signallistener_2ecs',['SignalListener.cs',['../_signal_listener_8cs.html',1,'']]],
-  ['stringevent_2ecs',['StringEvent.cs',['../_string_event_8cs.html',1,'']]],
-  ['stringsignal_2ecs',['StringSignal.cs',['../_string_signal_8cs.html',1,'']]],
-  ['stringsignaleditor_2ecs',['StringSignalEditor.cs',['../_string_signal_editor_8cs.html',1,'']]],
-  ['stringsignallistener_2ecs',['StringSignalListener.cs',['../_string_signal_listener_8cs.html',1,'']]],
-  ['stringvaluereference_2ecs',['StringValueReference.cs',['../_string_value_reference_8cs.html',1,'']]],
-  ['stringvaluereferencedrawer_2ecs',['StringValueReferenceDrawer.cs',['../_string_value_reference_drawer_8cs.html',1,'']]]
+  ['quaternionevent_2ecs',['QuaternionEvent.cs',['../_quaternion_event_8cs.html',1,'']]],
+  ['quaternionsignal_2ecs',['QuaternionSignal.cs',['../_quaternion_signal_8cs.html',1,'']]],
+  ['quaternionsignaleditor_2ecs',['QuaternionSignalEditor.cs',['../_quaternion_signal_editor_8cs.html',1,'']]],
+  ['quaternionsignallistener_2ecs',['QuaternionSignalListener.cs',['../_quaternion_signal_listener_8cs.html',1,'']]],
+  ['quaternionvaluereference_2ecs',['QuaternionValueReference.cs',['../_quaternion_value_reference_8cs.html',1,'']]]
 ];

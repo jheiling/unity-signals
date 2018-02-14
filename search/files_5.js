@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logger_2ecs',['Logger.cs',['../_logger_8cs.html',1,'']]]
+  ['gravityysignalupdater_2ecs',['GravityYSignalUpdater.cs',['../_gravity_y_signal_updater_8cs.html',1,'']]]
 ];

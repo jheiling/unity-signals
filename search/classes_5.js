@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logger',['Logger',['../class_signals_1_1_example_1_1_logger.html',1,'Signals::Example']]]
+  ['gravityysignalupdater',['GravityYSignalUpdater',['../class_signals_1_1_examples_1_1_gravity_y_signal_updater.html',1,'Signals::Examples']]]
 ];

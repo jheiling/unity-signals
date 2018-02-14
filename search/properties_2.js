@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['onchanged',['OnChanged',['../interface_signals_1_1_i_signal.html#a0abb60b09f36c38579a848b666c89a50',1,'Signals.ISignal.OnChanged()'],['../class_signals_1_1_signal.html#af38c81101db272fd83d5443542908e38',1,'Signals.Signal.OnChanged()'],['../class_signals_1_1_signal_listener.html#a1b92d2b94746bc8bea06cbc7f7e2b879',1,'Signals.SignalListener.OnChanged()']]]
+  ['captureframerate',['CaptureFramerate',['../class_signals_1_1_utils_1_1_engine_1_1_time_settings.html#ac8e6aeaa2ff8fea597608faeffeaa1f4',1,'Signals.Utils.Engine.TimeSettings.CaptureFramerate()'],['../class_signals_1_1_utils_1_1_engine_1_1_time_wrapper.html#a04596a310c0980153d0881b5b164885b',1,'Signals.Utils.Engine.TimeWrapper.CaptureFramerate()']]]
 ];
