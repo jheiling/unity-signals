@@ -1,4 +1,4 @@
-# Signals For Unity3D
+# Signals For Unity3D v1.1.0
 ## Documentation
 You can find the API documentation [here](https://jheiling.github.io/unity-signals/).
 ## What Are Signals?
