@@ -1,4 +1,4 @@
-# Signals For Unity3D v1.1.0
+# Signals For Unity3D v1.2.0
 ## Documentation
 You can find the API documentation [here](https://jheiling.github.io/unity-signals/).
 ## What Are Signals?
@@ -68,4 +68,3 @@ You can find a simple code generator that can save you a lot of work [here](http
 See Examples folder.
 ## Credits
 Signals was inspired by Ryan Hipple's [talk](https://www.youtube.com/watch?v=raQ3iHhE_Kk) about game architecture with ScriptableObjects.
-I also nicked a bit of his code for the ValueReferenceDrawer class. You can find the source [here](https://github.com/roboryantron/Unite2017).
