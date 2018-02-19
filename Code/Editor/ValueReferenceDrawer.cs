@@ -10,42 +10,55 @@ namespace Signals
     /// </summary>
     public abstract class ValueReferenceDrawer : PropertyDrawer
     {
-        readonly static string[] popupOptions = { "Use Signal Value", "Use Local Value" };
-        static GUIStyle popupStyle;
+        readonly static string[] _popupOptions = { "Use Signal Value", "Use Local Value" };
+
+        readonly static GUIStyle _popupStyle = new GUIStyle(GUI.skin.GetStyle("PaneOptions"))
+        {
+            imagePosition = ImagePosition.ImageOnly
+        };
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
-            if (popupStyle == null)
-            {
-                popupStyle = new GUIStyle(GUI.skin.GetStyle("PaneOptions"));
-                popupStyle.imagePosition = ImagePosition.ImageOnly;
-            }
-
             label = EditorGUI.BeginProperty(position, label, property);
             position = EditorGUI.PrefixLabel(position, label);
 
             EditorGUI.BeginChangeCheck();
 
+            var popupPosition = new Rect(position.x, position.y + _popupStyle.margin.top, _popupStyle.fixedWidth + _popupStyle.margin.right, position.height);
             var useLocalValue = property.FindPropertyRelative("_useLocalValue");
-            var signal = property.FindPropertyRelative("_signal");
-            var localValue = property.FindPropertyRelative("_localValue");
+            useLocalValue.boolValue = EditorGUI.Popup(popupPosition, useLocalValue.boolValue ? 1 : 0, _popupOptions, _popupStyle) == 1;
 
-            var buttonRect = new Rect(position);
-            buttonRect.yMin += popupStyle.margin.top;
-            buttonRect.width = popupStyle.fixedWidth + popupStyle.margin.right;
-            position.xMin = buttonRect.xMax;
-
-            var indent = EditorGUI.indentLevel;
-            EditorGUI.indentLevel = 0;
-
-            useLocalValue.boolValue = EditorGUI.Popup(buttonRect, useLocalValue.boolValue ? 1 : 0, popupOptions, popupStyle) == 1;
-
-            EditorGUI.PropertyField(position, useLocalValue.boolValue ? localValue : signal, GUIContent.none);
+            position.xMin = popupPosition.xMax;
+            if (useLocalValue.boolValue) LocalValueField(position, property.FindPropertyRelative("_localValue"));
+            else EditorGUI.PropertyField(position, property.FindPropertyRelative("_signal"), GUIContent.none);
 
             if (EditorGUI.EndChangeCheck()) property.serializedObject.ApplyModifiedProperties();
 
-            EditorGUI.indentLevel = indent;
             EditorGUI.EndProperty();
+        }
+
+        /// <summary>
+        /// Override this method to implement a custom inspector for the <see cref="ValueReference.LocalValue"/>.
+        /// </summary>
+        /// <param name="position">The field's position.</param>
+        /// <param name="localValue">The SerializedProperty containing the value.</param>
+        protected virtual void LocalValueField(Rect position, SerializedProperty localValue)
+        {
+            EditorGUI.PropertyField(position, localValue, GUIContent.none, true);
+        }
+
+        public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+        {
+            return property.FindPropertyRelative("_useLocalValue").boolValue ? GetLocalValueFieldHeight() : EditorGUIUtility.singleLineHeight;
+        }
+
+        /// <summary>
+        /// Override this if your <see cref="LocalValueField"/> is higher than one line.
+        /// </summary>
+        /// <returns>The <see cref="LocalValueField"/>'s height.</returns>
+        protected virtual float GetLocalValueFieldHeight()
+        {
+            return EditorGUIUtility.singleLineHeight;
         }
     }
 }
