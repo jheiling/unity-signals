@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['logmovementinput',['LogMovementInput',['../class_signals_1_1_examples_1_1_logger.html#acf63b6694aafb48ce63209b0086fa00d',1,'Signals::Examples::Logger']]],
-  ['logundermousepointer',['LogUnderMousePointer',['../class_signals_1_1_examples_1_1_logger.html#ab7bdd6c0d6d173b74d8f3f31065a3283',1,'Signals::Examples::Logger']]]
+  ['break',['Break',['../class_signals_1_1_utils_1_1_engine_1_1_debug_wrapper.html#a5b03a52a2de6bb7b63d4ad5d26adad2b',1,'Signals::Utils::Engine::DebugWrapper']]]
 ];

@@ -38,13 +38,20 @@ var hierarchy =
         [ "Signals.Common.CharValueReferenceDrawer", "class_signals_1_1_common_1_1_char_value_reference_drawer.html", null ],
         [ "Signals.Common.FloatValueReferenceDrawer", "class_signals_1_1_common_1_1_float_value_reference_drawer.html", null ],
         [ "Signals.Common.IntValueReferenceDrawer", "class_signals_1_1_common_1_1_int_value_reference_drawer.html", null ],
-        [ "Signals.Common.StringValueReferenceDrawer", "class_signals_1_1_common_1_1_string_value_reference_drawer.html", null ]
+        [ "Signals.Common.QuaternionValueReferenceDrawer", "class_signals_1_1_common_1_1_quaternion_value_reference_drawer.html", null ],
+        [ "Signals.Common.StringValueReferenceDrawer", "class_signals_1_1_common_1_1_string_value_reference_drawer.html", null ],
+        [ "Signals.Common.Vector2IntValueReferenceDrawer", "class_signals_1_1_common_1_1_vector2_int_value_reference_drawer.html", null ],
+        [ "Signals.Common.Vector2ValueReferenceDrawer", "class_signals_1_1_common_1_1_vector2_value_reference_drawer.html", null ],
+        [ "Signals.Common.Vector3IntValueReferenceDrawer", "class_signals_1_1_common_1_1_vector3_int_value_reference_drawer.html", null ],
+        [ "Signals.Common.Vector3ValueReferenceDrawer", "class_signals_1_1_common_1_1_vector3_value_reference_drawer.html", null ],
+        [ "Signals.Common.Vector4ValueReferenceDrawer", "class_signals_1_1_common_1_1_vector4_value_reference_drawer.html", null ]
       ] ]
     ] ],
     [ "ScriptableObject", null, [
       [ "Signals.Examples.Logger", "class_signals_1_1_examples_1_1_logger.html", null ],
       [ "Signals.Signal< T, ET >", "class_signals_1_1_signal.html", null ],
       [ "Signals.Utils.Engine.ApplicationWrapper", "class_signals_1_1_utils_1_1_engine_1_1_application_wrapper.html", null ],
+      [ "Signals.Utils.Engine.DebugWrapper", "class_signals_1_1_utils_1_1_engine_1_1_debug_wrapper.html", null ],
       [ "Signals.Utils.Engine.PhysicsWrapper", "class_signals_1_1_utils_1_1_engine_1_1_physics_wrapper.html", null ],
       [ "Signals.Utils.Engine.TimeWrapper", "class_signals_1_1_utils_1_1_engine_1_1_time_wrapper.html", null ]
     ] ],

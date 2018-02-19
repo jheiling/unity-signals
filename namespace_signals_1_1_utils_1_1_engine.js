@@ -9,6 +9,7 @@ var namespace_signals_1_1_utils_1_1_engine =
     [ "ApplicationSetupEditor", "class_signals_1_1_utils_1_1_engine_1_1_application_setup_editor.html", null ],
     [ "ApplicationWrapper", "class_signals_1_1_utils_1_1_engine_1_1_application_wrapper.html", "class_signals_1_1_utils_1_1_engine_1_1_application_wrapper" ],
     [ "ApplicationWrapperEditor", "class_signals_1_1_utils_1_1_engine_1_1_application_wrapper_editor.html", "class_signals_1_1_utils_1_1_engine_1_1_application_wrapper_editor" ],
+    [ "DebugWrapper", "class_signals_1_1_utils_1_1_engine_1_1_debug_wrapper.html", "class_signals_1_1_utils_1_1_engine_1_1_debug_wrapper" ],
     [ "ISettings", "interface_signals_1_1_utils_1_1_engine_1_1_i_settings.html", "interface_signals_1_1_utils_1_1_engine_1_1_i_settings" ],
     [ "PhysicsSettings", "class_signals_1_1_utils_1_1_engine_1_1_physics_settings.html", "class_signals_1_1_utils_1_1_engine_1_1_physics_settings" ],
     [ "PhysicsSettingsEvent", "class_signals_1_1_utils_1_1_engine_1_1_physics_settings_event.html", null ],

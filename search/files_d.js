@@ -1,14 +1,16 @@
 var searchData=
 [
-  ['textsetter_2ecs',['TextSetter.cs',['../_text_setter_8cs.html',1,'']]],
-  ['timescalesignalupdater_2ecs',['TimeScaleSignalUpdater.cs',['../_time_scale_signal_updater_8cs.html',1,'']]],
-  ['timesettings_2ecs',['TimeSettings.cs',['../_time_settings_8cs.html',1,'']]],
-  ['timesettingsevent_2ecs',['TimeSettingsEvent.cs',['../_time_settings_event_8cs.html',1,'']]],
-  ['timesettingssignal_2ecs',['TimeSettingsSignal.cs',['../_time_settings_signal_8cs.html',1,'']]],
-  ['timesettingssignaleditor_2ecs',['TimeSettingsSignalEditor.cs',['../_time_settings_signal_editor_8cs.html',1,'']]],
-  ['timesettingsvaluereference_2ecs',['TimeSettingsValueReference.cs',['../_time_settings_value_reference_8cs.html',1,'']]],
-  ['timesetup_2ecs',['TimeSetup.cs',['../_time_setup_8cs.html',1,'']]],
-  ['timesetupeditor_2ecs',['TimeSetupEditor.cs',['../_time_setup_editor_8cs.html',1,'']]],
-  ['timewrapper_2ecs',['TimeWrapper.cs',['../_time_wrapper_8cs.html',1,'']]],
-  ['timewrappereditor_2ecs',['TimeWrapperEditor.cs',['../_time_wrapper_editor_8cs.html',1,'']]]
+  ['settingssignal_2ecs',['SettingsSignal.cs',['../_settings_signal_8cs.html',1,'']]],
+  ['settingssignaleditor_2ecs',['SettingsSignalEditor.cs',['../_settings_signal_editor_8cs.html',1,'']]],
+  ['setup_2ecs',['Setup.cs',['../_setup_8cs.html',1,'']]],
+  ['setupeditor_2ecs',['SetupEditor.cs',['../_setup_editor_8cs.html',1,'']]],
+  ['signal_2ecs',['Signal.cs',['../_signal_8cs.html',1,'']]],
+  ['signaleditor_2ecs',['SignalEditor.cs',['../_signal_editor_8cs.html',1,'']]],
+  ['signallistener_2ecs',['SignalListener.cs',['../_signal_listener_8cs.html',1,'']]],
+  ['stringevent_2ecs',['StringEvent.cs',['../_string_event_8cs.html',1,'']]],
+  ['stringsignal_2ecs',['StringSignal.cs',['../_string_signal_8cs.html',1,'']]],
+  ['stringsignaleditor_2ecs',['StringSignalEditor.cs',['../_string_signal_editor_8cs.html',1,'']]],
+  ['stringsignallistener_2ecs',['StringSignalListener.cs',['../_string_signal_listener_8cs.html',1,'']]],
+  ['stringvaluereference_2ecs',['StringValueReference.cs',['../_string_value_reference_8cs.html',1,'']]],
+  ['stringvaluereferencedrawer_2ecs',['StringValueReferenceDrawer.cs',['../_string_value_reference_drawer_8cs.html',1,'']]]
 ];

@@ -50,6 +50,8 @@ var menudata={children:[
 {text:"v",url:"functions.html#index_v"}]},
 {text:"Functions",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
+{text:"b",url:"functions_func.html#index_b"},
+{text:"g",url:"functions_func.html#index_g"},
 {text:"l",url:"functions_func.html#index_l"},
 {text:"o",url:"functions_func.html#index_o"},
 {text:"r",url:"functions_func.html#index_r"},

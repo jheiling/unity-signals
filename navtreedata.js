@@ -24,7 +24,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "UnitySignals", "index.html", [
-    [ "Signals For Unity3D v1.1.0", "md__r_e_a_d_m_e.html", null ],
+    [ "Signals For Unity3D v1.2.0", "md__r_e_a_d_m_e.html", null ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -48,7 +48,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_application_settings_8cs.html",
-"class_signals_1_1_utils_1_1_engine_1_1_physics_setup.html"
+"class_signals_1_1_utils_1_1_engine_1_1_debug_wrapper.html#a1233083a296da5af22fbd17dad72d053"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

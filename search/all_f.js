@@ -3,7 +3,7 @@ var searchData=
   ['common',['Common',['../namespace_signals_1_1_common.html',1,'Signals']]],
   ['engine',['Engine',['../namespace_signals_1_1_utils_1_1_engine.html',1,'Signals::Utils']]],
   ['examples',['Examples',['../namespace_signals_1_1_examples.html',1,'Signals']]],
-  ['signals_20for_20unity3d_20v1_2e1_2e0',['Signals For Unity3D v1.1.0',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['signals_20for_20unity3d_20v1_2e2_2e0',['Signals For Unity3D v1.2.0',['../md__r_e_a_d_m_e.html',1,'']]],
   ['settext',['SetText',['../class_signals_1_1_examples_1_1_text_setter.html#a579fe6ac192b1d41533fdfd5292da911',1,'Signals.Examples.TextSetter.SetText(float value)'],['../class_signals_1_1_examples_1_1_text_setter.html#aed6cc4ec785410893f30fb2a7e47142f',1,'Signals.Examples.TextSetter.SetText(Vector3 value)']]],
   ['settings',['Settings',['../class_signals_1_1_utils_1_1_engine_1_1_setup.html#afa38411a6d339542fc45821dd7d3359f',1,'Signals::Utils::Engine::Setup']]],
   ['settingssignal',['SettingsSignal',['../class_signals_1_1_utils_1_1_engine_1_1_settings_signal.html',1,'Signals::Utils::Engine']]],

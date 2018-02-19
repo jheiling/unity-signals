@@ -19,6 +19,9 @@ var dir_1b6db5d6baa88f7c2260dca76a1688ef =
     [ "ApplicationWrapper.cs", "_application_wrapper_8cs.html", [
       [ "ApplicationWrapper", "class_signals_1_1_utils_1_1_engine_1_1_application_wrapper.html", "class_signals_1_1_utils_1_1_engine_1_1_application_wrapper" ]
     ] ],
+    [ "DebugWrapper.cs", "_debug_wrapper_8cs.html", [
+      [ "DebugWrapper", "class_signals_1_1_utils_1_1_engine_1_1_debug_wrapper.html", "class_signals_1_1_utils_1_1_engine_1_1_debug_wrapper" ]
+    ] ],
     [ "ISettings.cs", "_i_settings_8cs.html", [
       [ "ISettings", "interface_signals_1_1_utils_1_1_engine_1_1_i_settings.html", "interface_signals_1_1_utils_1_1_engine_1_1_i_settings" ]
     ] ],

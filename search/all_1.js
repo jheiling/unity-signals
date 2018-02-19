@@ -13,5 +13,6 @@ var searchData=
   ['boolvaluereference_2ecs',['BoolValueReference.cs',['../_bool_value_reference_8cs.html',1,'']]],
   ['boolvaluereferencedrawer',['BoolValueReferenceDrawer',['../class_signals_1_1_common_1_1_bool_value_reference_drawer.html',1,'Signals::Common']]],
   ['boolvaluereferencedrawer_2ecs',['BoolValueReferenceDrawer.cs',['../_bool_value_reference_drawer_8cs.html',1,'']]],
-  ['bouncethreshold',['BounceThreshold',['../class_signals_1_1_utils_1_1_engine_1_1_physics_settings.html#a98838ddb67816b7feb7ec71209713251',1,'Signals.Utils.Engine.PhysicsSettings.BounceThreshold()'],['../class_signals_1_1_utils_1_1_engine_1_1_physics_wrapper.html#a5a0703c6ba5cfd5180f9bd80c93c43a3',1,'Signals.Utils.Engine.PhysicsWrapper.BounceThreshold()']]]
+  ['bouncethreshold',['BounceThreshold',['../class_signals_1_1_utils_1_1_engine_1_1_physics_settings.html#a98838ddb67816b7feb7ec71209713251',1,'Signals.Utils.Engine.PhysicsSettings.BounceThreshold()'],['../class_signals_1_1_utils_1_1_engine_1_1_physics_wrapper.html#a5a0703c6ba5cfd5180f9bd80c93c43a3',1,'Signals.Utils.Engine.PhysicsWrapper.BounceThreshold()']]],
+  ['break',['Break',['../class_signals_1_1_utils_1_1_engine_1_1_debug_wrapper.html#a5b03a52a2de6bb7b63d4ad5d26adad2b',1,'Signals::Utils::Engine::DebugWrapper']]]
 ];

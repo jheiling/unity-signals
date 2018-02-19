@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UnitySignals: Signals For Unity3D v1.1.0</title>
+<title>UnitySignals: Signals For Unity3D v1.2.0</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title"><a class="el" href="namespace_signals.html">Signals</a> For Unity3D v1.1.0 </div>  </div>
+<div class="title"><a class="el" href="namespace_signals.html">Signals</a> For Unity3D v1.2.0 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h2>Documentation</h2>
@@ -104,7 +104,7 @@ You must check whether the value was really changed to avoid unnecessary value u
 <p>By inheriting from ValueReference you can use serializable fields in your scripts that can either hold a local value or a reference to a signal's value: </p><div class="fragment"><div class="line">{c#}</div><div class="line">[System.Serializable]</div><div class="line">public class FloatValueReference : ValueReference&lt;float, FloatEvent, FloatSignal&gt; { }</div></div><!-- fragment --><p>And to make it look nice in the editor: </p><div class="fragment"><div class="line">{c#}</div><div class="line">[UnityEditor.CustomPropertyDrawer(typeof(FloatValueReference))]</div><div class="line">public class FloatValueReferenceDrawer : ValueReferenceDrawer { }</div></div><!-- fragment --> <h3>Code Generation</h3>
 <p>You can find a simple code generator that can save you a lot of work <a href="https://github.com/jheiling/unity-signals-generator">here</a>. </p><h3>Examples</h3>
 <p>See Examples folder. </p><h2>Credits</h2>
-<p><a class="el" href="namespace_signals.html">Signals</a> was inspired by Ryan Hipple's <a href="https://www.youtube.com/watch?v=raQ3iHhE_Kk">talk</a> about game architecture with ScriptableObjects. I also nicked a bit of his code for the ValueReferenceDrawer class. You can find the source <a href="https://github.com/roboryantron/Unite2017">here</a>. </p>
+<p><a class="el" href="namespace_signals.html">Signals</a> was inspired by Ryan Hipple's <a href="https://www.youtube.com/watch?v=raQ3iHhE_Kk">talk</a> about game architecture with ScriptableObjects. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -27,6 +27,9 @@ var dir_7c12ce4dbd4a29d366e033e2e4725a19 =
     [ "QuaternionSignalEditor.cs", "_quaternion_signal_editor_8cs.html", [
       [ "QuaternionSignalEditor", "class_signals_1_1_common_1_1_quaternion_signal_editor.html", "class_signals_1_1_common_1_1_quaternion_signal_editor" ]
     ] ],
+    [ "QuaternionValueReferenceDrawer.cs", "_quaternion_value_reference_drawer_8cs.html", [
+      [ "QuaternionValueReferenceDrawer", "class_signals_1_1_common_1_1_quaternion_value_reference_drawer.html", "class_signals_1_1_common_1_1_quaternion_value_reference_drawer" ]
+    ] ],
     [ "StringSignalEditor.cs", "_string_signal_editor_8cs.html", [
       [ "StringSignalEditor", "class_signals_1_1_common_1_1_string_signal_editor.html", "class_signals_1_1_common_1_1_string_signal_editor" ]
     ] ],
@@ -36,16 +39,31 @@ var dir_7c12ce4dbd4a29d366e033e2e4725a19 =
     [ "Vector2IntSignalEditor.cs", "_vector2_int_signal_editor_8cs.html", [
       [ "Vector2IntSignalEditor", "class_signals_1_1_common_1_1_vector2_int_signal_editor.html", "class_signals_1_1_common_1_1_vector2_int_signal_editor" ]
     ] ],
+    [ "Vector2IntValueReferenceDrawer.cs", "_vector2_int_value_reference_drawer_8cs.html", [
+      [ "Vector2IntValueReferenceDrawer", "class_signals_1_1_common_1_1_vector2_int_value_reference_drawer.html", null ]
+    ] ],
     [ "Vector2SignalEditor.cs", "_vector2_signal_editor_8cs.html", [
       [ "Vector2SignalEditor", "class_signals_1_1_common_1_1_vector2_signal_editor.html", "class_signals_1_1_common_1_1_vector2_signal_editor" ]
+    ] ],
+    [ "Vector2ValueReferenceDrawer.cs", "_vector2_value_reference_drawer_8cs.html", [
+      [ "Vector2ValueReferenceDrawer", "class_signals_1_1_common_1_1_vector2_value_reference_drawer.html", null ]
     ] ],
     [ "Vector3IntSignalEditor.cs", "_vector3_int_signal_editor_8cs.html", [
       [ "Vector3IntSignalEditor", "class_signals_1_1_common_1_1_vector3_int_signal_editor.html", "class_signals_1_1_common_1_1_vector3_int_signal_editor" ]
     ] ],
+    [ "Vector3IntValueReferenceDrawer.cs", "_vector3_int_value_reference_drawer_8cs.html", [
+      [ "Vector3IntValueReferenceDrawer", "class_signals_1_1_common_1_1_vector3_int_value_reference_drawer.html", null ]
+    ] ],
     [ "Vector3SignalEditor.cs", "_vector3_signal_editor_8cs.html", [
       [ "Vector3SignalEditor", "class_signals_1_1_common_1_1_vector3_signal_editor.html", "class_signals_1_1_common_1_1_vector3_signal_editor" ]
     ] ],
+    [ "Vector3ValueReferenceDrawer.cs", "_vector3_value_reference_drawer_8cs.html", [
+      [ "Vector3ValueReferenceDrawer", "class_signals_1_1_common_1_1_vector3_value_reference_drawer.html", null ]
+    ] ],
     [ "Vector4SignalEditor.cs", "_vector4_signal_editor_8cs.html", [
       [ "Vector4SignalEditor", "class_signals_1_1_common_1_1_vector4_signal_editor.html", "class_signals_1_1_common_1_1_vector4_signal_editor" ]
+    ] ],
+    [ "Vector4ValueReferenceDrawer.cs", "_vector4_value_reference_drawer_8cs.html", [
+      [ "Vector4ValueReferenceDrawer", "class_signals_1_1_common_1_1_vector4_value_reference_drawer.html", "class_signals_1_1_common_1_1_vector4_value_reference_drawer" ]
     ] ]
 ];
