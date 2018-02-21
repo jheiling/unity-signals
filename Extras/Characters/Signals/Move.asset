@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5de45cd184ae9448c287e2e9bac991, type: 3}
+  m_Name: Move
+  m_EditorClassIdentifier: 
+  _description: 
+  _serializeChanges: 0
+  _initialValue: {x: 0, y: 0}
+  _onChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Signals.Common.Vector2Event, Signals, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  _useValidation: 1

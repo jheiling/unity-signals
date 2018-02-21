@@ -1,4 +1,4 @@
-# Signals For Unity3D v1.2.0
+# Signals For Unity3D v2.0.0-alpha
 ## Documentation
 You can find the API documentation [here](https://jheiling.github.io/unity-signals/).
 ## What Are Signals?
@@ -30,21 +30,17 @@ By default signals will trigger the OnChanged event whenever a new value is assi
 By overriding the ValidateValue method you can validate the value and/or add a check to avoid unnecessarily triggering the event.
 By default ValidateValue will use the Equals method for this check.
 
-Then create an editor class for your signal:
+If you want to have a nice inspector create an editor class for your signal and override the ValueField method:
 ```c#
 [UnityEditor.CustomEditor(typeof(FloatSignal))]
 public class FloatSignalEditor : SignalEditor<float, FloatEvent>
 {
-    protected override void ValueField(Signal<float, FloatEvent> signal)
+    protected override float ValueField(float value)
     {
-        var value = EditorGUILayout.DelayedFloatField(signal);
-        if (value != signal) signal.Value = value;
+        return EditorGUILayout.DelayedFloatField(value);
     }
 }
 ```
-Overriding the ValueField method allows you to change the signal's value in the editor when the application is running.
-By default the value will be shown, but isn't editable.  
-You must check whether the value was really changed to avoid unnecessary value updates.
 ### Implementing A SignalListener
 By inheriting from SignalListener you can create a Component that listens to a signal's OnChanged event and propagates it:
 ```c#
@@ -54,7 +50,11 @@ public class FloatSignalListener : SignalListener<float, FloatEvent, FloatSignal
 By inheriting from ValueReference you can use serializable fields in your scripts that can either hold a local value or a reference to a signal's value:
 ```c#
 [System.Serializable]
-public class FloatValueReference : ValueReference<float, FloatEvent, FloatSignal> { }
+public class FloatValueReference : ValueReference<float, FloatEvent, FloatSignal> 
+{
+    public FloatValueReference() { }
+    public FloatValueReference(float localValue) : base(localValue) { }
+}
 ```
 
 And to make it look nice in the editor:
