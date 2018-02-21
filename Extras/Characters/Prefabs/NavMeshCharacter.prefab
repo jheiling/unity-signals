@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 114664857564302356}
   - component: {fileID: 114507914540082106}
   m_Layer: 0
-  m_Name: TopDownCharacter
+  m_Name: NavMeshCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

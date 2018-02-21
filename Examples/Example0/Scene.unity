@@ -882,7 +882,7 @@ GameObject:
   - component: {fileID: 1064793886}
   - component: {fileID: 1064793885}
   m_Layer: 0
-  m_Name: TopDownPlayerCharacterInput
+  m_Name: CharacterInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
