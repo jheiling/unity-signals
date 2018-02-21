@@ -8,12 +8,12 @@ namespace Signals.Extras.Characters
     [Serializable]
     public class RigidbodyCharacterSettings
     {
-        [SerializeField] float _forwardSpeed = 8f;
-        [SerializeField] float _backwardSpeed = 4f;
-        [SerializeField] float _strafeSpeed = 4f;
+        [SerializeField] float _forwardForce = 40f;
+        [SerializeField] float _backwardForce = 20f;
+        [SerializeField] float _strafeForce = 20f;
         [SerializeField] float _runMultiplier = 2f;
         [SerializeField] AnimationCurve _slopeModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
-        [SerializeField] float _jumpForce = 50f;
+        [SerializeField] float _jumpForce = 400f;
         [SerializeField] bool _airControl;
         [SerializeField] float _groundDrag = 5f;
         [SerializeField] float _airDrag;
@@ -24,42 +24,42 @@ namespace Signals.Extras.Characters
         [SerializeField] float _stickToGroundDistance = .6f;
         [SerializeField] float _shellOffset = .1f;
 
-        public float ForwardSpeed
+        public float ForwardForce
         {
             get
             {
-                return _forwardSpeed;
+                return _forwardForce;
             }
 
             set
             {
-                _forwardSpeed = value;
+                _forwardForce = value;
             }
         }
 
-        public float BackwardSpeed
+        public float BackwardForce
         {
             get
             {
-                return _backwardSpeed;
+                return _backwardForce;
             }
 
             set
             {
-                _backwardSpeed = value;
+                _backwardForce = value;
             }
         }
 
-        public float StrafeSpeed
+        public float StrafeForce
         {
             get
             {
-                return _strafeSpeed;
+                return _strafeForce;
             }
 
             set
             {
-                _strafeSpeed = value;
+                _strafeForce = value;
             }
         }
 

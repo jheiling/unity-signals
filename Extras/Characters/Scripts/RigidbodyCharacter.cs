@@ -179,8 +179,8 @@ namespace Signals.Extras.Characters
 
                 if (!Mathf.Approximately(moveX, 0f) || !Mathf.Approximately(moveZ, 0f))
                 {
-                    moveX *= _settings.Value.StrafeSpeed;
-                    moveZ *= moveZ > 0 ? _settings.Value.ForwardSpeed : _settings.Value.BackwardSpeed;
+                    moveX *= _settings.Value.StrafeForce;
+                    moveZ *= moveZ > 0 ? _settings.Value.ForwardForce : _settings.Value.BackwardForce;
 
                     if (_runSignal != null && _runSignal.Value)
                     {
