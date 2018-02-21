@@ -140,7 +140,10 @@ namespace Signals.Extras.Characters
 
         void Turn(float oldRotationY)
         {
-            if (_isGrounded) _rigidbody.velocity = Quaternion.AngleAxis(_transform.eulerAngles.y - oldRotationY, Vector3.up) * _rigidbody.velocity;
+            if (_isGrounded || _settings.Value.AirControl)
+            {
+                _rigidbody.velocity = Quaternion.AngleAxis(_transform.eulerAngles.y - oldRotationY, Vector3.up) * _rigidbody.velocity;
+            }
         }
 
         void FixedUpdate()
@@ -150,7 +153,7 @@ namespace Signals.Extras.Characters
                 var wasGrounded = _isGrounded;
                 RaycastHit hit;
 
-                if (Physics.SphereCast(_transform.position, _collider.radius, Vector3.down, out hit,
+                if (Physics.SphereCast(_transform.position, _collider.radius * (1f - _settings.Value.ShellOffset), Vector3.down, out hit,
                     _collider.height * .5f - _collider.radius + _settings.Value.GroundCheckDistance))
                 {
                     _isGrounded = true;
@@ -160,7 +163,8 @@ namespace Signals.Extras.Characters
                 else
                 {
                     _isGrounded = false;
-                    _rigidbody.drag = 0f;
+                    if (_settings.Value.AirControl) Move(Vector3.up);
+                    _rigidbody.drag = _settings.Value.AirDrag;
                     StickToGround(wasGrounded, ref hit);
                 }
             }
@@ -199,21 +203,21 @@ namespace Signals.Extras.Characters
             if (_jumpSignal != null && _jumpSignal.Value)
             {
                 _isJumping = true;
-                _rigidbody.drag = 0f;
+                _rigidbody.drag = _settings.Value.AirDrag;
                 _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, 0f, _rigidbody.velocity.z);
                 _rigidbody.AddForce(new Vector3(0f, _settings.Value.JumpForce), ForceMode.Impulse);
             }
             else
             {
                 if (!wasGrounded) _isJumping = false;
-                _rigidbody.drag = 5f;
+                _rigidbody.drag = _settings.Value.GroundDrag;
             }
         }
 
         void StickToGround(bool wasGrounded, ref RaycastHit hit)
         {
             if (wasGrounded && !_isJumping &&
-                Physics.SphereCast(_transform.position, _collider.radius, Vector3.down, out hit,
+                Physics.SphereCast(_transform.position, _collider.radius * (1f - _settings.Value.ShellOffset), Vector3.down, out hit,
                     _collider.height * .5f - _collider.radius + _settings.Value.StickToGroundDistance) &&
                 Mathf.Abs(Vector3.Angle(hit.normal, Vector3.up)) < 85f)
             {

@@ -13,12 +13,16 @@ namespace Signals.Extras.Characters
         [SerializeField] float _strafeSpeed = 4f;
         [SerializeField] float _runMultiplier = 2f;
         [SerializeField] AnimationCurve _slopeModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
-        [SerializeField] float _jumpForce = 500f;
+        [SerializeField] float _jumpForce = 50f;
+        [SerializeField] bool _airControl;
+        [SerializeField] float _groundDrag = 5f;
+        [SerializeField] float _airDrag;
         [SerializeField] float _minimumLookX = -45f;
         [SerializeField] float _maximumLookX = 90f;
         [SerializeField] float _smoothLookTime = 18f;
         [SerializeField] float _groundCheckDistance = .1f;
         [SerializeField] float _stickToGroundDistance = .6f;
+        [SerializeField] float _shellOffset = .1f;
 
         public float ForwardSpeed
         {
@@ -98,6 +102,45 @@ namespace Signals.Extras.Characters
             }
         }
 
+        public bool AirControl
+        {
+            get
+            {
+                return _airControl;
+            }
+
+            set
+            {
+                _airControl = value;
+            }
+        }
+
+        public float GroundDrag
+        {
+            get
+            {
+                return _groundDrag;
+            }
+
+            set
+            {
+                _groundDrag = value;
+            }
+        }
+
+        public float AirDrag
+        {
+            get
+            {
+                return _airDrag;
+            }
+
+            set
+            {
+                _airDrag = value;
+            }
+        }
+
         public float MinimumLookX
         {
             get
@@ -160,6 +203,19 @@ namespace Signals.Extras.Characters
             set
             {
                 _stickToGroundDistance = value;
+            }
+        }
+
+        public float ShellOffset
+        {
+            get
+            {
+                return _shellOffset;
+            }
+
+            set
+            {
+                _shellOffset = value;
             }
         }
     }
