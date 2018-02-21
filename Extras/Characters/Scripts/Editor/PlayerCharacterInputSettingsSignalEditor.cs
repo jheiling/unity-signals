@@ -4,6 +4,6 @@ using UnityEditor;
 
 namespace Signals.Extras.Characters
 {
-    [CustomEditor(typeof(PlayerCharacterInputSettingsSignal))]
-    public class PlayerCharacterInputSettingsSignalEditor : SignalEditor<PlayerCharacterInputSettings, PlayerCharacterInputSettingsEvent> { }
+    [CustomEditor(typeof(FirstPersonPlayerCharacterInputSettingsSignal))]
+    public class PlayerCharacterInputSettingsSignalEditor : SignalEditor<FirstPersonPlayerCharacterInputSettings, FirstPersonPlayerCharacterInputSettingsEvent> { }
 }

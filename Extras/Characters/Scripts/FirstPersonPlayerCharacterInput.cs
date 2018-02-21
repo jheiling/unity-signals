@@ -5,16 +5,16 @@ using Signals.Common;
 
 namespace Signals.Extras.Characters
 {
-    [AddComponentMenu("Signals/Extras/Characters/PlayerCharacterInput")]
-    public class PlayerCharacterInput : MonoBehaviour
+    [AddComponentMenu("Signals/Extras/Characters/FirstPersonPlayerCharacterInput")]
+    public class FirstPersonPlayerCharacterInput : MonoBehaviour
     {
-        [SerializeField] PlayerCharacterInputSettingsValueReference _settings;
+        [SerializeField] FirstPersonPlayerCharacterInputSettingsValueReference _settings;
         [SerializeField] CharacterMoveSignal _moveSignal;
         [SerializeField] BoolSignal _runSignal;
         [SerializeField] BoolSignal _jumpSignal;
         [SerializeField] Vector2Signal _lookSignal;
 
-        public PlayerCharacterInputSettings Settings
+        public FirstPersonPlayerCharacterInputSettings Settings
         {
             get
             {

@@ -11,7 +11,8 @@ namespace Signals
     /// </summary>
     /// <typeparam name="T">The type of the <see cref="Value"/>.</typeparam>
     /// <typeparam name="ET">The type of the <see cref="OnChanged"/> event.</typeparam>
-    public abstract class Signal<T, ET> : ScriptableObject, ISignal<T, ET> where ET : UnityEvent<T>, new()
+    public abstract class Signal<T, ET> : ScriptableObject, ISignal<T, ET> 
+        where ET : UnityEvent<T>, new()
     {
 #if UNITY_EDITOR
 #pragma warning disable
@@ -123,7 +124,16 @@ namespace Signals
         /// <param name="signal">The Signal.</param>
         public static implicit operator T(Signal<T, ET> signal)
         {
-            return signal.Value;
+            return signal._value;
+        }
+
+        /// <summary>
+        /// Implicit cast from the Signal to it's <see cref="OnChanged"/> Event.
+        /// </summary>
+        /// <param name="signal">The Signal.</param>
+        public static implicit operator ET(Signal<T, ET> signal)
+        {
+            return signal._onChanged;
         }
     }
 }

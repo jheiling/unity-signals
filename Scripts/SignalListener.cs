@@ -11,7 +11,9 @@ namespace Signals
     /// <typeparam name="T">The type of the <see cref="Signal.Value"/>.</typeparam>
     /// <typeparam name="ET">The type of the <see cref="Signal.OnChanged"/> event.</typeparam>
     /// <typeparam name="ST">The type of the Signal.</typeparam>
-    public abstract class SignalListener<T, ET, ST> : MonoBehaviour where ET : UnityEvent<T>, new() where ST : Signal<T, ET>
+    public abstract class SignalListener<T, ET, ST> : MonoBehaviour 
+        where ET : UnityEvent<T>, new() 
+        where ST : ISignal<T, ET>
     {
 #if UNITY_EDITOR
 #pragma warning disable
@@ -84,16 +86,16 @@ namespace Signals
 
         void AddListener()
         {
-            if (_signal)
+            if (!_signal.Equals(null))
             {
                 _signal.OnChanged.AddListener(_onChanged.Invoke);
-                if (_invokeImmediately) _onChanged.Invoke(_signal);
+                if (_invokeImmediately) _onChanged.Invoke(_signal.Value);
             }
         }
 
         void RemoveListener()
         {
-            if (_signal) _signal.OnChanged.RemoveListener(_onChanged.Invoke);
+            if (!_signal.Equals(null)) _signal.OnChanged.RemoveListener(_onChanged.Invoke);
         }
     }
 }

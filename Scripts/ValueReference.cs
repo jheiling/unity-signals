@@ -12,7 +12,9 @@ namespace Signals
     /// <typeparam name="T">The type of the <see cref="Signal.Value"/>.</typeparam>
     /// <typeparam name="ET">The type of the <see cref="Signal.OnChanged"/> event.</typeparam>
     /// <typeparam name="ST">The type of the Signal.</typeparam>
-    public abstract class ValueReference<T, ET, ST> where ET : UnityEvent<T>, new() where ST : Signal<T, ET>
+    public abstract class ValueReference<T, ET, ST> 
+        where ET : UnityEvent<T>, new() 
+        where ST : ISignal<T, ET>
     {
         [SerializeField] bool _useLocalValue;
         [SerializeField] ST _signal;
@@ -94,8 +96,8 @@ namespace Signals
                 }
                 else
                 {
-                    if (!_signal) throw new NullReferenceException();
-                    return _signal;
+                    if (_signal.Equals(null)) throw new NullReferenceException();
+                    return _signal.Value;
                 }
             }
 
@@ -108,7 +110,7 @@ namespace Signals
                 }
                 else
                 {
-                    if (!_signal) throw new NullReferenceException();
+                    if (_signal.Equals(null)) throw new NullReferenceException();
                     _signal.Value = value;
                 }
             }

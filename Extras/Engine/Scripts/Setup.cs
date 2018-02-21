@@ -8,7 +8,7 @@ namespace Signals.Extras.Engine
     public abstract class Setup<T, ET, ST, VT> : MonoBehaviour, ISettings 
         where T : ISettings, new()
         where ET : UnityEvent<T>, new() 
-        where ST : Signal<T, ET> 
+        where ST : ISignal<T, ET> 
         where VT : ValueReference<T, ET, ST>
     {
         [SerializeField] VT _settings;
