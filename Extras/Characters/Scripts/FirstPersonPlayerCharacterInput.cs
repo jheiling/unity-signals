@@ -90,7 +90,7 @@ namespace Signals.Extras.Characters
             {
                 if (_moveSignal) _moveSignal.Value = new Vector2(Input.GetAxis(_settings.Value.MoveXAxis), Input.GetAxis(_settings.Value.MoveZAxis));
                 if (_runSignal != null) _runSignal.Value = Input.GetButton(_settings.Value.RunButton);
-                if (_jumpSignal != null) _jumpSignal.Value = Input.GetButtonDown(_settings.Value.JumpButton);
+                if (_jumpSignal != null) _jumpSignal.Value = Input.GetButton(_settings.Value.JumpButton);
                 if (_lookSignal)
                 {
                     _lookSignal.Value = new Vector2(-Input.GetAxis(_settings.Value.LookXAxis) * _settings.Value.LookSensitivity,
