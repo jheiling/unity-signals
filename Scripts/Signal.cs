@@ -96,6 +96,14 @@ namespace Signals
         }
 
         /// <summary>
+        /// Triggers the <see cref="OnChanged"/> event with the current value.
+        /// </summary>
+        public void ForceChange()
+        {
+            _onChanged.Invoke(_value);
+        }
+
+        /// <summary>
         /// Override this method to preprocess values before applying them.
         /// </summary>
         /// <param name="value">The value to process</param>

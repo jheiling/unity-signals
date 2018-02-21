@@ -22,5 +22,10 @@ namespace Signals
         /// The event invoked when a <see cref="Value"/> is assigned to the Signal.
         /// </summary>
         ET OnChanged { get; }
+
+        /// <summary>
+        /// Triggers the <see cref="OnChanged"/> event with the current value.
+        /// </summary>
+        void ForceChange();
     }
 }
