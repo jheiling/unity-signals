@@ -1,0 +1,5 @@
+var class_signals_1_1_extras_1_1_characters_1_1_player_character_input_settings_value_reference =
+[
+    [ "PlayerCharacterInputSettingsValueReference", "class_signals_1_1_extras_1_1_characters_1_1_player_character_input_settings_value_reference.html#aa7908b0f988bfe010bf80b1ad8af4cc8", null ],
+    [ "PlayerCharacterInputSettingsValueReference", "class_signals_1_1_extras_1_1_characters_1_1_player_character_input_settings_value_reference.html#aabd86861bd936cd1b7137f85d72c034e", null ]
+];

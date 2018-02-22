@@ -105,12 +105,12 @@ Inheritance diagram for Signals.Common.BoolSignalEditor:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a77376e82955f69aed6a83690ba234a28"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signals_1_1_common_1_1_bool_signal_editor.html#a77376e82955f69aed6a83690ba234a28">ValueField</a> (<a class="el" href="class_signals_1_1_signal.html">Signal</a>&lt; bool, <a class="el" href="class_signals_1_1_common_1_1_bool_event.html">BoolEvent</a> &gt; signal)</td></tr>
-<tr class="separator:a77376e82955f69aed6a83690ba234a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2090446da84961798e75225fee961a3"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signals_1_1_common_1_1_bool_signal_editor.html#aa2090446da84961798e75225fee961a3">ValueField</a> (bool value)</td></tr>
+<tr class="separator:aa2090446da84961798e75225fee961a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_signals_1_1_signal_editor"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_signals_1_1_signal_editor')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_signals_1_1_signal_editor.html">Signals.SignalEditor&lt; bool, BoolEvent &gt;</a></td></tr>
-<tr class="memitem:a13b1278e6768d37fecf783057ff9becd inherit pro_methods_class_signals_1_1_signal_editor"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signals_1_1_signal_editor.html#a13b1278e6768d37fecf783057ff9becd">ValueField</a> (<a class="el" href="class_signals_1_1_signal.html">Signal</a>&lt; T, ET &gt; signal)</td></tr>
-<tr class="memdesc:a13b1278e6768d37fecf783057ff9becd inherit pro_methods_class_signals_1_1_signal_editor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to provide an editable field for the current Signal.Value when the application is running in the editor.  <a href="class_signals_1_1_signal_editor.html#a13b1278e6768d37fecf783057ff9becd">More...</a><br /></td></tr>
-<tr class="separator:a13b1278e6768d37fecf783057ff9becd inherit pro_methods_class_signals_1_1_signal_editor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8dad73b84c0fa7dc148cc20bc26039 inherit pro_methods_class_signals_1_1_signal_editor"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signals_1_1_signal_editor.html#a0d8dad73b84c0fa7dc148cc20bc26039">ValueField</a> (T value)</td></tr>
+<tr class="memdesc:a0d8dad73b84c0fa7dc148cc20bc26039 inherit pro_methods_class_signals_1_1_signal_editor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to provide an editable field for the <a class="el" href="">, and for the current </a> when the application is running.  <a href="class_signals_1_1_signal_editor.html#a0d8dad73b84c0fa7dc148cc20bc26039">More...</a><br /></td></tr>
+<tr class="separator:a0d8dad73b84c0fa7dc148cc20bc26039 inherit pro_methods_class_signals_1_1_signal_editor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -121,8 +121,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a48e5dac2693bc72e536bb8aff5b8a1d4 inherit pub_methods_class_signals_1_1_signal_editor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a77376e82955f69aed6a83690ba234a28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77376e82955f69aed6a83690ba234a28">&#9670;&nbsp;</a></span>ValueField()</h2>
+<a id="aa2090446da84961798e75225fee961a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2090446da84961798e75225fee961a3">&#9670;&nbsp;</a></span>ValueField()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,10 +131,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">override void Signals.Common.BoolSignalEditor.ValueField </td>
+          <td class="memname">override bool Signals.Common.BoolSignalEditor.ValueField </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_signals_1_1_signal.html">Signal</a>&lt; bool, <a class="el" href="class_signals_1_1_common_1_1_bool_event.html">BoolEvent</a> &gt;&#160;</td>
-          <td class="paramname"><em>signal</em></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -148,7 +148,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Code/Common/Editor/<a class="el" href="_bool_signal_editor_8cs.html">BoolSignalEditor.cs</a></li>
+<li>Scripts/Common/Editor/<a class="el" href="_bool_signal_editor_8cs.html">BoolSignalEditor.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

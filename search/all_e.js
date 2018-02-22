@@ -1,10 +1,17 @@
 var searchData=
 [
-  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['requiresconstantrepaint',['RequiresConstantRepaint',['../class_signals_1_1_signal_editor.html#a48e5dac2693bc72e536bb8aff5b8a1d4',1,'Signals.SignalEditor.RequiresConstantRepaint()'],['../class_signals_1_1_utils_1_1_engine_1_1_wrapper_editor.html#a5b9a0a63a92abb902db0e97a3af59cd1',1,'Signals.Utils.Engine.WrapperEditor.RequiresConstantRepaint()']]],
-  ['resetbelow',['ResetBelow',['../class_signals_1_1_examples_1_1_falling_cube.html#a6fdee368c1898956b0b2d93e4ec8e6b7',1,'Signals::Examples::FallingCube']]],
-  ['resetto',['ResetTo',['../class_signals_1_1_examples_1_1_falling_cube.html#af3ddacfeb677877fccfb9ffc50b39279',1,'Signals::Examples::FallingCube']]],
-  ['rotationtracker',['RotationTracker',['../class_signals_1_1_utils_1_1_rotation_tracker.html',1,'Signals::Utils']]],
-  ['rotationtracker_2ecs',['RotationTracker.cs',['../_rotation_tracker_8cs.html',1,'']]],
-  ['runinbackground',['RunInBackground',['../class_signals_1_1_utils_1_1_engine_1_1_application_settings.html#a81f9b1863336a60b5492347893fd3500',1,'Signals.Utils.Engine.ApplicationSettings.RunInBackground()'],['../class_signals_1_1_utils_1_1_engine_1_1_application_wrapper.html#a1eb8b1c5a28414516f16897e1280012d',1,'Signals.Utils.Engine.ApplicationWrapper.RunInBackground()']]]
+  ['quaternionevent',['QuaternionEvent',['../class_signals_1_1_common_1_1_quaternion_event.html',1,'Signals::Common']]],
+  ['quaternionevent_2ecs',['QuaternionEvent.cs',['../_quaternion_event_8cs.html',1,'']]],
+  ['quaternionsignal',['QuaternionSignal',['../class_signals_1_1_common_1_1_quaternion_signal.html',1,'Signals::Common']]],
+  ['quaternionsignal_2ecs',['QuaternionSignal.cs',['../_quaternion_signal_8cs.html',1,'']]],
+  ['quaternionsignaleditor',['QuaternionSignalEditor',['../class_signals_1_1_common_1_1_quaternion_signal_editor.html',1,'Signals::Common']]],
+  ['quaternionsignaleditor_2ecs',['QuaternionSignalEditor.cs',['../_quaternion_signal_editor_8cs.html',1,'']]],
+  ['quaternionsignallistener',['QuaternionSignalListener',['../class_signals_1_1_common_1_1_quaternion_signal_listener.html',1,'Signals::Common']]],
+  ['quaternionsignallistener_2ecs',['QuaternionSignalListener.cs',['../_quaternion_signal_listener_8cs.html',1,'']]],
+  ['quaternionvaluereference',['QuaternionValueReference',['../class_signals_1_1_common_1_1_quaternion_value_reference.html',1,'Signals.Common.QuaternionValueReference'],['../class_signals_1_1_common_1_1_quaternion_value_reference.html#aee2e30807e804b96dfb65cdc44ad7e2a',1,'Signals.Common.QuaternionValueReference.QuaternionValueReference()'],['../class_signals_1_1_common_1_1_quaternion_value_reference.html#ab914fcbc73e11ccce4db725e50e9a2b7',1,'Signals.Common.QuaternionValueReference.QuaternionValueReference(Quaternion localValue)']]],
+  ['quaternionvaluereference_2ecs',['QuaternionValueReference.cs',['../_quaternion_value_reference_8cs.html',1,'']]],
+  ['quaternionvaluereferencedrawer',['QuaternionValueReferenceDrawer',['../class_signals_1_1_common_1_1_quaternion_value_reference_drawer.html',1,'Signals::Common']]],
+  ['quaternionvaluereferencedrawer_2ecs',['QuaternionValueReferenceDrawer.cs',['../_quaternion_value_reference_drawer_8cs.html',1,'']]],
+  ['querieshitbackfaces',['QueriesHitBackfaces',['../class_signals_1_1_extras_1_1_engine_1_1_physics_settings.html#a05b03f1615ac2118e04b05c24fead8e8',1,'Signals.Extras.Engine.PhysicsSettings.QueriesHitBackfaces()'],['../class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#aa57cf72520abf9fb87c4621165ce976b',1,'Signals.Extras.Engine.PhysicsWrapper.QueriesHitBackfaces()']]],
+  ['querieshittriggers',['QueriesHitTriggers',['../class_signals_1_1_extras_1_1_engine_1_1_physics_settings.html#af5343b0009caeda893961ff397e128a5',1,'Signals.Extras.Engine.PhysicsSettings.QueriesHitTriggers()'],['../class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#a878531ad0b1740f1152aa78327a6d885',1,'Signals.Extras.Engine.PhysicsWrapper.QueriesHitTriggers()']]]
 ];

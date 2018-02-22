@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['requiresconstantrepaint',['RequiresConstantRepaint',['../class_signals_1_1_signal_editor.html#a48e5dac2693bc72e536bb8aff5b8a1d4',1,'Signals.SignalEditor.RequiresConstantRepaint()'],['../class_signals_1_1_utils_1_1_engine_1_1_wrapper_editor.html#a5b9a0a63a92abb902db0e97a3af59cd1',1,'Signals.Utils.Engine.WrapperEditor.RequiresConstantRepaint()']]]
+  ['intvaluereference',['IntValueReference',['../class_signals_1_1_common_1_1_int_value_reference.html#a944d3444410cf1842e51e6c2c8b14b7c',1,'Signals.Common.IntValueReference.IntValueReference()'],['../class_signals_1_1_common_1_1_int_value_reference.html#ab95c96b115d7e16ac2f5069db5109e4d',1,'Signals.Common.IntValueReference.IntValueReference(int localValue)']]]
 ];

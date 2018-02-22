@@ -1,37 +1,42 @@
 var hierarchy =
 [
     [ "Editor", null, [
+      [ "Signals.Extras.Engine.SetupEditor< T >", "class_signals_1_1_extras_1_1_engine_1_1_setup_editor.html", null ],
+      [ "Signals.Extras.Engine.WrapperEditor< T >", "class_signals_1_1_extras_1_1_engine_1_1_wrapper_editor.html", null ],
       [ "Signals.SignalEditor< T, ET >", "class_signals_1_1_signal_editor.html", [
-        [ "Signals.Utils.Engine.SettingsSignalEditor< T, ET >", "class_signals_1_1_utils_1_1_engine_1_1_settings_signal_editor.html", null ]
-      ] ],
-      [ "Signals.Utils.Engine.SetupEditor< T >", "class_signals_1_1_utils_1_1_engine_1_1_setup_editor.html", null ],
-      [ "Signals.Utils.Engine.WrapperEditor< T >", "class_signals_1_1_utils_1_1_engine_1_1_wrapper_editor.html", null ]
+        [ "Signals.Extras.Engine.SettingsSignalEditor< T, ET >", "class_signals_1_1_extras_1_1_engine_1_1_settings_signal_editor.html", null ]
+      ] ]
     ] ],
-    [ "Signals.Utils.Engine.ISettings", "interface_signals_1_1_utils_1_1_engine_1_1_i_settings.html", [
-      [ "Signals.Utils.Engine.ApplicationSettings", "class_signals_1_1_utils_1_1_engine_1_1_application_settings.html", null ],
-      [ "Signals.Utils.Engine.PhysicsSettings", "class_signals_1_1_utils_1_1_engine_1_1_physics_settings.html", null ],
-      [ "Signals.Utils.Engine.SettingsSignal< T, ET >", "class_signals_1_1_utils_1_1_engine_1_1_settings_signal.html", null ],
-      [ "Signals.Utils.Engine.Setup< T, ET, ST, VT >", "class_signals_1_1_utils_1_1_engine_1_1_setup.html", null ],
-      [ "Signals.Utils.Engine.TimeSettings", "class_signals_1_1_utils_1_1_engine_1_1_time_settings.html", null ]
+    [ "Signals.Extras.Engine.ISettings", "interface_signals_1_1_extras_1_1_engine_1_1_i_settings.html", [
+      [ "Signals.Extras.Engine.ApplicationSettings", "class_signals_1_1_extras_1_1_engine_1_1_application_settings.html", null ],
+      [ "Signals.Extras.Engine.PhysicsSettings", "class_signals_1_1_extras_1_1_engine_1_1_physics_settings.html", null ],
+      [ "Signals.Extras.Engine.SettingsSignal< T, ET >", "class_signals_1_1_extras_1_1_engine_1_1_settings_signal.html", null ],
+      [ "Signals.Extras.Engine.Setup< T, ET, ST, VT >", "class_signals_1_1_extras_1_1_engine_1_1_setup.html", null ],
+      [ "Signals.Extras.Engine.TimeSettings", "class_signals_1_1_extras_1_1_engine_1_1_time_settings.html", null ]
     ] ],
     [ "Signals.ISignal< T, ET >", "interface_signals_1_1_i_signal.html", [
       [ "Signals.Signal< T, ET >", "class_signals_1_1_signal.html", [
-        [ "Signals.Utils.Engine.SettingsSignal< T, ET >", "class_signals_1_1_utils_1_1_engine_1_1_settings_signal.html", null ]
+        [ "Signals.Extras.Engine.SettingsSignal< T, ET >", "class_signals_1_1_extras_1_1_engine_1_1_settings_signal.html", null ]
       ] ]
     ] ],
     [ "MonoBehaviour", null, [
       [ "Signals.Examples.FallingCube", "class_signals_1_1_examples_1_1_falling_cube.html", null ],
       [ "Signals.Examples.GravityYSignalUpdater", "class_signals_1_1_examples_1_1_gravity_y_signal_updater.html", null ],
-      [ "Signals.Examples.InputSystem", "class_signals_1_1_examples_1_1_input_system.html", null ],
-      [ "Signals.Examples.Name", "class_signals_1_1_examples_1_1_name.html", null ],
       [ "Signals.Examples.TextSetter", "class_signals_1_1_examples_1_1_text_setter.html", null ],
       [ "Signals.Examples.TimeScaleSignalUpdater", "class_signals_1_1_examples_1_1_time_scale_signal_updater.html", null ],
+      [ "Signals.Extras.Characters.PlayerCharacterInput", "class_signals_1_1_extras_1_1_characters_1_1_player_character_input.html", null ],
+      [ "Signals.Extras.Characters.RigidbodyCharacter", "class_signals_1_1_extras_1_1_characters_1_1_rigidbody_character.html", null ],
+      [ "Signals.Extras.Characters.TopDownPlayerCharacterInput", "class_signals_1_1_extras_1_1_characters_1_1_top_down_player_character_input.html", [
+        [ "Signals.Examples.ExamplePlayerCharacterInput", "class_signals_1_1_examples_1_1_example_player_character_input.html", null ]
+      ] ],
+      [ "Signals.Extras.Engine.Setup< T, ET, ST, VT >", "class_signals_1_1_extras_1_1_engine_1_1_setup.html", null ],
+      [ "Signals.Extras.Utility.EulerAnglesTracker", "class_signals_1_1_extras_1_1_utility_1_1_euler_angles_tracker.html", null ],
+      [ "Signals.Extras.Utility.PositionTracker", "class_signals_1_1_extras_1_1_utility_1_1_position_tracker.html", null ],
+      [ "Signals.Extras.Utility.RotationTracker", "class_signals_1_1_extras_1_1_utility_1_1_rotation_tracker.html", null ],
       [ "Signals.SignalListener< T, ET, ST >", "class_signals_1_1_signal_listener.html", null ],
-      [ "Signals.Utils.Engine.Setup< T, ET, ST, VT >", "class_signals_1_1_utils_1_1_engine_1_1_setup.html", null ],
-      [ "Signals.Utils.EulerAnglesTracker", "class_signals_1_1_utils_1_1_euler_angles_tracker.html", null ],
-      [ "Signals.Utils.PositionTracker", "class_signals_1_1_utils_1_1_position_tracker.html", null ],
-      [ "Signals.Utils.RotationTracker", "class_signals_1_1_utils_1_1_rotation_tracker.html", null ]
+      [ "Signals.ValueReferenceComponent< T, ET, ST, VT >", "class_signals_1_1_value_reference_component.html", null ]
     ] ],
+    [ "Signals.Extras.Characters.PlayerCharacterInputSettings", "class_signals_1_1_extras_1_1_characters_1_1_player_character_input_settings.html", null ],
     [ "PropertyDrawer", null, [
       [ "Signals.ValueReferenceDrawer", "class_signals_1_1_value_reference_drawer.html", [
         [ "Signals.Common.BoolValueReferenceDrawer", "class_signals_1_1_common_1_1_bool_value_reference_drawer.html", null ],
@@ -47,46 +52,47 @@ var hierarchy =
         [ "Signals.Common.Vector4ValueReferenceDrawer", "class_signals_1_1_common_1_1_vector4_value_reference_drawer.html", null ]
       ] ]
     ] ],
+    [ "Signals.Extras.Characters.RigidbodyCharacterSettings", "class_signals_1_1_extras_1_1_characters_1_1_rigidbody_character_settings.html", null ],
     [ "ScriptableObject", null, [
       [ "Signals.Examples.Logger", "class_signals_1_1_examples_1_1_logger.html", null ],
-      [ "Signals.Signal< T, ET >", "class_signals_1_1_signal.html", null ],
-      [ "Signals.Utils.Engine.ApplicationWrapper", "class_signals_1_1_utils_1_1_engine_1_1_application_wrapper.html", null ],
-      [ "Signals.Utils.Engine.DebugWrapper", "class_signals_1_1_utils_1_1_engine_1_1_debug_wrapper.html", null ],
-      [ "Signals.Utils.Engine.PhysicsWrapper", "class_signals_1_1_utils_1_1_engine_1_1_physics_wrapper.html", null ],
-      [ "Signals.Utils.Engine.TimeWrapper", "class_signals_1_1_utils_1_1_engine_1_1_time_wrapper.html", null ]
+      [ "Signals.Extras.Engine.ApplicationWrapper", "class_signals_1_1_extras_1_1_engine_1_1_application_wrapper.html", null ],
+      [ "Signals.Extras.Engine.DebugWrapper", "class_signals_1_1_extras_1_1_engine_1_1_debug_wrapper.html", null ],
+      [ "Signals.Extras.Engine.PhysicsWrapper", "class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html", null ],
+      [ "Signals.Extras.Engine.TimeWrapper", "class_signals_1_1_extras_1_1_engine_1_1_time_wrapper.html", null ],
+      [ "Signals.Signal< T, ET >", "class_signals_1_1_signal.html", null ]
     ] ],
-    [ "Signals.Utils.Engine.SettingsSignal< ApplicationSettings, ApplicationSettingsEvent >", "class_signals_1_1_utils_1_1_engine_1_1_settings_signal.html", [
-      [ "Signals.Utils.Engine.ApplicationSettingsSignal", "class_signals_1_1_utils_1_1_engine_1_1_application_settings_signal.html", null ]
+    [ "Signals.Extras.Engine.SettingsSignal< ApplicationSettings, ApplicationSettingsEvent >", "class_signals_1_1_extras_1_1_engine_1_1_settings_signal.html", [
+      [ "Signals.Extras.Engine.ApplicationSettingsSignal", "class_signals_1_1_extras_1_1_engine_1_1_application_settings_signal.html", null ]
     ] ],
-    [ "Signals.Utils.Engine.SettingsSignal< PhysicsSettings, PhysicsSettingsEvent >", "class_signals_1_1_utils_1_1_engine_1_1_settings_signal.html", [
-      [ "Signals.Utils.Engine.PhysicsSettingsSignal", "class_signals_1_1_utils_1_1_engine_1_1_physics_settings_signal.html", null ]
+    [ "Signals.Extras.Engine.SettingsSignal< PhysicsSettings, PhysicsSettingsEvent >", "class_signals_1_1_extras_1_1_engine_1_1_settings_signal.html", [
+      [ "Signals.Extras.Engine.PhysicsSettingsSignal", "class_signals_1_1_extras_1_1_engine_1_1_physics_settings_signal.html", null ]
     ] ],
-    [ "Signals.Utils.Engine.SettingsSignalEditor< ApplicationSettings, ApplicationSettingsEvent >", "class_signals_1_1_utils_1_1_engine_1_1_settings_signal_editor.html", [
-      [ "Signals.Utils.Engine.ApplicationSettingsSignalEditor", "class_signals_1_1_utils_1_1_engine_1_1_application_settings_signal_editor.html", null ]
+    [ "Signals.Extras.Engine.SettingsSignalEditor< ApplicationSettings, ApplicationSettingsEvent >", "class_signals_1_1_extras_1_1_engine_1_1_settings_signal_editor.html", [
+      [ "Signals.Extras.Engine.ApplicationSettingsSignalEditor", "class_signals_1_1_extras_1_1_engine_1_1_application_settings_signal_editor.html", null ]
     ] ],
-    [ "Signals.Utils.Engine.SettingsSignalEditor< PhysicsSettings, PhysicsSettingsEvent >", "class_signals_1_1_utils_1_1_engine_1_1_settings_signal_editor.html", [
-      [ "Signals.Utils.Engine.PhysicsSettingsSignalEditor", "class_signals_1_1_utils_1_1_engine_1_1_physics_settings_signal_editor.html", null ]
+    [ "Signals.Extras.Engine.SettingsSignalEditor< PhysicsSettings, PhysicsSettingsEvent >", "class_signals_1_1_extras_1_1_engine_1_1_settings_signal_editor.html", [
+      [ "Signals.Extras.Engine.PhysicsSettingsSignalEditor", "class_signals_1_1_extras_1_1_engine_1_1_physics_settings_signal_editor.html", null ]
     ] ],
-    [ "Signals.Utils.Engine.SettingsSignalEditor< TimeSettings, TimeSettingsEvent >", "class_signals_1_1_utils_1_1_engine_1_1_settings_signal_editor.html", [
-      [ "Signals.Utils.Engine.TimeSettingsSignalEditor", "class_signals_1_1_utils_1_1_engine_1_1_time_settings_signal_editor.html", null ]
+    [ "Signals.Extras.Engine.SettingsSignalEditor< TimeSettings, TimeSettingsEvent >", "class_signals_1_1_extras_1_1_engine_1_1_settings_signal_editor.html", [
+      [ "Signals.Extras.Engine.TimeSettingsSignalEditor", "class_signals_1_1_extras_1_1_engine_1_1_time_settings_signal_editor.html", null ]
     ] ],
-    [ "Signals.Utils.Engine.Setup< ApplicationSettings, ApplicationSettingsEvent, ApplicationSettingsSignal, ApplicationSettingsValueReference >", "class_signals_1_1_utils_1_1_engine_1_1_setup.html", [
-      [ "Signals.Utils.Engine.ApplicationSetup", "class_signals_1_1_utils_1_1_engine_1_1_application_setup.html", null ]
+    [ "Signals.Extras.Engine.Setup< ApplicationSettings, ApplicationSettingsEvent, ApplicationSettingsSignal, ApplicationSettingsValueReference >", "class_signals_1_1_extras_1_1_engine_1_1_setup.html", [
+      [ "Signals.Extras.Engine.ApplicationSetup", "class_signals_1_1_extras_1_1_engine_1_1_application_setup.html", null ]
     ] ],
-    [ "Signals.Utils.Engine.Setup< PhysicsSettings, PhysicsSettingsEvent, PhysicsSettingsSignal, PhysicsSettingsValueReference >", "class_signals_1_1_utils_1_1_engine_1_1_setup.html", [
-      [ "Signals.Utils.Engine.PhysicsSetup", "class_signals_1_1_utils_1_1_engine_1_1_physics_setup.html", null ]
+    [ "Signals.Extras.Engine.Setup< PhysicsSettings, PhysicsSettingsEvent, PhysicsSettingsSignal, PhysicsSettingsValueReference >", "class_signals_1_1_extras_1_1_engine_1_1_setup.html", [
+      [ "Signals.Extras.Engine.PhysicsSetup", "class_signals_1_1_extras_1_1_engine_1_1_physics_setup.html", null ]
     ] ],
-    [ "Signals.Utils.Engine.Setup< TimeSettings, TimeSettingsEvent, TimeSettingsSignal, TimeSettingsValueReference >", "class_signals_1_1_utils_1_1_engine_1_1_setup.html", [
-      [ "Signals.Utils.Engine.TimeSetup", "class_signals_1_1_utils_1_1_engine_1_1_time_setup.html", null ]
+    [ "Signals.Extras.Engine.Setup< TimeSettings, TimeSettingsEvent, TimeSettingsSignal, TimeSettingsValueReference >", "class_signals_1_1_extras_1_1_engine_1_1_setup.html", [
+      [ "Signals.Extras.Engine.TimeSetup", "class_signals_1_1_extras_1_1_engine_1_1_time_setup.html", null ]
     ] ],
-    [ "Signals.Utils.Engine.SetupEditor< ApplicationSetup >", "class_signals_1_1_utils_1_1_engine_1_1_setup_editor.html", [
-      [ "Signals.Utils.Engine.ApplicationSetupEditor", "class_signals_1_1_utils_1_1_engine_1_1_application_setup_editor.html", null ]
+    [ "Signals.Extras.Engine.SetupEditor< ApplicationSetup >", "class_signals_1_1_extras_1_1_engine_1_1_setup_editor.html", [
+      [ "Signals.Extras.Engine.ApplicationSetupEditor", "class_signals_1_1_extras_1_1_engine_1_1_application_setup_editor.html", null ]
     ] ],
-    [ "Signals.Utils.Engine.SetupEditor< PhysicsSetup >", "class_signals_1_1_utils_1_1_engine_1_1_setup_editor.html", [
-      [ "Signals.Utils.Engine.PhysicsSetupEditor", "class_signals_1_1_utils_1_1_engine_1_1_physics_setup_editor.html", null ]
+    [ "Signals.Extras.Engine.SetupEditor< PhysicsSetup >", "class_signals_1_1_extras_1_1_engine_1_1_setup_editor.html", [
+      [ "Signals.Extras.Engine.PhysicsSetupEditor", "class_signals_1_1_extras_1_1_engine_1_1_physics_setup_editor.html", null ]
     ] ],
-    [ "Signals.Utils.Engine.SetupEditor< TimeSetup >", "class_signals_1_1_utils_1_1_engine_1_1_setup_editor.html", [
-      [ "Signals.Utils.Engine.TimeSetupEditor", "class_signals_1_1_utils_1_1_engine_1_1_time_setup_editor.html", null ]
+    [ "Signals.Extras.Engine.SetupEditor< TimeSetup >", "class_signals_1_1_extras_1_1_engine_1_1_setup_editor.html", [
+      [ "Signals.Extras.Engine.TimeSetupEditor", "class_signals_1_1_extras_1_1_engine_1_1_time_setup_editor.html", null ]
     ] ],
     [ "Signals.Signal< bool, BoolEvent >", "class_signals_1_1_signal.html", [
       [ "Signals.Common.BoolSignal", "class_signals_1_1_common_1_1_bool_signal.html", null ]
@@ -100,17 +106,25 @@ var hierarchy =
     [ "Signals.Signal< int, IntEvent >", "class_signals_1_1_signal.html", [
       [ "Signals.Common.IntSignal", "class_signals_1_1_common_1_1_int_signal.html", null ]
     ] ],
+    [ "Signals.Signal< PlayerCharacterInputSettings, PlayerCharacterInputSettingsEvent >", "class_signals_1_1_signal.html", [
+      [ "Signals.Extras.Characters.PlayerCharacterInputSettingsSignal", "class_signals_1_1_extras_1_1_characters_1_1_player_character_input_settings_signal.html", null ]
+    ] ],
     [ "Signals.Signal< Quaternion, QuaternionEvent >", "class_signals_1_1_signal.html", [
       [ "Signals.Common.QuaternionSignal", "class_signals_1_1_common_1_1_quaternion_signal.html", null ]
+    ] ],
+    [ "Signals.Signal< RigidbodyCharacterSettings, RigidbodyCharacterSettingsEvent >", "class_signals_1_1_signal.html", [
+      [ "Signals.Extras.Characters.RigidbodyCharacterSettingsSignal", "class_signals_1_1_extras_1_1_characters_1_1_rigidbody_character_settings_signal.html", null ]
     ] ],
     [ "Signals.Signal< string, StringEvent >", "class_signals_1_1_signal.html", [
       [ "Signals.Common.StringSignal", "class_signals_1_1_common_1_1_string_signal.html", null ]
     ] ],
     [ "Signals.Signal< TimeSettings, TimeSettingsEvent >", "class_signals_1_1_signal.html", [
-      [ "Signals.Utils.Engine.TimeSettingsSignal", "class_signals_1_1_utils_1_1_engine_1_1_time_settings_signal.html", null ]
+      [ "Signals.Extras.Engine.TimeSettingsSignal", "class_signals_1_1_extras_1_1_engine_1_1_time_settings_signal.html", null ]
     ] ],
     [ "Signals.Signal< Vector2, Vector2Event >", "class_signals_1_1_signal.html", [
-      [ "Signals.Common.Vector2Signal", "class_signals_1_1_common_1_1_vector2_signal.html", null ]
+      [ "Signals.Common.Vector2Signal", "class_signals_1_1_common_1_1_vector2_signal.html", [
+        [ "Signals.Extras.Characters.CharacterMoveSignal", "class_signals_1_1_extras_1_1_characters_1_1_character_move_signal.html", null ]
+      ] ]
     ] ],
     [ "Signals.Signal< Vector2Int, Vector2IntEvent >", "class_signals_1_1_signal.html", [
       [ "Signals.Common.Vector2IntSignal", "class_signals_1_1_common_1_1_vector2_int_signal.html", null ]
@@ -136,8 +150,14 @@ var hierarchy =
     [ "Signals.SignalEditor< int, IntEvent >", "class_signals_1_1_signal_editor.html", [
       [ "Signals.Common.IntSignalEditor", "class_signals_1_1_common_1_1_int_signal_editor.html", null ]
     ] ],
+    [ "Signals.SignalEditor< PlayerCharacterInputSettings, PlayerCharacterInputSettingsEvent >", "class_signals_1_1_signal_editor.html", [
+      [ "Signals.Extras.Characters.PlayerCharacterInputSettingsSignalEditor", "class_signals_1_1_extras_1_1_characters_1_1_player_character_input_settings_signal_editor.html", null ]
+    ] ],
     [ "Signals.SignalEditor< Quaternion, QuaternionEvent >", "class_signals_1_1_signal_editor.html", [
       [ "Signals.Common.QuaternionSignalEditor", "class_signals_1_1_common_1_1_quaternion_signal_editor.html", null ]
+    ] ],
+    [ "Signals.SignalEditor< RigidbodyCharacterSettings, RigidbodyCharacterSettingsEvent >", "class_signals_1_1_signal_editor.html", [
+      [ "Signals.Extras.Characters.RigidbodyCharacterSettingsSignalEditor", "class_signals_1_1_extras_1_1_characters_1_1_rigidbody_character_settings_signal_editor.html", null ]
     ] ],
     [ "Signals.SignalEditor< string, StringEvent >", "class_signals_1_1_signal_editor.html", [
       [ "Signals.Common.StringSignalEditor", "class_signals_1_1_common_1_1_string_signal_editor.html", null ]
@@ -202,13 +222,15 @@ var hierarchy =
       [ "Signals.Common.Vector3Event", "class_signals_1_1_common_1_1_vector3_event.html", null ],
       [ "Signals.Common.Vector3IntEvent", "class_signals_1_1_common_1_1_vector3_int_event.html", null ],
       [ "Signals.Common.Vector4Event", "class_signals_1_1_common_1_1_vector4_event.html", null ],
-      [ "Signals.Utils.Engine.ApplicationSettingsEvent", "class_signals_1_1_utils_1_1_engine_1_1_application_settings_event.html", null ],
-      [ "Signals.Utils.Engine.PhysicsSettingsEvent", "class_signals_1_1_utils_1_1_engine_1_1_physics_settings_event.html", null ],
-      [ "Signals.Utils.Engine.TimeSettingsEvent", "class_signals_1_1_utils_1_1_engine_1_1_time_settings_event.html", null ]
+      [ "Signals.Extras.Characters.PlayerCharacterInputSettingsEvent", "class_signals_1_1_extras_1_1_characters_1_1_player_character_input_settings_event.html", null ],
+      [ "Signals.Extras.Characters.RigidbodyCharacterSettingsEvent", "class_signals_1_1_extras_1_1_characters_1_1_rigidbody_character_settings_event.html", null ],
+      [ "Signals.Extras.Engine.ApplicationSettingsEvent", "class_signals_1_1_extras_1_1_engine_1_1_application_settings_event.html", null ],
+      [ "Signals.Extras.Engine.PhysicsSettingsEvent", "class_signals_1_1_extras_1_1_engine_1_1_physics_settings_event.html", null ],
+      [ "Signals.Extras.Engine.TimeSettingsEvent", "class_signals_1_1_extras_1_1_engine_1_1_time_settings_event.html", null ]
     ] ],
     [ "Signals.ValueReference< T, ET, ST >", "class_signals_1_1_value_reference.html", null ],
     [ "Signals.ValueReference< ApplicationSettings, ApplicationSettingsEvent, ApplicationSettingsSignal >", "class_signals_1_1_value_reference.html", [
-      [ "Signals.Utils.Engine.ApplicationSettingsValueReference", "class_signals_1_1_utils_1_1_engine_1_1_application_settings_value_reference.html", null ]
+      [ "Signals.Extras.Engine.ApplicationSettingsValueReference", "class_signals_1_1_extras_1_1_engine_1_1_application_settings_value_reference.html", null ]
     ] ],
     [ "Signals.ValueReference< bool, BoolEvent, BoolSignal >", "class_signals_1_1_value_reference.html", [
       [ "Signals.Common.BoolValueReference", "class_signals_1_1_common_1_1_bool_value_reference.html", null ]
@@ -223,16 +245,22 @@ var hierarchy =
       [ "Signals.Common.IntValueReference", "class_signals_1_1_common_1_1_int_value_reference.html", null ]
     ] ],
     [ "Signals.ValueReference< PhysicsSettings, PhysicsSettingsEvent, PhysicsSettingsSignal >", "class_signals_1_1_value_reference.html", [
-      [ "Signals.Utils.Engine.PhysicsSettingsValueReference", "class_signals_1_1_utils_1_1_engine_1_1_physics_settings_value_reference.html", null ]
+      [ "Signals.Extras.Engine.PhysicsSettingsValueReference", "class_signals_1_1_extras_1_1_engine_1_1_physics_settings_value_reference.html", null ]
+    ] ],
+    [ "Signals.ValueReference< PlayerCharacterInputSettings, PlayerCharacterInputSettingsEvent, PlayerCharacterInputSettingsSignal >", "class_signals_1_1_value_reference.html", [
+      [ "Signals.Extras.Characters.PlayerCharacterInputSettingsValueReference", "class_signals_1_1_extras_1_1_characters_1_1_player_character_input_settings_value_reference.html", null ]
     ] ],
     [ "Signals.ValueReference< Quaternion, QuaternionEvent, QuaternionSignal >", "class_signals_1_1_value_reference.html", [
       [ "Signals.Common.QuaternionValueReference", "class_signals_1_1_common_1_1_quaternion_value_reference.html", null ]
+    ] ],
+    [ "Signals.ValueReference< RigidbodyCharacterSettings, RigidbodyCharacterSettingsEvent, RigidbodyCharacterSettingsSignal >", "class_signals_1_1_value_reference.html", [
+      [ "Signals.Extras.Characters.RigidbodyCharacterSettingsValueReference", "class_signals_1_1_extras_1_1_characters_1_1_rigidbody_character_settings_value_reference.html", null ]
     ] ],
     [ "Signals.ValueReference< string, StringEvent, StringSignal >", "class_signals_1_1_value_reference.html", [
       [ "Signals.Common.StringValueReference", "class_signals_1_1_common_1_1_string_value_reference.html", null ]
     ] ],
     [ "Signals.ValueReference< TimeSettings, TimeSettingsEvent, TimeSettingsSignal >", "class_signals_1_1_value_reference.html", [
-      [ "Signals.Utils.Engine.TimeSettingsValueReference", "class_signals_1_1_utils_1_1_engine_1_1_time_settings_value_reference.html", null ]
+      [ "Signals.Extras.Engine.TimeSettingsValueReference", "class_signals_1_1_extras_1_1_engine_1_1_time_settings_value_reference.html", null ]
     ] ],
     [ "Signals.ValueReference< Vector2, Vector2Event, Vector2Signal >", "class_signals_1_1_value_reference.html", [
       [ "Signals.Common.Vector2ValueReference", "class_signals_1_1_common_1_1_vector2_value_reference.html", null ]
@@ -249,13 +277,16 @@ var hierarchy =
     [ "Signals.ValueReference< Vector4, Vector4Event, Vector4Signal >", "class_signals_1_1_value_reference.html", [
       [ "Signals.Common.Vector4ValueReference", "class_signals_1_1_common_1_1_vector4_value_reference.html", null ]
     ] ],
-    [ "Signals.Utils.Engine.WrapperEditor< ApplicationWrapper >", "class_signals_1_1_utils_1_1_engine_1_1_wrapper_editor.html", [
-      [ "Signals.Utils.Engine.ApplicationWrapperEditor", "class_signals_1_1_utils_1_1_engine_1_1_application_wrapper_editor.html", null ]
+    [ "Signals.ValueReferenceComponent< string, StringEvent, StringSignal, StringValueReference >", "class_signals_1_1_value_reference_component.html", [
+      [ "Signals.Examples.Name", "class_signals_1_1_examples_1_1_name.html", null ]
     ] ],
-    [ "Signals.Utils.Engine.WrapperEditor< PhysicsWrapper >", "class_signals_1_1_utils_1_1_engine_1_1_wrapper_editor.html", [
-      [ "Signals.Utils.Engine.PhysicsWrapperEditor", "class_signals_1_1_utils_1_1_engine_1_1_physics_wrapper_editor.html", null ]
+    [ "Signals.Extras.Engine.WrapperEditor< ApplicationWrapper >", "class_signals_1_1_extras_1_1_engine_1_1_wrapper_editor.html", [
+      [ "Signals.Extras.Engine.ApplicationWrapperEditor", "class_signals_1_1_extras_1_1_engine_1_1_application_wrapper_editor.html", null ]
     ] ],
-    [ "Signals.Utils.Engine.WrapperEditor< TimeWrapper >", "class_signals_1_1_utils_1_1_engine_1_1_wrapper_editor.html", [
-      [ "Signals.Utils.Engine.TimeWrapperEditor", "class_signals_1_1_utils_1_1_engine_1_1_time_wrapper_editor.html", null ]
+    [ "Signals.Extras.Engine.WrapperEditor< PhysicsWrapper >", "class_signals_1_1_extras_1_1_engine_1_1_wrapper_editor.html", [
+      [ "Signals.Extras.Engine.PhysicsWrapperEditor", "class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper_editor.html", null ]
+    ] ],
+    [ "Signals.Extras.Engine.WrapperEditor< TimeWrapper >", "class_signals_1_1_extras_1_1_engine_1_1_wrapper_editor.html", [
+      [ "Signals.Extras.Engine.TimeWrapperEditor", "class_signals_1_1_extras_1_1_engine_1_1_time_wrapper_editor.html", null ]
     ] ]
 ];

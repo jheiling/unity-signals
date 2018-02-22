@@ -87,6 +87,7 @@ $(document).ready(function(){initNavTree('class_signals_1_1_signal.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
@@ -104,22 +105,36 @@ Inheritance diagram for Signals.Signal&lt; T, ET &gt;:</div>
  <div class="center">
   <img src="class_signals_1_1_signal.png" usemap="#Signals.Signal_3C_20T_2C_20ET_20_3E_map" alt=""/>
   <map id="Signals.Signal_3C_20T_2C_20ET_20_3E_map" name="Signals.Signal_3C_20T_2C_20ET_20_3E_map">
-<area href="interface_signals_1_1_i_signal.html" title="The Signal interface. " alt="Signals.ISignal&lt; T, ET &gt;" shape="rect" coords="271,0,532,24"/>
-<area href="class_signals_1_1_utils_1_1_engine_1_1_settings_signal.html" alt="Signals.Utils.Engine.SettingsSignal&lt; T, ET &gt;" shape="rect" coords="135,112,396,136"/>
+<area href="interface_signals_1_1_i_signal.html" title="The Signal interface. " alt="Signals.ISignal&lt; T, ET &gt;" shape="rect" coords="283,0,556,24"/>
+<area href="class_signals_1_1_extras_1_1_engine_1_1_settings_signal.html" alt="Signals.Extras.Engine.SettingsSignal&lt; T, ET &gt;" shape="rect" coords="141,112,414,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a6a6f49c8a8a73823a735e4b53fd3c651"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signals_1_1_signal.html#a6a6f49c8a8a73823a735e4b53fd3c651">ForceChange</a> ()</td></tr>
+<tr class="memdesc:a6a6f49c8a8a73823a735e4b53fd3c651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers the <a class="el" href="class_signals_1_1_signal.html#af38c81101db272fd83d5443542908e38" title="The event invoked when a Value is assigned to the Signal. ">OnChanged</a> event with the current value.  <a href="#a6a6f49c8a8a73823a735e4b53fd3c651">More...</a><br /></td></tr>
+<tr class="separator:a6a6f49c8a8a73823a735e4b53fd3c651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a27c0beabb4ea4c11c3584a4db02d1b0c"><td class="memItemLeft" align="right" valign="top">static implicit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signals_1_1_signal.html#a27c0beabb4ea4c11c3584a4db02d1b0c">operator T</a> (<a class="el" href="class_signals_1_1_signal.html">Signal</a>&lt; T, ET &gt; signal)</td></tr>
 <tr class="memdesc:a27c0beabb4ea4c11c3584a4db02d1b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit cast from the <a class="el" href="class_signals_1_1_signal.html" title="Abstract base class for Signals inheriting from ScriptableObject. Implements the ISignal interface...">Signal</a> to it's <a class="el" href="class_signals_1_1_signal.html#acf78067b4588b6105f160140970fe754" title="The current value of the Signal. Setting the value triggers the OnChanged event. If you want to add a...">Value</a>.  <a href="#a27c0beabb4ea4c11c3584a4db02d1b0c">More...</a><br /></td></tr>
 <tr class="separator:a27c0beabb4ea4c11c3584a4db02d1b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21f9dacc994e2b8021c228f3ff07bd56"><td class="memItemLeft" align="right" valign="top">static implicit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signals_1_1_signal.html#a21f9dacc994e2b8021c228f3ff07bd56">operator ET</a> (<a class="el" href="class_signals_1_1_signal.html">Signal</a>&lt; T, ET &gt; signal)</td></tr>
+<tr class="memdesc:a21f9dacc994e2b8021c228f3ff07bd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit cast from the <a class="el" href="class_signals_1_1_signal.html" title="Abstract base class for Signals inheriting from ScriptableObject. Implements the ISignal interface...">Signal</a> to it's <a class="el" href="class_signals_1_1_signal.html#af38c81101db272fd83d5443542908e38" title="The event invoked when a Value is assigned to the Signal. ">OnChanged</a> Event.  <a href="#a21f9dacc994e2b8021c228f3ff07bd56">More...</a><br /></td></tr>
+<tr class="separator:a21f9dacc994e2b8021c228f3ff07bd56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:ac121a1ff3f9f42ce5e6bf18d540ce811"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signals_1_1_signal.html#ac121a1ff3f9f42ce5e6bf18d540ce811">ProcessValue</a> (ref T value)</td></tr>
+<tr class="memdesc:ac121a1ff3f9f42ce5e6bf18d540ce811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to preprocess values before applying them.  <a href="#ac121a1ff3f9f42ce5e6bf18d540ce811">More...</a><br /></td></tr>
+<tr class="separator:ac121a1ff3f9f42ce5e6bf18d540ce811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07590b21b45a62069eb961c9a21dc7a6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signals_1_1_signal.html#a07590b21b45a62069eb961c9a21dc7a6">ValidateValue</a> (T value)</td></tr>
 <tr class="memdesc:a07590b21b45a62069eb961c9a21dc7a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to check whether a value is valid and/or if it has changed. If <a class="el" href="class_signals_1_1_signal.html#af7d32cc52571c05f38fd144bcad421ae" title="True if new values are validated, false otherwise. ">UseValidation</a> is true the <a class="el" href="class_signals_1_1_signal.html#acf78067b4588b6105f160140970fe754" title="The current value of the Signal. Setting the value triggers the OnChanged event. If you want to add a...">Value</a> is set and the <a class="el" href="class_signals_1_1_signal.html#af38c81101db272fd83d5443542908e38" title="The event invoked when a Value is assigned to the Signal. ">OnChanged</a> event is invoked only if this method returns true.  <a href="#a07590b21b45a62069eb961c9a21dc7a6">More...</a><br /></td></tr>
 <tr class="separator:a07590b21b45a62069eb961c9a21dc7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0e8da29f25f1b90e574daabe30f2e16"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signals_1_1_signal.html#ad0e8da29f25f1b90e574daabe30f2e16">Awake</a> ()</td></tr>
+<tr class="separator:ad0e8da29f25f1b90e574daabe30f2e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -162,6 +177,86 @@ Properties</h2></td></tr>
 </dl>
 </div>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad0e8da29f25f1b90e574daabe30f2e16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0e8da29f25f1b90e574daabe30f2e16">&#9670;&nbsp;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_signals_1_1_signal.html">Signals.Signal</a>&lt; T, ET &gt;.Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a6f49c8a8a73823a735e4b53fd3c651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a6f49c8a8a73823a735e4b53fd3c651">&#9670;&nbsp;</a></span>ForceChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_signals_1_1_signal.html">Signals.Signal</a>&lt; T, ET &gt;.ForceChange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Triggers the <a class="el" href="class_signals_1_1_signal.html#af38c81101db272fd83d5443542908e38" title="The event invoked when a Value is assigned to the Signal. ">OnChanged</a> event with the current value. </p>
+
+<p>Implements <a class="el" href="interface_signals_1_1_i_signal.html#a1839749fcb4e8b3fd32de3a525c3f566">Signals.ISignal&lt; T, ET &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a21f9dacc994e2b8021c228f3ff07bd56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21f9dacc994e2b8021c228f3ff07bd56">&#9670;&nbsp;</a></span>operator ET()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static implicit <a class="el" href="class_signals_1_1_signal.html">Signals.Signal</a>&lt; T, ET &gt;.operator ET </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_signals_1_1_signal.html">Signal</a>&lt; T, ET &gt;&#160;</td>
+          <td class="paramname"><em>signal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implicit cast from the <a class="el" href="class_signals_1_1_signal.html" title="Abstract base class for Signals inheriting from ScriptableObject. Implements the ISignal interface...">Signal</a> to it's <a class="el" href="class_signals_1_1_signal.html#af38c81101db272fd83d5443542908e38" title="The event invoked when a Value is assigned to the Signal. ">OnChanged</a> Event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">signal</td><td>The <a class="el" href="class_signals_1_1_signal.html" title="Abstract base class for Signals inheriting from ScriptableObject. Implements the ISignal interface...">Signal</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a27c0beabb4ea4c11c3584a4db02d1b0c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a27c0beabb4ea4c11c3584a4db02d1b0c">&#9670;&nbsp;</a></span>operator T()</h2>
 
@@ -190,6 +285,40 @@ Properties</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">signal</td><td>The <a class="el" href="class_signals_1_1_signal.html" title="Abstract base class for Signals inheriting from ScriptableObject. Implements the ISignal interface...">Signal</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac121a1ff3f9f42ce5e6bf18d540ce811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac121a1ff3f9f42ce5e6bf18d540ce811">&#9670;&nbsp;</a></span>ProcessValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_signals_1_1_signal.html">Signals.Signal</a>&lt; T, ET &gt;.ProcessValue </td>
+          <td>(</td>
+          <td class="paramtype">ref T&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Override this method to preprocess values before applying them. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to process</td></tr>
   </table>
   </dd>
 </dl>
@@ -329,7 +458,7 @@ Properties</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Code/<a class="el" href="_signal_8cs.html">Signal.cs</a></li>
+<li>Scripts/<a class="el" href="_signal_8cs.html">Signal.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

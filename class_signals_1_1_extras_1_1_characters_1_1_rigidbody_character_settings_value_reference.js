@@ -1,0 +1,5 @@
+var class_signals_1_1_extras_1_1_characters_1_1_rigidbody_character_settings_value_reference =
+[
+    [ "RigidbodyCharacterSettingsValueReference", "class_signals_1_1_extras_1_1_characters_1_1_rigidbody_character_settings_value_reference.html#a2f629b15994c3208ec11314c061e2d5f", null ],
+    [ "RigidbodyCharacterSettingsValueReference", "class_signals_1_1_extras_1_1_characters_1_1_rigidbody_character_settings_value_reference.html#a21adf7aa5babd72fda3fe092751face3", null ]
+];

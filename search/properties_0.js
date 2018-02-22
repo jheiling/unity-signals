@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['applyonstart',['ApplyOnStart',['../class_signals_1_1_utils_1_1_engine_1_1_setup.html#a92b1d7ef269263f639af78660e094d07',1,'Signals::Utils::Engine::Setup']]],
-  ['autosimulation',['AutoSimulation',['../class_signals_1_1_utils_1_1_engine_1_1_physics_settings.html#a7837c5e8f7e5eb7228f547071c097551',1,'Signals.Utils.Engine.PhysicsSettings.AutoSimulation()'],['../class_signals_1_1_utils_1_1_engine_1_1_physics_wrapper.html#a0be7db70a35029fd2795ca4f66a31839',1,'Signals.Utils.Engine.PhysicsWrapper.AutoSimulation()']]],
-  ['autosynctransforms',['AutoSyncTransforms',['../class_signals_1_1_utils_1_1_engine_1_1_physics_settings.html#a781c284ba564eb56ae1f1d5bac1c69a4',1,'Signals.Utils.Engine.PhysicsSettings.AutoSyncTransforms()'],['../class_signals_1_1_utils_1_1_engine_1_1_physics_wrapper.html#ae2152b9f8e6a8425bc77845e21cb54e7',1,'Signals.Utils.Engine.PhysicsWrapper.AutoSyncTransforms()']]]
+  ['aircontrol',['AirControl',['../class_signals_1_1_extras_1_1_characters_1_1_rigidbody_character_settings.html#add2eddd3383d0b59e3e8f52030103e51',1,'Signals::Extras::Characters::RigidbodyCharacterSettings']]],
+  ['airdrag',['AirDrag',['../class_signals_1_1_extras_1_1_characters_1_1_rigidbody_character_settings.html#a3bef03b182a2873d04460cc4fc76a6be',1,'Signals::Extras::Characters::RigidbodyCharacterSettings']]],
+  ['applyonstart',['ApplyOnStart',['../class_signals_1_1_extras_1_1_engine_1_1_setup.html#aba855678e9e6cdfc242c636d8b4e8345',1,'Signals::Extras::Engine::Setup']]],
+  ['autosimulation',['AutoSimulation',['../class_signals_1_1_extras_1_1_engine_1_1_physics_settings.html#a5daa4700cc57b497d7aa0ca0d01d6e22',1,'Signals.Extras.Engine.PhysicsSettings.AutoSimulation()'],['../class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#af46afca6744fe8a5acce69fe1458e281',1,'Signals.Extras.Engine.PhysicsWrapper.AutoSimulation()']]],
+  ['autosynctransforms',['AutoSyncTransforms',['../class_signals_1_1_extras_1_1_engine_1_1_physics_settings.html#a6d0ef6ffd58f50bb8ab0398cec7c6c6d',1,'Signals.Extras.Engine.PhysicsSettings.AutoSyncTransforms()'],['../class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#acc5f771dd3d0f6f5d3ca76bd1bff3260',1,'Signals.Extras.Engine.PhysicsWrapper.AutoSyncTransforms()']]]
 ];

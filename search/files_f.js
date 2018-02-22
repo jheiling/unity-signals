@@ -1,6 +1,7 @@
 var searchData=
 [
   ['valuereference_2ecs',['ValueReference.cs',['../_value_reference_8cs.html',1,'']]],
+  ['valuereferencecomponent_2ecs',['ValueReferenceComponent.cs',['../_value_reference_component_8cs.html',1,'']]],
   ['valuereferencedrawer_2ecs',['ValueReferenceDrawer.cs',['../_value_reference_drawer_8cs.html',1,'']]],
   ['vector2event_2ecs',['Vector2Event.cs',['../_vector2_event_8cs.html',1,'']]],
   ['vector2intevent_2ecs',['Vector2IntEvent.cs',['../_vector2_int_event_8cs.html',1,'']]],

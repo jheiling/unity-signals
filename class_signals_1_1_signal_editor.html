@@ -103,7 +103,7 @@ Inheritance diagram for Signals.SignalEditor&lt; T, ET &gt;:</div>
  <div class="center">
   <img src="class_signals_1_1_signal_editor.png" usemap="#Signals.SignalEditor_3C_20T_2C_20ET_20_3E_map" alt=""/>
   <map id="Signals.SignalEditor_3C_20T_2C_20ET_20_3E_map" name="Signals.SignalEditor_3C_20T_2C_20ET_20_3E_map">
-<area href="class_signals_1_1_utils_1_1_engine_1_1_settings_signal_editor.html" alt="Signals.Utils.Engine.SettingsSignalEditor&lt; T, ET &gt;" shape="rect" coords="0,112,294,136"/>
+<area href="class_signals_1_1_extras_1_1_engine_1_1_settings_signal_editor.html" alt="Signals.Extras.Engine.SettingsSignalEditor&lt; T, ET &gt;" shape="rect" coords="0,112,306,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -116,9 +116,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a13b1278e6768d37fecf783057ff9becd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signals_1_1_signal_editor.html#a13b1278e6768d37fecf783057ff9becd">ValueField</a> (<a class="el" href="class_signals_1_1_signal.html">Signal</a>&lt; T, ET &gt; signal)</td></tr>
-<tr class="memdesc:a13b1278e6768d37fecf783057ff9becd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to provide an editable field for the current <a class="el" href="class_signals_1_1_signal.html#acf78067b4588b6105f160140970fe754" title="The current value of the Signal. Setting the value triggers the OnChanged event. If you want to add a...">Signal.Value</a> when the application is running in the editor.  <a href="#a13b1278e6768d37fecf783057ff9becd">More...</a><br /></td></tr>
-<tr class="separator:a13b1278e6768d37fecf783057ff9becd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8dad73b84c0fa7dc148cc20bc26039"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signals_1_1_signal_editor.html#a0d8dad73b84c0fa7dc148cc20bc26039">ValueField</a> (T value)</td></tr>
+<tr class="memdesc:a0d8dad73b84c0fa7dc148cc20bc26039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to provide an editable field for the <a class="el" href="class_signals_1_1_signal.html#a148979537499270fbf2a4f47ad9218c0">, and for the current </a> when the application is running.  <a href="#a0d8dad73b84c0fa7dc148cc20bc26039">More...</a><br /></td></tr>
+<tr class="separator:a0d8dad73b84c0fa7dc148cc20bc26039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract base class for custom editors for classes inheriting from <a class="el" href="class_signals_1_1_signal.html" title="Abstract base class for Signals inheriting from ScriptableObject. Implements the ISignal interface...">Signal</a>. </p>
@@ -173,8 +173,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a13b1278e6768d37fecf783057ff9becd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13b1278e6768d37fecf783057ff9becd">&#9670;&nbsp;</a></span>ValueField()</h2>
+<a id="a0d8dad73b84c0fa7dc148cc20bc26039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d8dad73b84c0fa7dc148cc20bc26039">&#9670;&nbsp;</a></span>ValueField()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,10 +183,10 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="class_signals_1_1_signal_editor.html">Signals.SignalEditor</a>&lt; T, ET &gt;.ValueField </td>
+          <td class="memname">virtual T <a class="el" href="class_signals_1_1_signal_editor.html">Signals.SignalEditor</a>&lt; T, ET &gt;.ValueField </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_signals_1_1_signal.html">Signal</a>&lt; T, ET &gt;&#160;</td>
-          <td class="paramname"><em>signal</em></td><td>)</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -197,18 +197,19 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Override this method to provide an editable field for the current <a class="el" href="class_signals_1_1_signal.html#acf78067b4588b6105f160140970fe754" title="The current value of the Signal. Setting the value triggers the OnChanged event. If you want to add a...">Signal.Value</a> when the application is running in the editor. </p>
+<p>Override this method to provide an editable field for the <a class="el" href="class_signals_1_1_signal.html#a148979537499270fbf2a4f47ad9218c0">, and for the current </a> when the application is running. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">signal</td><td>The <a class="el" href="class_signals_1_1_signal.html" title="Abstract base class for Signals inheriting from ScriptableObject. Implements the ISignal interface...">Signal</a>.</td></tr>
+    <tr><td class="paramname">value</td><td>The value to display.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The new value.</dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Code/Editor/<a class="el" href="_signal_editor_8cs.html">SignalEditor.cs</a></li>
+<li>Scripts/Editor/<a class="el" href="_signal_editor_8cs.html">SignalEditor.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

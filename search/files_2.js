@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['charactermovesignal_2ecs',['CharacterMoveSignal.cs',['../_character_move_signal_8cs.html',1,'']]],
   ['charevent_2ecs',['CharEvent.cs',['../_char_event_8cs.html',1,'']]],
   ['charsignal_2ecs',['CharSignal.cs',['../_char_signal_8cs.html',1,'']]],
   ['charsignaleditor_2ecs',['CharSignalEditor.cs',['../_char_signal_editor_8cs.html',1,'']]],
