@@ -47,7 +47,7 @@ namespace Signals.Extras.Characters
 
         protected virtual void OnMouseButtonDown(ref RaycastHit target)
         {
-            _destinationSignal.Value = target.point;
+            if(_destinationSignal) _destinationSignal.Value = target.point;
         }
     }
 }
