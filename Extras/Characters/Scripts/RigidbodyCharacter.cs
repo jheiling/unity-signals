@@ -191,9 +191,7 @@ namespace Signals.Extras.Characters
                     var move = Vector3.ProjectOnPlane(_cameraPivot.forward * moveZ + _cameraPivot.right * moveX, groundNormal);
 
                     if (_rigidbody.velocity.sqrMagnitude < move.sqrMagnitude)
-                    {
                         _rigidbody.AddForce(move * _settings.Value.SlopeModifier.Evaluate(Vector3.Angle(groundNormal, Vector3.up)), ForceMode.Impulse);
-                    }
                 }
             }
         }
@@ -220,9 +218,7 @@ namespace Signals.Extras.Characters
                 Physics.SphereCast(_transform.position, _collider.radius * (1f - _settings.Value.ShellOffset), Vector3.down, out hit,
                     _collider.height * .5f - _collider.radius + _settings.Value.StickToGroundDistance) &&
                 Mathf.Abs(Vector3.Angle(hit.normal, Vector3.up)) < 85f)
-            {
                 _rigidbody.velocity = Vector3.ProjectOnPlane(_rigidbody.velocity, hit.normal);
-            }
         }
     }
 }
