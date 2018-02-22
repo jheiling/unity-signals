@@ -98,8 +98,8 @@ namespace Signals.Extras.Characters
                 }
             }
 
-            if (Input.GetMouseButtonUp(0)) LockCursor();
-            else if (Input.GetKeyUp(KeyCode.Escape)) UnlockCursor();
+            if (Application.isFocused) LockCursor();
+            else UnlockCursor();
         }
 
         void LockCursor()
