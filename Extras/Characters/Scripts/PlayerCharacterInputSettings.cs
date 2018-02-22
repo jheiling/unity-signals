@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Signals.Extras.Characters
 {
     [Serializable]
-    public class FirstPersonPlayerCharacterInputSettings
+    public class PlayerCharacterInputSettings
     {
         [SerializeField] string _moveXAxis = "Horizontal";
         [SerializeField] string _moveZAxis = "Vertical";
