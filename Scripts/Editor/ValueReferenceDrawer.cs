@@ -10,9 +10,9 @@ namespace Signals
     /// </summary>
     public abstract class ValueReferenceDrawer : PropertyDrawer
     {
-        readonly static string[] _popupOptions = { "Use Signal Value", "Use Local Value" };
+        static readonly string[] _popupOptions = { "Use Signal Value", "Use Local Value" };
 
-        readonly static GUIStyle _popupStyle = new GUIStyle(GUI.skin.GetStyle("PaneOptions"))
+        static readonly GUIStyle _popupStyle = new GUIStyle(GUI.skin.GetStyle("PaneOptions"))
         {
             imagePosition = ImagePosition.ImageOnly
         };

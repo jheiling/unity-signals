@@ -13,9 +13,9 @@ namespace Signals
     /// <typeparam name="ET">The type of the <see cref="Signal.OnChanged"/> event.</typeparam>
     public abstract class SignalEditor<T, ET> : Editor where ET : UnityEvent<T>, new()
     {
-        static GUIContent _descriptionLabel = new GUIContent("Description");
-        static GUIContent _onChangedLabel = new GUIContent("On Changed");
-        static GUIContent _serializeChangesLabel = new GUIContent("Serialize Changes");
+        static readonly GUIContent _descriptionLabel = new GUIContent("Description");
+        static readonly GUIContent _onChangedLabel = new GUIContent("On Changed");
+        static readonly GUIContent _serializeChangesLabel = new GUIContent("Serialize Changes");
 
         SerializedProperty _description;
         SerializedProperty _onChanged;
