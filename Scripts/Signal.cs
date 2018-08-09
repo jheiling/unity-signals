@@ -5,6 +5,32 @@ using UnityEngine.Events;
 
 namespace Signals
 {
+    [CreateAssetMenu(menuName = "Signals/Signal")]
+    public class Signal : ScriptableObject, ISignal
+    {
+#if UNITY_EDITOR
+#pragma warning disable
+        [SerializeField] [Multiline] string _description;
+#pragma warning restore
+#endif
+        [SerializeField] UnityEvent _onTriggered;
+
+        public UnityEvent OnTriggered
+        {
+            get
+            {
+                return _onTriggered;
+            }
+        }
+
+        public void Trigger()
+        {
+            _onTriggered.Invoke();
+        }
+    }
+
+
+
     /// <summary>
     /// Abstract base class for Signals inheriting from ScriptableObject.
     /// Implements the <see cref="ISignal"/> interface.
