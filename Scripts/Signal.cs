@@ -120,7 +120,7 @@ namespace Signals
             return !_value.Equals(value);
         }
 
-        protected virtual void Awake()
+        protected virtual void OnEnable()
         {
             _value = _initialValue;
             if (_onChanged == null) _onChanged = new ET();
