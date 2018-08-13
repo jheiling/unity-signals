@@ -5,10 +5,10 @@ using UnityEngine.Events;
 
 namespace Signals
 {
-
     /// <summary>
     /// Signal Listener for a basic Signal.
     /// </summary>
+    [AddComponentMenu("Signals/SignalListener")]
     public class SignalListener : MonoBehaviour
     {
 #if UNITY_EDITOR
@@ -95,8 +95,9 @@ namespace Signals
         {
             if (!_signal.Equals(null)) _signal.OnTriggered.RemoveListener(_onTriggered.Invoke);
         }
-
     }
+
+
 
     /// <summary>
     /// Abstract base class for MonoBehaviours which propagate a <see cref="Signal.OnChanged"/> event.
