@@ -5,6 +5,10 @@ using UnityEngine.Events;
 
 namespace Signals
 {
+    /// <summary>
+    /// Signal with no value.
+    /// Implements the <see cref="ISignal"/> interface.
+    /// </summary>
     [CreateAssetMenu(menuName = "Signals/Signal")]
     public class Signal : ScriptableObject, ISignal
     {
@@ -15,6 +19,9 @@ namespace Signals
 #endif
         [SerializeField] UnityEvent _onTriggered;
 
+        /// <summary>
+        /// Invoked when <see cref="Trigger"/> is called.
+        /// </summary>
         public UnityEvent OnTriggered
         {
             get
@@ -23,6 +30,9 @@ namespace Signals
             }
         }
 
+        /// <summary>
+        /// Triggers the <see cref="OnTriggered"/> event.
+        /// </summary>
         public void Trigger()
         {
             _onTriggered.Invoke();

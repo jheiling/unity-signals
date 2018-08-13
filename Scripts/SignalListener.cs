@@ -17,11 +17,8 @@ namespace Signals
 #pragma warning restore
 #endif
         [SerializeField] Signal _signal;
-
         [SerializeField] UnityEvent _onTriggered;
-
         [SerializeField] bool _invokeImmediately;
-
 
         protected virtual void Awake()
         {
@@ -37,6 +34,7 @@ namespace Signals
         {
             RemoveListener();
         }
+
         /// <summary>
         /// The signal whose <see cref="Signal.OnTriggered"/> event is propagated.
         /// </summary>
@@ -54,9 +52,8 @@ namespace Signals
             }
         }
 
-
         /// <summary>
-        /// Invoked when the <see cref="Signal.OnTriggered"/> of the signal has changed.
+        /// Invoked when <see cref="Signal.Trigger"/> of the <see cref="Signal"/> is called.
         /// </summary>
         public UnityEvent OnTriggered
         {
@@ -67,7 +64,7 @@ namespace Signals
         }
 
         /// <summary>
-        /// If true the OnChanged event will also be invoked when the SignalListener is enabled or <see cref="Signal"/> is set.
+        /// If true the <see cref="OnChanged"/> event will also be invoked when the SignalListener is enabled or <see cref="Signal"/> is set.
         /// </summary>
         public bool InvokeImmediately
         {
@@ -148,7 +145,7 @@ namespace Signals
         }
 
         /// <summary>
-        /// If true the OnChanged event will also be invoked when the SignalListener is enabled or <see cref="Signal"/> is set.
+        /// If true the <see cref="OnChanged"/> event will also be invoked when the SignalListener is enabled or <see cref="Signal"/> is set.
         /// </summary>
         public bool InvokeImmediately
         {
