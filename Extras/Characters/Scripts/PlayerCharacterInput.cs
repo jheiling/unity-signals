@@ -8,7 +8,9 @@ namespace Signals.Extras.Characters
     [AddComponentMenu("Signals/Extras/Characters/PlayerCharacterInput")]
     public class PlayerCharacterInput : MonoBehaviour
     {
+#pragma warning disable
         [SerializeField] PlayerCharacterInputSettingsValueReference _settings;
+#pragma warning restore
         [SerializeField] CharacterMoveSignal _moveSignal;
         [SerializeField] BoolSignal _runSignal;
         [SerializeField] BoolSignal _jumpSignal;

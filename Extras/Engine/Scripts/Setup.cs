@@ -11,7 +11,9 @@ namespace Signals.Extras.Engine
         where ST : ISignal<T, ET> 
         where VT : ValueReference<T, ET, ST>
     {
+#pragma warning disable
         [SerializeField] VT _settings;
+#pragma warning restore
         [SerializeField] bool _applyOnStart = true;
 
         public VT Settings

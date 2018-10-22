@@ -10,7 +10,9 @@ namespace Signals
         where ST : ISignal<T, ET>
         where VT : ValueReference<T, ET, ST>
     {
+#pragma warning disable
         [SerializeField] VT _reference;
+#pragma warning restore
 
         public VT Reference
         {

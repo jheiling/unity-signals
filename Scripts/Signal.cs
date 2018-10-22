@@ -12,12 +12,12 @@ namespace Signals
     [CreateAssetMenu(menuName = "Signals/Signal")]
     public class Signal : ScriptableObject, ISignal
     {
-#if UNITY_EDITOR
 #pragma warning disable
+#if UNITY_EDITOR
         [SerializeField] [Multiline] string _description;
-#pragma warning restore
 #endif
         [SerializeField] UnityEvent _onTriggered;
+#pragma warning restore
 
         /// <summary>
         /// Invoked when <see cref="Trigger"/> is called.
@@ -53,8 +53,8 @@ namespace Signals
 #if UNITY_EDITOR
 #pragma warning disable
         [SerializeField] [Multiline] string _description;
-#pragma warning restore
         [SerializeField] bool _serializeChanges;
+#pragma warning restore
 #endif
         [SerializeField] T _initialValue;
         T _value;

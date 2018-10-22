@@ -9,7 +9,9 @@ namespace Signals.Examples
     [AddComponentMenu("Signals/Examples/ExamplePlayerCharacterInput")]
     public class ExamplePlayerCharacterInput : TopDownPlayerCharacterInput
     {
+#pragma warning disable
         [SerializeField] StringSignal _lookingAtSignal;
+#pragma warning restore
 
         protected override void OnMouseOverUI()
         {
