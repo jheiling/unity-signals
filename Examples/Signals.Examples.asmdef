@@ -1,0 +1,15 @@
+{
+    "name": "Signals.Examples",
+    "references": [
+        "Signals",
+        "Signals.Extras.Character"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": []
+}

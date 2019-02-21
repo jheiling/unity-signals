@@ -1,0 +1,17 @@
+{
+    "name": "Signals.Extras.Engine.Editor",
+    "references": [
+        "Signals.Extras.Engine",
+        "Signals.Editor"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": []
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Signals.Extras.Utility",
+    "references": [
+        "Signals"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
