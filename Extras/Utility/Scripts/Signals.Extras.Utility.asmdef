@@ -1,7 +1,8 @@
 {
     "name": "Signals.Extras.Utility",
     "references": [
-        "Signals"
+        "Signals",
+        "Signals.Common"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

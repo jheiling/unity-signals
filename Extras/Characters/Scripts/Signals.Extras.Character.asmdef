@@ -1,7 +1,8 @@
 {
     "name": "Signals.Extras.Character",
     "references": [
-        "Signals"
+        "Signals",
+        "Signals.Common"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

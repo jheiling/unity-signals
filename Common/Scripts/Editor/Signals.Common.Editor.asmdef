@@ -1,12 +1,13 @@
 {
-    "name": "Signals.Examples",
+    "name": "Signals.Common.Editor",
     "references": [
-        "Signals",
-        "Signals.Common",
-        "Signals.Extras.Character"
+        "Signals.Editor",
+        "Signals.Common"
     ],
     "optionalUnityReferences": [],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

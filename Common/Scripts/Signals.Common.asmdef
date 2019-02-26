@@ -1,9 +1,7 @@
 {
-    "name": "Signals.Examples",
+    "name": "Signals.Common",
     "references": [
-        "Signals",
-        "Signals.Common",
-        "Signals.Extras.Character"
+        "Signals"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
@@ -11,6 +9,6 @@
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
+    "autoReferenced": true,
     "defineConstraints": []
 }
