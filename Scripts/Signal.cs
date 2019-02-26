@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 namespace Signals
 {
-    /// <summary>Empty Signal. Implements the <see cref="ISignal"/> interface.</summary>
+    /// <summary>The empty Signal. Implements the <see cref="ISignal"/> interface.</summary>
     [CreateAssetMenu(menuName = nameof(Signals) + "/" + nameof(Signal))]
     public class Signal : ScriptableObject, ISignal
     {

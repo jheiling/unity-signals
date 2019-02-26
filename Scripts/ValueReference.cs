@@ -12,7 +12,7 @@ namespace Signals
         where ET : UnityEvent<T>, new() 
         where ST : ISignal<T, ET>
     {
-        [SerializeField] bool _useLocalValue;
+        [SerializeField] bool _useLocalValue = true;
         [SerializeField] ST _signal;
         [SerializeField] T _localValue;
 
@@ -21,11 +21,7 @@ namespace Signals
 
         /// <summary>Constructor for a ValueReference which uses a <see cref="LocalValue"/>.</summary>
         /// <param name="localValue">The local value.</param>
-        public ValueReference(T localValue)
-        {
-            _useLocalValue = true;
-            _localValue = localValue;
-        }
+        public ValueReference(T localValue) => _localValue = localValue;
 
         /// <summary>False if a <see cref="Signal"/>'s <see cref="Signal.Value"/> is used, true if <see cref="LocalValue"/> is used.</summary>
         public bool UseLocalValue

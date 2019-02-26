@@ -51,10 +51,8 @@ namespace Signals.Extras.Characters
                 if (_runSignal != null) _runSignal.Value = Input.GetButton(_settings.Value.RunButton);
                 if (_jumpSignal != null) _jumpSignal.Value = Input.GetButton(_settings.Value.JumpButton);
                 if (_lookSignal)
-                {
                     _lookSignal.Value = new Vector2(-Input.GetAxis(_settings.Value.LookXAxis) * _settings.Value.LookSensitivity,
                         Input.GetAxis(_settings.Value.LookYAxis) * _settings.Value.LookSensitivity);
-                }
             }
 
             if (Application.isFocused) LockCursor();

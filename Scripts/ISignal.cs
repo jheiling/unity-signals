@@ -2,7 +2,7 @@
 
 namespace Signals
 {
-    /// <summary>The Signal interface.</summary>
+    /// <summary>The empty Signal interface.</summary>
     public interface ISignal
     {
         /// <summary>Adds a listener.</summary>

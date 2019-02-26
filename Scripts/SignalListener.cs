@@ -9,7 +9,7 @@ namespace Signals
     {
 #pragma warning disable 649, IDE0044 // Add readonly modifier
 #if UNITY_EDITOR
-        [SerializeField] [Multiline] string _description;
+        [SerializeField, Multiline] string _description;
 #endif
         [SerializeField] Signal _signal;
         [SerializeField] UnityEvent _onUpdated;
@@ -53,7 +53,7 @@ namespace Signals
             }
         }
 
-        void RemoveListenerFromSignal() { if (_signal != null) _signal.RemoveListener(_onUpdated.Invoke); }
+        void RemoveListenerFromSignal() => _signal?.RemoveListener(_onUpdated.Invoke);
     }
 
 
@@ -112,6 +112,6 @@ namespace Signals
             }
         }
 
-        void RemoveListenerFromSignal() { if (_signal != null) _signal.RemoveListener(_onUpdated.Invoke); }
+        void RemoveListenerFromSignal() => _signal?.RemoveListener(_onUpdated.Invoke);
     }
 }
