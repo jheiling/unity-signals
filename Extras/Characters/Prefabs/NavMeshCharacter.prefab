@@ -240,11 +240,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _description: 
   _signal: {fileID: 11400000, guid: cbc6c60aea74f1a4bbae11198e8221bd, type: 2}
-  _onChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Signals.Common.Vector3Event, Signals, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   _onUpdated:
     m_PersistentCalls:
       m_Calls:
@@ -259,7 +254,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Signals.Common.Vector3Event, Signals, Version=0.0.0.0, Culture=neutral,
+    m_TypeName: Signals.Common.Vector3Event, Signals.Common, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   _invokeImmediately: 0
 --- !u!114 &114507914540082106
@@ -276,3 +271,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _signal: {fileID: 11400000, guid: 6667cbec9243f6f4d8788a4c679ee5fd, type: 2}
   _local: 0
+  _trackOnUpdate: 0
+  _trackOnLateUpdate: 1
+  _trackOnFixedUpdate: 0
