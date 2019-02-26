@@ -3,111 +3,115 @@ using UnityEngine.Events;
 
 namespace Signals
 {
-    /// <summary>Signal Listener for a basic Signal.</summary>
+    /// <summary>Signal Listener for an empty <see cref="Signal"/>.</summary>
     [AddComponentMenu("Signals/SignalListener")]
     public class SignalListener : MonoBehaviour
     {
-#if UNITY_EDITOR
 #pragma warning disable 649, IDE0044 // Add readonly modifier
+#if UNITY_EDITOR
         [SerializeField] [Multiline] string _description;
-#pragma warning restore 649, IDE0044 // Add readonly modifier
 #endif
         [SerializeField] Signal _signal;
-        [SerializeField] UnityEvent _onTriggered;
+        [SerializeField] UnityEvent _onUpdated;
         [SerializeField] bool _invokeImmediately;
+#pragma warning restore 649, IDE0044 // Add readonly modifier
 
-        protected virtual void Awake() { if (_onTriggered == null) _onTriggered = new UnityEvent(); }
-        protected virtual void OnEnable() => AddListener();
-        protected virtual void OnDisable() => RemoveListener();
-
-        /// <summary>The signal whose <see cref="Signal.OnTriggered"/> event is propagated.</summary>
+        /// <summary>The <see cref="Signal"/>.</summary>
         public Signal Signal
         {
             get => _signal;
             set
             {
-                if (enabled) RemoveListener();
+                if (enabled) RemoveListenerFromSignal();
                 _signal = value;
-                if (enabled) AddListener();
+                if (enabled) AddListenerToSignal();
             }
         }
 
-        /// <summary>Invoked when <see cref="Signal.Trigger"/> of the <see cref="Signal"/> is called.</summary>
-        public UnityEvent OnTriggered => _onTriggered;
-
-        /// <summary>If true the <see cref="OnChanged"/> event will also be invoked when the SignalListener is enabled or <see cref="Signal"/> is set.</summary>
+        /// <summary>If true the listeners will also be invoked when the <see cref="SignalListener"/> is enabled or <see cref="Signal"/> is set.</summary>
         public bool InvokeImmediately
         {
             get => _invokeImmediately;
             set => _invokeImmediately = value;
         }
 
-        void AddListener()
+        /// <summary>Adds a listener.</summary>
+        public void AddListener(UnityAction listener) => _onUpdated.AddListener(listener);
+
+        /// <summary>Removes a listener.</summary>
+        public void RemoveListener(UnityAction listener) => _onUpdated.RemoveListener(listener);
+
+        protected virtual void OnEnable() => AddListenerToSignal();
+        protected virtual void OnDisable() => RemoveListenerFromSignal();
+
+        void AddListenerToSignal()
         {
-            if (!_signal.Equals(null))
+            if (_signal != null)
             {
-                _signal.OnTriggered.AddListener(_onTriggered.Invoke);
-                if (_invokeImmediately) _onTriggered.Invoke();
+                _signal.AddListener(_onUpdated.Invoke);
+                if (_invokeImmediately) _onUpdated.Invoke();
             }
         }
 
-        void RemoveListener() { if (!_signal.Equals(null)) _signal.OnTriggered.RemoveListener(_onTriggered.Invoke); }
+        void RemoveListenerFromSignal() { if (_signal != null) _signal.RemoveListener(_onUpdated.Invoke); }
     }
 
 
 
-    /// <summary>Abstract base class for MonoBehaviours which propagate a <see cref="Signal.OnChanged"/> event.</summary>
+    /// <summary>Abstract base class for SignalListeners.</summary>
     /// <typeparam name="T">The type of the <see cref="Signal.Value"/>.</typeparam>
-    /// <typeparam name="ET">The type of the <see cref="Signal.OnChanged"/> event.</typeparam>
+    /// <typeparam name="ET">The type of the <see cref="Signal.OnUpdated"/> event.</typeparam>
     /// <typeparam name="ST">The type of the Signal.</typeparam>
     public abstract class SignalListener<T, ET, ST> : MonoBehaviour 
         where ET : UnityEvent<T>, new() 
         where ST : ISignal<T, ET>
     {
-#if UNITY_EDITOR
 #pragma warning disable 649, IDE0044 // Add readonly modifier
+#if UNITY_EDITOR
         [SerializeField] [Multiline] string _description;
-#pragma warning restore 649, IDE0044 // Add readonly modifier
 #endif
         [SerializeField] ST _signal;
-        [SerializeField] ET _onChanged;
+        [SerializeField] ET _onUpdated;
         [SerializeField] bool _invokeImmediately;
+#pragma warning restore 649, IDE0044 // Add readonly modifier
 
-        /// <summary>The signal whose <see cref="Signal.OnChanged"/> event is propagated.</summary>
+        /// <summary>The <see cref="Signal"/>.</summary>
         public ST Signal
         {
             get => _signal;
             set
             {
-                if (enabled) RemoveListener();
+                if (enabled) RemoveListenerFromSignal();
                 _signal = value;
-                if (enabled) AddListener();
+                if (enabled) AddListenerToSignal();
             }
         }
 
-        /// <summary>Invoked when the <see cref="Signal.Value"/> of the signal has changed.</summary>
-        public ET OnChanged => _onChanged;
-
-        /// <summary>If true the <see cref="OnChanged"/> event will also be invoked when the SignalListener is enabled or <see cref="Signal"/> is set.</summary>
+        /// <summary>If true the listeners will also be invoked when the <see cref="SignalListener"/> is enabled or <see cref="Signal"/> is set.</summary>
         public bool InvokeImmediately
         {
             get => _invokeImmediately;
             set => _invokeImmediately = value;
         }
 
-        protected virtual void Awake() { if (_onChanged == null) _onChanged = new ET(); }
-        protected virtual void OnEnable() => AddListener();
-        protected virtual void OnDisable() => RemoveListener();
+        /// <summary>Adds a listener.</summary>
+        public void AddListener(UnityAction<T> listener) => _onUpdated.AddListener(listener);
 
-        void AddListener()
+        /// <summary>Removes a listener.</summary>
+        public void RemoveListener(UnityAction<T> listener) => _onUpdated.RemoveListener(listener);
+
+        protected virtual void OnEnable() => AddListenerToSignal();
+        protected virtual void OnDisable() => RemoveListenerFromSignal();
+
+        void AddListenerToSignal()
         {
-            if (!_signal.Equals(null))
+            if (_signal != null)
             {
-                _signal.OnChanged.AddListener(_onChanged.Invoke);
-                if (_invokeImmediately) _onChanged.Invoke(_signal.Value);
+                _signal.AddListener(_onUpdated.Invoke);
+                if (_invokeImmediately) _onUpdated.Invoke(_signal.Value);
             }
         }
 
-        void RemoveListener() { if (!_signal.Equals(null)) _signal.OnChanged.RemoveListener(_onChanged.Invoke); }
+        void RemoveListenerFromSignal() { if (_signal != null) _signal.RemoveListener(_onUpdated.Invoke); }
     }
 }

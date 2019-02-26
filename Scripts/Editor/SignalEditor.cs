@@ -10,18 +10,18 @@ namespace Signals
     public abstract class SignalEditor<T, ET> : Editor where ET : UnityEvent<T>, new()
     {
         static readonly GUIContent _descriptionLabel = new GUIContent("Description");
-        static readonly GUIContent _onChangedLabel = new GUIContent("On Changed");
+        static readonly GUIContent _onUpdatedLabel = new GUIContent("On Updated");
         static readonly GUIContent _serializeChangesLabel = new GUIContent("Serialize Changes");
 
         SerializedProperty _description;
-        SerializedProperty _onChanged;
+        SerializedProperty _onUpdated;
         SerializedProperty _serializeChanges;
 
         void OnEnable()
         {
-            _description = serializedObject.FindProperty("_description");
-            _onChanged = serializedObject.FindProperty("_onChanged");
-            _serializeChanges = serializedObject.FindProperty("_serializeChanges");
+            _description = serializedObject.FindProperty(nameof(_description));
+            _onUpdated = serializedObject.FindProperty(nameof(_onUpdated));
+            _serializeChanges = serializedObject.FindProperty(nameof(_serializeChanges));
         }
 
         public override void OnInspectorGUI()
@@ -37,7 +37,7 @@ namespace Signals
             if (!signal.InitialValue.Equals(value)) signal.InitialValue = value;
             GUILayout.EndHorizontal();
 
-            EditorGUILayout.PropertyField(_onChanged, _onChangedLabel);
+            EditorGUILayout.PropertyField(_onUpdated, _onUpdatedLabel);
             EditorGUILayout.Toggle("Use Validation", signal.UseValidation);
             EditorGUILayout.PropertyField(_serializeChanges, _serializeChangesLabel);
 

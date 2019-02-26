@@ -59,7 +59,7 @@ namespace Signals
                 }
                 else
                 {
-                    if (_signal.Equals(null)) throw new NullReferenceException();
+                    if (_signal == null) throw new NullReferenceException();
                     return _signal.Value;
                 }
             }
@@ -71,14 +71,14 @@ namespace Signals
                 }
                 else
                 {
-                    if (_signal.Equals(null)) throw new NullReferenceException();
+                    if (_signal == null) throw new NullReferenceException();
                     _signal.Value = value;
                 }
             }
         }
 
-        /// <summary>Implicit cast from the ValueReference to it's <see cref="Value"/>.</summary>
-        /// <param name="reference">The ValueReference.</param>
+        /// <summary>Implicit cast from the <see cref="ValueReference"/> to it's <see cref="Value"/>.</summary>
+        /// <param name="reference">The <see cref="ValueReference"/>.</param>
         public static implicit operator T(ValueReference<T, ET, ST> reference) => reference.Value;
     }
 }
