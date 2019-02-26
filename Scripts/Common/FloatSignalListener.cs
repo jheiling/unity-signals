@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 
-
-
 namespace Signals.Common
 {
-    [AddComponentMenu("Signals/FloatSignalListener")]
+    [AddComponentMenu(nameof(Signals) + "/" + nameof(FloatSignalListener))]
     public class FloatSignalListener : SignalListener<float, FloatEvent, FloatSignal> { }
 }

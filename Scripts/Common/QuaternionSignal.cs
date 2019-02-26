@@ -1,9 +1,7 @@
 using UnityEngine;
 
-
-
 namespace Signals.Common
 {
-    [CreateAssetMenu(menuName = "Signals/QuaternionSignal")]
+    [CreateAssetMenu(menuName = nameof(Signals) + "/" + nameof(QuaternionSignal))]
     public class QuaternionSignal : Signal<Quaternion, QuaternionEvent> { }
 }

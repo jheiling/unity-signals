@@ -1,9 +1,7 @@
 using UnityEngine;
 
-
-
 namespace Signals.Extras.Engine
 {
-    [CreateAssetMenu(menuName = "Signals/Extras/Engine/PhysicsSettingsSignal")]
+    [CreateAssetMenu(menuName = nameof(Signals) + "/" + nameof(Extras) + "/" + nameof(Engine) + "/" + nameof(PhysicsSettingsSignal))]
     public class PhysicsSettingsSignal : SettingsSignal<PhysicsSettings, PhysicsSettingsEvent> { }
 }

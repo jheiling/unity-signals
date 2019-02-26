@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 
-
-
 namespace Signals.Extras.Engine
 {
-    [AddComponentMenu("Signals/Extras/Engine/ApplicationSetup")]
+    [AddComponentMenu(nameof(Signals) + "/" + nameof(Extras) + "/" + nameof(Engine) + "/" + nameof(ApplicationSetup))]
     public class ApplicationSetup : Setup<ApplicationSettings, ApplicationSettingsEvent, ApplicationSettingsSignal, ApplicationSettingsValueReference> { }
 }

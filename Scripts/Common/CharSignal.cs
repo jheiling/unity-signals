@@ -1,9 +1,7 @@
 using UnityEngine;
 
-
-
 namespace Signals.Common
 {
-    [CreateAssetMenu(menuName = "Signals/CharSignal")]
+    [CreateAssetMenu(menuName = nameof(Signals) + "/" + nameof(CharSignal))]
     public class CharSignal : Signal<char, CharEvent> { }
 }

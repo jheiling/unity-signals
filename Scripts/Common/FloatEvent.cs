@@ -1,8 +1,6 @@
 ﻿using System;
 using UnityEngine.Events;
 
-
-
 namespace Signals.Common
 {
     [Serializable]

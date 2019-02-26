@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEditor;
 
-
-
 namespace Signals.Common
 {
     [CustomEditor(typeof(QuaternionSignal), true)]

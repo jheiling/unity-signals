@@ -1,75 +1,38 @@
 ﻿using UnityEngine;
 
-
-
 namespace Signals.Extras.Engine
 {
-    [CreateAssetMenu(fileName = "Time", menuName = "Signals/Extras/Engine/TimeWrapper")]
+    [CreateAssetMenu(fileName = "Time", menuName = nameof(Signals) + "/" + nameof(Extras) + "/" + nameof(Engine) + "/" + nameof(TimeWrapper))]
     public class TimeWrapper : ScriptableObject
     {
         public float FixedDeltaTime
         {
-            get
-            {
-                return Time.fixedDeltaTime;
-            }
-
-            set
-            {
-                Time.fixedDeltaTime = value;
-            }
+            get => Time.fixedDeltaTime;
+            set => Time.fixedDeltaTime = value;
         }
 
         public float MaximumDeltaTime
         {
-            get
-            {
-                return Time.maximumDeltaTime;
-            }
-
-            set
-            {
-                Time.maximumDeltaTime = value;
-            }
+            get => Time.maximumDeltaTime;
+            set => Time.maximumDeltaTime = value;
         }
 
         public float TimeScale
         {
-            get
-            {
-                return Time.timeScale;
-            }
-
-            set
-            {
-                Time.timeScale = value;
-            }
+            get => Time.timeScale;
+            set => Time.timeScale = value;
         }
 
         public float MaximumParticleDeltaTime
         {
-            get
-            {
-                return Time.maximumParticleDeltaTime;
-            }
-
-            set
-            {
-                Time.maximumParticleDeltaTime = value;
-            }
+            get => Time.maximumParticleDeltaTime;
+            set => Time.maximumParticleDeltaTime = value;
         }
 
         public int CaptureFramerate
         {
-            get
-            {
-                return Time.captureFramerate;
-            }
-
-            set
-            {
-                Time.captureFramerate = value;
-            }
+            get => Time.captureFramerate;
+            set => Time.captureFramerate = value;
         }
     }
 }

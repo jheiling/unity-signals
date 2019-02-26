@@ -2,8 +2,6 @@
 using UnityEngine;
 using UnityEditor;
 
-
-
 namespace Signals.Extras.Engine
 {
     [CustomEditor(typeof(ApplicationWrapper))]

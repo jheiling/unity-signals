@@ -1,9 +1,7 @@
 using UnityEngine;
 
-
-
 namespace Signals.Common
 {
-    [AddComponentMenu("Signals/BoolSignalListener")]
+    [AddComponentMenu(nameof(Signals) + "/" + nameof(BoolSignalListener))]
     public class BoolSignalListener : SignalListener<bool, BoolEvent, BoolSignal> { }
 }

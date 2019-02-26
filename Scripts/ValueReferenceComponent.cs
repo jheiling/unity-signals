@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-
-
 namespace Signals
 {
     public abstract class ValueReferenceComponent<T, ET, ST, VT> : MonoBehaviour 
@@ -10,34 +8,18 @@ namespace Signals
         where ST : ISignal<T, ET>
         where VT : ValueReference<T, ET, ST>
     {
-#pragma warning disable
+#pragma warning disable 649, IDE0044 // Add readonly modifier
         [SerializeField] VT _reference;
-#pragma warning restore
+#pragma warning restore 649, IDE0044 // Add readonly modifier
 
-        public VT Reference
-        {
-            get
-            {
-                return _reference;
-            }
-        }
+        public VT Reference => _reference;
 
-        /// <summary>
-        /// Implicit cast from the ValueReferenceComponent to the wrapped <see cref="ValueReference"/>.
-        /// </summary>
+        /// <summary>Implicit cast from the ValueReferenceComponent to the wrapped <see cref="ValueReference"/>.</summary>
         /// <param name="component">The ValueReferenceComponent.</param>
-        public static implicit operator VT(ValueReferenceComponent<T, ET, ST, VT> component)
-        {
-            return component._reference;
-        }
+        public static implicit operator VT(ValueReferenceComponent<T, ET, ST, VT> component) => component._reference;
 
-        /// <summary>
-        /// Implicit cast from the ValueReferenceComponent to the wrapped <see cref="ValueReference.Value"/>.
-        /// </summary>
+        /// <summary>Implicit cast from the ValueReferenceComponent to the wrapped <see cref="ValueReference.Value"/>.</summary>
         /// <param name="component">The ValueReferenceComponent.</param>
-        public static implicit operator T(ValueReferenceComponent<T, ET, ST, VT> component)
-        {
-            return component._reference.Value;
-        }
+        public static implicit operator T(ValueReferenceComponent<T, ET, ST, VT> component) => component._reference.Value;
     }
 }

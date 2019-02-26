@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 
-
-
 namespace Signals.Extras.Engine
 {
-    [AddComponentMenu("Signals/Extras/Engine/TimeSetup")]
+    [AddComponentMenu(nameof(Signals) + "/" + nameof(Extras) + "/" + nameof(Engine) + "/" + nameof(TimeSetup))]
     public class TimeSetup : Setup<TimeSettings, TimeSettingsEvent, TimeSettingsSignal, TimeSettingsValueReference> { }
 }

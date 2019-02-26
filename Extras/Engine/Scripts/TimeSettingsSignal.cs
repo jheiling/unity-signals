@@ -1,9 +1,7 @@
 using UnityEngine;
 
-
-
 namespace Signals.Extras.Engine
 {
-    [CreateAssetMenu(menuName = "Signals/Extras/Engine/TimeSettingsSignal")]
+    [CreateAssetMenu(menuName = nameof(Signals) + "/" + nameof(Extras) + "/" + nameof(Engine) + "/" + nameof(TimeSettingsSignal))]
     public class TimeSettingsSignal : Signal<TimeSettings, TimeSettingsEvent> { }
 }

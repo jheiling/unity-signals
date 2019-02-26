@@ -1,13 +1,9 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-
-
 namespace Signals
 {
-    /// <summary>
-    /// Abstract base class for custom drawers for classes inheriting from <see cref="ValueReference"/>.
-    /// </summary>
+    /// <summary>Abstract base class for custom drawers for classes inheriting from <see cref="ValueReference"/>.</summary>
     public abstract class ValueReferenceDrawer : PropertyDrawer
     {
         static readonly string[] _popupOptions = { "Use Signal Value", "Use Local Value" };
@@ -37,28 +33,17 @@ namespace Signals
             EditorGUI.EndProperty();
         }
 
-        /// <summary>
-        /// Override this method to implement a custom inspector for the <see cref="ValueReference.LocalValue"/>.
-        /// </summary>
+        /// <summary>Override this method to implement a custom inspector for the <see cref="ValueReference.LocalValue"/>.</summary>
         /// <param name="position">The field's position.</param>
         /// <param name="localValue">The SerializedProperty containing the value.</param>
-        protected virtual void LocalValueField(Rect position, SerializedProperty localValue)
-        {
+        protected virtual void LocalValueField(Rect position, SerializedProperty localValue) =>
             EditorGUI.PropertyField(position, localValue, GUIContent.none, true);
-        }
 
-        public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
-        {
-            return property.FindPropertyRelative("_useLocalValue").boolValue ? GetLocalValueFieldHeight() : EditorGUIUtility.singleLineHeight;
-        }
+        public override float GetPropertyHeight(SerializedProperty property, GUIContent label) => 
+            property.FindPropertyRelative("_useLocalValue").boolValue ? GetLocalValueFieldHeight() : EditorGUIUtility.singleLineHeight;
 
-        /// <summary>
-        /// Override this if your <see cref="LocalValueField"/> is higher than one line.
-        /// </summary>
+        /// <summary>Override this if your <see cref="LocalValueField"/> is higher than one line.</summary>
         /// <returns>The <see cref="LocalValueField"/>'s height.</returns>
-        protected virtual float GetLocalValueFieldHeight()
-        {
-            return EditorGUIUtility.singleLineHeight;
-        }
+        protected virtual float GetLocalValueFieldHeight() => EditorGUIUtility.singleLineHeight;
     }
 }

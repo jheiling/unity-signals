@@ -1,7 +1,5 @@
 using System;
 
-
-
 namespace Signals.Common
 {
     [Serializable]

@@ -1,45 +1,28 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-
-
 namespace Signals
 {
     /// <summary>
     /// Signal with no value.
     /// Implements the <see cref="ISignal"/> interface.
     /// </summary>
-    [CreateAssetMenu(menuName = "Signals/Signal")]
+    [CreateAssetMenu(menuName = nameof(Signals) + "/" + nameof(Signal))]
     public class Signal : ScriptableObject, ISignal
     {
-#pragma warning disable
+#pragma warning disable 649, IDE0044 // Add readonly modifier
 #if UNITY_EDITOR
-        [SerializeField] [Multiline] string _description;
+        [SerializeField, Multiline] string _description;
 #endif
         [SerializeField] UnityEvent _onTriggered;
-#pragma warning restore
+#pragma warning restore 649, IDE0044 // Add readonly modifier
 
-        /// <summary>
-        /// Invoked when <see cref="Trigger"/> is called.
-        /// </summary>
-        public UnityEvent OnTriggered
-        {
-            get
-            {
-                return _onTriggered;
-            }
-        }
+        /// <summary>Invoked when <see cref="Trigger"/> is called.</summary>
+        public UnityEvent OnTriggered => _onTriggered;
 
-        /// <summary>
-        /// Triggers the <see cref="OnTriggered"/> event.
-        /// </summary>
-        public void Trigger()
-        {
-            _onTriggered.Invoke();
-        }
+        /// <summary>Triggers the <see cref="OnTriggered"/> event.</summary>
+        public void Trigger() => _onTriggered.Invoke();
     }
-
-
 
     /// <summary>
     /// Abstract base class for Signals inheriting from ScriptableObject.
@@ -47,30 +30,23 @@ namespace Signals
     /// </summary>
     /// <typeparam name="T">The type of the <see cref="Value"/>.</typeparam>
     /// <typeparam name="ET">The type of the <see cref="OnChanged"/> event.</typeparam>
-    public abstract class Signal<T, ET> : ScriptableObject, ISignal<T, ET> 
-        where ET : UnityEvent<T>, new()
+    public abstract class Signal<T, ET> : ScriptableObject, ISignal<T, ET> where ET : UnityEvent<T>, new()
     {
 #if UNITY_EDITOR
-#pragma warning disable
-        [SerializeField] [Multiline] string _description;
+#pragma warning disable 649, IDE0044 // Add readonly modifier
+        [SerializeField, Multiline] string _description;
         [SerializeField] bool _serializeChanges;
-#pragma warning restore
+#pragma warning restore 649, IDE0044 // Add readonly modifier
 #endif
         [SerializeField] T _initialValue;
-        T _value;
         [SerializeField] ET _onChanged;
         [SerializeField] bool _useValidation = true;
+        T _value;
 
-        /// <summary>
-        /// The initial value of the Signal.
-        /// </summary>
+        /// <summary>The initial value of the Signal.</summary>
         public T InitialValue
         {
-            get
-            {
-                return _initialValue;
-            }
-
+            get => _initialValue;
             set
             {
                 ProcessValue(ref value);
@@ -85,11 +61,7 @@ namespace Signals
         /// </summary>
         public T Value
         {
-            get
-            {
-                return _value;
-            }
-
+            get => _value;
             set
             {
                 ProcessValue(ref value);
@@ -104,44 +76,20 @@ namespace Signals
             }
         }
 
-        /// <summary>
-        /// The event invoked when a <see cref="Value"/> is assigned to the Signal.
-        /// </summary>
-        public ET OnChanged
-        {
-            get
-            {
-                return _onChanged;
-            }
-        }
+        /// <summary>The event invoked when a <see cref="Value"/> is assigned to the Signal.</summary>
+        public ET OnChanged => _onChanged;
 
-        /// <summary>
-        /// True if new values are validated, false otherwise.
-        /// </summary>
+        /// <summary>True if new values are validated, false otherwise.</summary>
         public bool UseValidation
         {
-            get
-            {
-                return _useValidation;
-            }
-
-            set
-            {
-                _useValidation = value;
-            }
+            get => _useValidation;
+            set => _useValidation = value;
         }
 
-        /// <summary>
-        /// Triggers the <see cref="OnChanged"/> event with the current value.
-        /// </summary>
-        public void ForceChange()
-        {
-            _onChanged.Invoke(_value);
-        }
+        /// <summary>Triggers the <see cref="OnChanged"/> event with the current value.</summary>
+        public void ForceChange() => _onChanged.Invoke(_value);
 
-        /// <summary>
-        /// Override this method to preprocess values before applying them.
-        /// </summary>
+        /// <summary>Override this method to preprocess values before applying them.</summary>
         /// <param name="value">The value to process</param>
         protected virtual void ProcessValue(ref T value) { }
 
@@ -151,10 +99,7 @@ namespace Signals
         /// </summary>
         /// <param name="value">The new value.</param>
         /// <returns>True if the <see cref="Value"/> shoud be updated and the <see cref="OnChanged"/> event should be triggered, false otherwise.</returns>
-        protected virtual bool ValidateValue(T value)
-        {
-            return !_value.Equals(value);
-        }
+        protected virtual bool ValidateValue(T value) => !_value.Equals(value);
 
         protected virtual void OnEnable()
         {
@@ -166,18 +111,12 @@ namespace Signals
         /// Implicit cast from the Signal to it's <see cref="Value"/>.
         /// </summary>
         /// <param name="signal">The Signal.</param>
-        public static implicit operator T(Signal<T, ET> signal)
-        {
-            return signal._value;
-        }
+        public static implicit operator T(Signal<T, ET> signal) => signal._value;
 
         /// <summary>
         /// Implicit cast from the Signal to it's <see cref="OnChanged"/> Event.
         /// </summary>
         /// <param name="signal">The Signal.</param>
-        public static implicit operator ET(Signal<T, ET> signal)
-        {
-            return signal._onChanged;
-        }
+        public static implicit operator ET(Signal<T, ET> signal) => signal._onChanged;
     }
 }

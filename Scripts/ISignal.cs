@@ -1,12 +1,8 @@
 ﻿using UnityEngine.Events;
 
-
-
 namespace Signals
 {
-    /// <summary>
-    /// The Signal interface.
-    /// </summary>
+    /// <summary>The Signal interface.</summary>
     public interface ISignal
     {
         UnityEvent OnTriggered { get; }
@@ -14,15 +10,12 @@ namespace Signals
         void Trigger();
     }
 
-
-
     /// <summary>
     /// The Signal interface.
     /// </summary>
     /// <typeparam name="T">The type of the <see cref="Value"/>.</typeparam>
     /// <typeparam name="ET">The type of the <see cref="OnChanged"/> event.</typeparam>
-    public interface ISignal<T, ET> 
-        where ET : UnityEvent<T>, new()
+    public interface ISignal<T, ET> where ET : UnityEvent<T>, new()
     {
         /// <summary>
         /// The current value of the Signal. 
@@ -30,14 +23,10 @@ namespace Signals
         /// </summary>
         T Value { get; set; }
 
-        /// <summary>
-        /// The event invoked when a <see cref="Value"/> is assigned to the Signal.
-        /// </summary>
+        /// <summary>The event invoked when a <see cref="Value"/> is assigned to the Signal.</summary>
         ET OnChanged { get; }
 
-        /// <summary>
-        /// Triggers the <see cref="OnChanged"/> event with the current value.
-        /// </summary>
+        /// <summary>Triggers the <see cref="OnChanged"/> event with the current value.</summary>
         void ForceChange();
     }
 }

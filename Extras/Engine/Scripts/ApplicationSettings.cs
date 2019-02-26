@@ -1,8 +1,6 @@
 ﻿using System;
 using UnityEngine;
 
-
-
 namespace Signals.Extras.Engine
 {
     [Serializable]
@@ -14,41 +12,20 @@ namespace Signals.Extras.Engine
 
         public int TargetFrameRate
         {
-            get
-            {
-                return _targetFrameRate;
-            }
-
-            set
-            {
-                _targetFrameRate = value;
-            }
+            get => _targetFrameRate;
+            set => _targetFrameRate = value;
         }
 
         public bool RunInBackground
         {
-            get
-            {
-                return _runInBackground;
-            }
-
-            set
-            {
-                _runInBackground = value;
-            }
+            get => _runInBackground;
+            set => _runInBackground = value;
         }
 
         public ThreadPriority BackgroundLoadingPriority
         {
-            get
-            {
-                return _backgroundLoadingPriority;
-            }
-
-            set
-            {
-                _backgroundLoadingPriority = value;
-            }
+            get => _backgroundLoadingPriority;
+            set => _backgroundLoadingPriority = value;
         }
 
         public void Apply()

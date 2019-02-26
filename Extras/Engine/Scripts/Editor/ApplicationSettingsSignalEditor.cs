@@ -1,7 +1,5 @@
 using UnityEditor;
 
-
-
 namespace Signals.Extras.Engine
 {
     [CustomEditor(typeof(ApplicationSettingsSignal))]

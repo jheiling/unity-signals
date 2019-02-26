@@ -1,9 +1,7 @@
 using UnityEngine;
 
-
-
 namespace Signals.Common
 {
-    [AddComponentMenu("Signals/QuaternionSignalListener")]
+    [AddComponentMenu(nameof(Signals) + "/" + nameof(QuaternionSignalListener))]
     public class QuaternionSignalListener : SignalListener<Quaternion, QuaternionEvent, QuaternionSignal> { }
 }

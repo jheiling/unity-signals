@@ -1,179 +1,86 @@
 ﻿using UnityEngine;
 
-
-
 namespace Signals.Extras.Engine
 {
-    [CreateAssetMenu(fileName = "Physics", menuName = "Signals/Extras/Engine/PhysicsWrapper")]
+    [CreateAssetMenu(fileName = "Physics", menuName = nameof(Signals) + "/" + nameof(Extras) + "/" + nameof(Engine) + "/" + nameof(PhysicsWrapper))]
     public class PhysicsWrapper : ScriptableObject
     {
         public Vector3 Gravity
         {
-            get
-            {
-                return Physics.gravity;
-            }
-
-            set
-            {
-                Physics.gravity = value;
-            }
+            get => Physics.gravity;
+            set => Physics.gravity = value;
         }
 
         public float GravityY
         {
-            get
-            {
-                return Gravity.y;
-            }
-
-            set
-            {
-                Gravity = new Vector3(Gravity.x, value, Gravity.z);
-            }
+            get => Gravity.y;
+            set => Gravity = new Vector3(Gravity.x, value, Gravity.z);
         }
 
         public float BounceThreshold
         {
-            get
-            {
-                return Physics.bounceThreshold;
-            }
-
-            set
-            {
-                Physics.bounceThreshold = value;
-            }
+            get => Physics.bounceThreshold;
+            set => Physics.bounceThreshold = value;
         }
 
         public float SleepThreshold
         {
-            get
-            {
-                return Physics.sleepThreshold;
-            }
-
-            set
-            {
-                Physics.sleepThreshold = value;
-            }
+            get => Physics.sleepThreshold;
+            set => Physics.sleepThreshold = value;
         }
 
         public float DefaultContactOffset
         {
-            get
-            {
-                return Physics.defaultContactOffset;
-            }
-
-            set
-            {
-                Physics.defaultContactOffset = value;
-            }
+            get => Physics.defaultContactOffset;
+            set => Physics.defaultContactOffset = value;
         }
 
         public int DefaultSolverIterations
         {
-            get
-            {
-                return Physics.defaultSolverIterations;
-            }
-
-            set
-            {
-                Physics.defaultSolverIterations = value;
-            }
+            get => Physics.defaultSolverIterations;
+            set => Physics.defaultSolverIterations = value;
         }
 
         public int DefaultSolverVelocityIterations
         {
-            get
-            {
-                return Physics.defaultSolverVelocityIterations;
-            }
-
-            set
-            {
-                Physics.defaultSolverVelocityIterations = value;
-            }
+            get => Physics.defaultSolverVelocityIterations;
+            set => Physics.defaultSolverVelocityIterations = value;
         }
 
         public bool QueriesHitBackfaces
         {
-            get
-            {
-                return Physics.queriesHitBackfaces;
-            }
-
-            set
-            {
-                Physics.queriesHitBackfaces = value;
-            }
+            get => Physics.queriesHitBackfaces;
+            set => Physics.queriesHitBackfaces = value;
         }
 
         public bool QueriesHitTriggers
         {
-            get
-            {
-                return Physics.queriesHitTriggers;
-            }
-
-            set
-            {
-                Physics.queriesHitTriggers = value;
-            }
+            get => Physics.queriesHitTriggers;
+            set => Physics.queriesHitTriggers = value;
         }
 
         public bool AutoSimulation
         {
-            get
-            {
-                return Physics.autoSimulation;
-            }
-
-            set
-            {
-                Physics.autoSimulation = value;
-            }
+            get => Physics.autoSimulation;
+            set => Physics.autoSimulation = value;
         }
 
         public bool AutoSyncTransforms
         {
-            get
-            {
-                return Physics.autoSyncTransforms;
-            }
-
-            set
-            {
-                Physics.autoSyncTransforms = value;
-            }
+            get => Physics.autoSyncTransforms;
+            set => Physics.autoSyncTransforms = value;
         }
 
         public float InterCollisionDistance
         {
-            get
-            {
-                return Physics.interCollisionDistance;
-            }
-
-            set
-            {
-                Physics.interCollisionDistance = value;
-            }
+            get => Physics.interCollisionDistance;
+            set => Physics.interCollisionDistance = value;
         }
 
         public float InterCollisionStiffness
         {
-            get
-            {
-                return Physics.interCollisionStiffness;
-            }
-
-            set
-            {
-                Physics.interCollisionStiffness = value;
-            }
+            get => Physics.interCollisionStiffness;
+            set => Physics.interCollisionStiffness = value;
         }
     }
 }

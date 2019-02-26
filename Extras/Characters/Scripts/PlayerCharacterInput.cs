@@ -1,90 +1,47 @@
 ﻿using UnityEngine;
 using Signals.Common;
 
-
-
 namespace Signals.Extras.Characters
 {
-    [AddComponentMenu("Signals/Extras/Characters/PlayerCharacterInput")]
+    [AddComponentMenu(nameof(Signals) + "/" + nameof(Extras) + "/" + nameof(Characters) + "/" + nameof(PlayerCharacterInput))]
     public class PlayerCharacterInput : MonoBehaviour
     {
-#pragma warning disable
+#pragma warning disable 649
         [SerializeField] PlayerCharacterInputSettingsValueReference _settings;
-#pragma warning restore
+#pragma warning restore 649
         [SerializeField] CharacterMoveSignal _moveSignal;
         [SerializeField] BoolSignal _runSignal;
         [SerializeField] BoolSignal _jumpSignal;
         [SerializeField] Vector2Signal _lookSignal;
 
-        public PlayerCharacterInputSettings Settings
-        {
-            get
-            {
-                return _settings;
-            }
-        }
+        public PlayerCharacterInputSettings Settings => _settings;
 
         public CharacterMoveSignal MoveSignal
         {
-            get
-            {
-                return _moveSignal;
-            }
-
-            set
-            {
-                _moveSignal = value;
-            }
+            get => _moveSignal;
+            set => _moveSignal = value;
         }
 
         public BoolSignal RunSignal
         {
-            get
-            {
-                return _runSignal;
-            }
-
-            set
-            {
-                _runSignal = value;
-            }
+            get => _runSignal;
+            set => _runSignal = value;
         }
 
         public BoolSignal JumpSignal
         {
-            get
-            {
-                return _jumpSignal;
-            }
-
-            set
-            {
-                _jumpSignal = value;
-            }
+            get => _jumpSignal;
+            set => _jumpSignal = value;
         }
 
         public Vector2Signal LookSignal
         {
-            get
-            {
-                return _lookSignal;
-            }
-
-            set
-            {
-                _lookSignal = value;
-            }
+            get => _lookSignal;
+            set => _lookSignal = value;
         }
 
-        void OnEnable()
-        {
-            LockCursor();
-        }
-
-        void OnDisable()
-        {
-            UnlockCursor();
-        }
+        void OnEnable() => LockCursor();
+        void OnDisable() => UnlockCursor();
 
         void Update()
         {

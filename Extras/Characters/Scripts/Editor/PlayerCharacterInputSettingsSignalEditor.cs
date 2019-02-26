@@ -1,7 +1,5 @@
 using UnityEditor;
 
-
-
 namespace Signals.Extras.Characters
 {
     [CustomEditor(typeof(PlayerCharacterInputSettingsSignal))]

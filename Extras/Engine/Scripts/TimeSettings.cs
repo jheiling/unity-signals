@@ -1,8 +1,6 @@
 ﻿using System;
 using UnityEngine;
 
-
-
 namespace Signals.Extras.Engine
 {
     [Serializable]
@@ -16,67 +14,32 @@ namespace Signals.Extras.Engine
 
         public float FixedDeltaTime
         {
-            get
-            {
-                return _fixedDeltaTime;
-            }
-
-            set
-            {
-                _fixedDeltaTime = value;
-            }
+            get => _fixedDeltaTime;
+            set => _fixedDeltaTime = value;
         }
 
         public float MaximumDeltaTime
         {
-            get
-            {
-                return _maximumDeltaTime;
-            }
-
-            set
-            {
-                _maximumDeltaTime = value;
-            }
+            get => _maximumDeltaTime;
+            set => _maximumDeltaTime = value;
         }
 
         public float TimeScale
         {
-            get
-            {
-                return _timeScale;
-            }
-
-            set
-            {
-                _timeScale = value;
-            }
+            get => _timeScale;
+            set => _timeScale = value;
         }
 
         public float MaximumParticleDeltaTime
         {
-            get
-            {
-                return _maximumParticleDeltaTime;
-            }
-
-            set
-            {
-                _maximumParticleDeltaTime = value;
-            }
+            get => _maximumParticleDeltaTime;
+            set => _maximumParticleDeltaTime = value;
         }
 
         public int CaptureFramerate
         {
-            get
-            {
-                return _captureFramerate;
-            }
-
-            set
-            {
-                _captureFramerate = value;
-            }
+            get => _captureFramerate;
+            set => _captureFramerate = value;
         }
 
         public void SetToCurrent()

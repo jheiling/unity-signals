@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 
-
-
 namespace Signals.Common
 {
-    [CreateAssetMenu(menuName = "Signals/StringSignal")]
+    [CreateAssetMenu(menuName = nameof(Signals) + "/" + nameof(StringSignal))]
     public class StringSignal : Signal<string, StringEvent> { }
 }

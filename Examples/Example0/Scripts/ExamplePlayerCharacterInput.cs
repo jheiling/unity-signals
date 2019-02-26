@@ -2,21 +2,16 @@
 using Signals.Common;
 using Signals.Extras.Characters;
 
-
-
 namespace Signals.Examples
 {
-    [AddComponentMenu("Signals/Examples/ExamplePlayerCharacterInput")]
+    [AddComponentMenu(nameof(Signals) + "/" + nameof(Examples) + "/" + nameof(ExamplePlayerCharacterInput))]
     public class ExamplePlayerCharacterInput : TopDownPlayerCharacterInput
     {
-#pragma warning disable
+#pragma warning disable 649
         [SerializeField] StringSignal _lookingAtSignal;
-#pragma warning restore
+#pragma warning restore 649
 
-        protected override void OnMouseOverUI()
-        {
-            _lookingAtSignal.Value = "";
-        }
+        protected override void OnMouseOverUI() => _lookingAtSignal.Value = "";
 
         protected override void OnMouseOver(ref RaycastHit target)
         {

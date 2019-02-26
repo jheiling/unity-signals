@@ -1,9 +1,7 @@
 using UnityEngine;
 
-
-
 namespace Signals.Common
 {
-    [AddComponentMenu("Signals/Vector2IntSignalListener")]
+    [AddComponentMenu(nameof(Signals) + "/" + nameof(Vector2IntSignalListener))]
     public class Vector2IntSignalListener : SignalListener<Vector2Int, Vector2IntEvent, Vector2IntSignal> { }
 }

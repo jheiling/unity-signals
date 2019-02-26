@@ -2,13 +2,9 @@
 using UnityEngine.Events;
 using UnityEditor;
 
-
-
 namespace Signals
 {
-    /// <summary>
-    /// Abstract base class for custom editors for classes inheriting from <see cref="Signal"/>.
-    /// </summary>
+    /// <summary>Abstract base class for custom editors for classes inheriting from <see cref="Signal"/>.</summary>
     /// <typeparam name="T">The type of the <see cref="Signal.Value"/>.</typeparam>
     /// <typeparam name="ET">The type of the <see cref="Signal.OnChanged"/> event.</typeparam>
     public abstract class SignalEditor<T, ET> : Editor where ET : UnityEvent<T>, new()
@@ -70,9 +66,6 @@ namespace Signals
             return value;
         }
 
-        public override bool RequiresConstantRepaint()
-        {
-            return true;
-        }
+        public override bool RequiresConstantRepaint() => true;
     }
 }

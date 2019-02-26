@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 
-
-
 namespace Signals.Examples
 {
-    [AddComponentMenu("Signals/Examples/FallingCube")]
+    [AddComponentMenu(nameof(Signals) + "/" + nameof(Examples) + "/" + nameof(FallingCube))]
     [RequireComponent(typeof(Rigidbody))]
     public class FallingCube : MonoBehaviour
     {
@@ -12,10 +10,7 @@ namespace Signals.Examples
         public float ResetTo = 6f;
         Rigidbody _rigidbody;
 
-        void Start()
-        {
-            _rigidbody = GetComponent<Rigidbody>();
-        }
+        void Start() => _rigidbody = GetComponent<Rigidbody>();
 
         void FixedUpdate()
         {

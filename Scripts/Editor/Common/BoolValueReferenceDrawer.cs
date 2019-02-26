@@ -1,7 +1,5 @@
 using UnityEditor;
 
-
-
 namespace Signals.Common
 {
     [CustomPropertyDrawer(typeof(BoolValueReference))]

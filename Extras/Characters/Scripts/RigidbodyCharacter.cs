@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 using Signals.Common;
 
-
-
 namespace Signals.Extras.Characters
 {
-    [AddComponentMenu("Signals/Extras/Characters/RigidbodyCharacter")]
+    [AddComponentMenu(nameof(Signals) + "/" + nameof(Extras) + "/" + nameof(Characters) + "/" + nameof(RigidbodyCharacter))]
     [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(CapsuleCollider))]
     public class RigidbodyCharacter : MonoBehaviour
@@ -25,77 +23,36 @@ namespace Signals.Extras.Characters
         Quaternion _targetRotationX = Quaternion.identity, _targetRotationY = Quaternion.identity;
         bool _isGrounded, _isJumping;
 
-        public RigidbodyCharacterSettingsValueReference Settings
-        {
-            get
-            {
-                return _settings;
-            }
-        }
+        public RigidbodyCharacterSettingsValueReference Settings => _settings;
 
         public Transform CameraPivot
         {
-            get
-            {
-                return _cameraPivot;
-            }
-
-            set
-            {
-                _cameraPivot = value;
-            }
+            get => _cameraPivot;
+            set => _cameraPivot = value;
         }
 
         public CharacterMoveSignal MoveSignal
         {
-            get
-            {
-                return _moveSignal;
-            }
-
-            set
-            {
-                _moveSignal = value;
-            }
+            get => _moveSignal;
+            set => _moveSignal = value;
         }
 
         public BoolSignal RunSignal
         {
-            get
-            {
-                return _runSignal;
-            }
-
-            set
-            {
-                _runSignal = value;
-            }
+            get => _runSignal;
+            set => _runSignal = value;
         }
 
         public BoolSignal JumpSignal
         {
-            get
-            {
-                return _jumpSignal;
-            }
-
-            set
-            {
-                _jumpSignal = value;
-            }
+            get => _jumpSignal;
+            set => _jumpSignal = value;
         }
 
         public Vector2Signal LookSignal
         {
-            get
-            {
-                return _lookSignal;
-            }
-
-            set
-            {
-                _lookSignal = value;
-            }
+            get => _lookSignal;
+            set => _lookSignal = value;
         }
 
         void Awake()
@@ -140,12 +97,10 @@ namespace Signals.Extras.Characters
                 Mathf.Clamp(2f * Mathf.Rad2Deg * Mathf.Atan(_targetRotationX.x), _settings.Value.MinimumLookX, _settings.Value.MaximumLookX));
         }
 
-        void Turn(float oldRotationY)
+        void Turn(in float oldRotationY)
         {
             if (_isGrounded || _settings.Value.AirControl)
-            {
                 _rigidbody.velocity = Quaternion.AngleAxis(_transform.eulerAngles.y - oldRotationY, Vector3.up) * _rigidbody.velocity;
-            }
         }
 
         void FixedUpdate()
@@ -153,9 +108,8 @@ namespace Signals.Extras.Characters
             if (_settings.Value != null)
             {
                 var wasGrounded = _isGrounded;
-                RaycastHit hit;
 
-                if (Physics.SphereCast(_transform.position, _collider.radius * (1f - _settings.Value.ShellOffset), Vector3.down, out hit,
+                if (Physics.SphereCast(_transform.position, _collider.radius * (1f - _settings.Value.ShellOffset), Vector3.down, out RaycastHit hit,
                     _collider.height * .5f - _collider.radius + _settings.Value.GroundCheckDistance))
                 {
                     _isGrounded = true;
@@ -172,7 +126,7 @@ namespace Signals.Extras.Characters
             }
         }
 
-        void Move(Vector3 groundNormal)
+        void Move(in Vector3 groundNormal)
         {
             if (_moveSignal)
             {
@@ -198,7 +152,7 @@ namespace Signals.Extras.Characters
             }
         }
 
-        void Jump(bool wasGrounded)
+        void Jump(in bool wasGrounded)
         {
             if (_jumpSignal != null && _jumpSignal.Value)
             {
@@ -214,7 +168,7 @@ namespace Signals.Extras.Characters
             }
         }
 
-        void StickToGround(bool wasGrounded, ref RaycastHit hit)
+        void StickToGround(in bool wasGrounded, ref RaycastHit hit)
         {
             if (wasGrounded && !_isJumping &&
                 Physics.SphereCast(_transform.position, _collider.radius * (1f - _settings.Value.ShellOffset), Vector3.down, out hit,

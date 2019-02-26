@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-
-
 namespace Signals.Extras.Engine
 {
     public abstract class SettingsSignalEditor<T, ET> : SignalEditor<T, ET> 

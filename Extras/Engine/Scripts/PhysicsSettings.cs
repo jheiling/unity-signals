@@ -1,8 +1,6 @@
 ﻿using System;
 using UnityEngine;
 
-
-
 namespace Signals.Extras.Engine
 {
     [Serializable]
@@ -23,158 +21,74 @@ namespace Signals.Extras.Engine
 
         public Vector3 Gravity
         {
-            get
-            {
-                return _gravity;
-            }
-
-            set
-            {
-                _gravity = value;
-            }
+            get => _gravity;
+            set => _gravity = value;
         }
 
         public float BounceThreshold
         {
-            get
-            {
-                return _bounceThreshold;
-            }
-
-            set
-            {
-                _bounceThreshold = value;
-            }
+            get => _bounceThreshold;
+            set => _bounceThreshold = value;
         }
 
         public float SleepThreshold
         {
-            get
-            {
-                return _sleepThreshold;
-            }
-
-            set
-            {
-                _sleepThreshold = value;
-            }
+            get => _sleepThreshold;
+            set => _sleepThreshold = value;
         }
 
         public float DefaultContactOffset
         {
-            get
-            {
-                return _defaultContactOffset;
-            }
-
-            set
-            {
-                _defaultContactOffset = value;
-            }
+            get => _defaultContactOffset;
+            set => _defaultContactOffset = value;
         }
 
         public int DefaultSolverIterations
         {
-            get
-            {
-                return _defaultSolverIterations;
-            }
-
-            set
-            {
-                _defaultSolverIterations = value;
-            }
+            get => _defaultSolverIterations;
+            set => _defaultSolverIterations = value;
         }
 
         public int DefaultSolverVelocityIterations
         {
-            get
-            {
-                return _defaultSolverVelocityIterations;
-            }
-
-            set
-            {
-                _defaultSolverVelocityIterations = value;
-            }
+            get => _defaultSolverVelocityIterations;
+            set => _defaultSolverVelocityIterations = value;
         }
 
         public bool QueriesHitBackfaces
         {
-            get
-            {
-                return _queriesHitBackfaces;
-            }
-
-            set
-            {
-                _queriesHitBackfaces = value;
-            }
+            get => _queriesHitBackfaces;
+            set => _queriesHitBackfaces = value;
         }
 
         public bool QueriesHitTriggers
         {
-            get
-            {
-                return _queriesHitTriggers;
-            }
-
-            set
-            {
-                _queriesHitTriggers = value;
-            }
+            get => _queriesHitTriggers;
+            set => _queriesHitTriggers = value;
         }
 
         public bool AutoSimulation
         {
-            get
-            {
-                return _autoSimulation;
-            }
-
-            set
-            {
-                _autoSimulation = value;
-            }
+            get => _autoSimulation;
+            set => _autoSimulation = value;
         }
 
         public bool AutoSyncTransforms
         {
-            get
-            {
-                return _autoSyncTransforms;
-            }
-
-            set
-            {
-                _autoSyncTransforms = value;
-            }
+            get => _autoSyncTransforms;
+            set => _autoSyncTransforms = value;
         }
 
         public float InterCollisionDistance
         {
-            get
-            {
-                return _interCollisionDistance;
-            }
-
-            set
-            {
-                _interCollisionDistance = value;
-            }
+            get => _interCollisionDistance;
+            set => _interCollisionDistance = value;
         }
 
         public float InterCollisionStiffness
         {
-            get
-            {
-                return _interCollisionStiffness;
-            }
-
-            set
-            {
-                _interCollisionStiffness = value;
-            }
+            get => _interCollisionStiffness;
+            set => _interCollisionStiffness = value;
         }
 
         public void SetToCurrent()

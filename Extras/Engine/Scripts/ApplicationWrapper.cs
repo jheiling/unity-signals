@@ -1,49 +1,26 @@
 ﻿using UnityEngine;
 
-
-
 namespace Signals.Extras.Engine
 {
-    [CreateAssetMenu(fileName = "Application", menuName = "Signals/Extras/Engine/ApplicationWrapper")]
+    [CreateAssetMenu(fileName = "Application", menuName = nameof(Signals) + "/" + nameof(Extras) + "/" + nameof(Engine) + "/" + nameof(ApplicationWrapper))]
     public class ApplicationWrapper : ScriptableObject
     {
         public int TargetFrameRate
         {
-            get
-            {
-                return Application.targetFrameRate;
-            }
-
-            set
-            {
-                Application.targetFrameRate = value;
-            }
+            get => Application.targetFrameRate;
+            set => Application.targetFrameRate = value;
         }
 
         public bool RunInBackground
         {
-            get
-            {
-                return Application.runInBackground;
-            }
-
-            set
-            {
-                Application.runInBackground = value;
-            }
+            get => Application.runInBackground;
+            set => Application.runInBackground = value;
         }
 
         public ThreadPriority BackgroundLoadingPriority
         {
-            get
-            {
-                return Application.backgroundLoadingPriority;
-            }
-
-            set
-            {
-                Application.backgroundLoadingPriority = value;
-            }
+            get => Application.backgroundLoadingPriority;
+            set => Application.backgroundLoadingPriority = value;
         }
     }
 }
