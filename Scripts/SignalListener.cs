@@ -46,7 +46,7 @@ namespace Signals
 
         void AddListenerToSignal()
         {
-            if (_signal != null)
+            if (_signal)
             {
                 _signal.AddListener(_onUpdated.Invoke);
                 if (_invokeImmediately) _onUpdated.Invoke();

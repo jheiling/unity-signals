@@ -11,21 +11,24 @@ namespace Signals.Extras.Utility
     {
         [SerializeField] QuaternionSignal _signal;
         [SerializeField] bool _local;
+        [SerializeField] bool _onUpdate = true;
+        [SerializeField] bool _onLateUpdate;
+        [SerializeField] bool _onFixedUpdate;
 
         /// <summary>The signal that keeps track of the rotation.</summary>
-        public QuaternionSignal Signal
-        {
-            get => _signal;
-            set => _signal = value;
-        }
+        public QuaternionSignal Signal { get => _signal; set => _signal = value; }
 
         /// <summary>True to track local instead of global rotation.</summary>
-        public bool Local
-        {
-            get => _local;
-            set => _local = value;
-        }
+        public bool Local { get => _local; set => _local = value; }
 
-        void Update() { if(_signal) _signal.Value = _local ? transform.localRotation : transform.rotation; }
+        public bool OnUpdate { get => _onUpdate; set => _onUpdate = value; }
+        public bool OnLateUpdate { get => _onLateUpdate; set => _onLateUpdate = value; }
+        public bool OnFixedUpdate { get => _onFixedUpdate; set => _onFixedUpdate = value; }
+
+        void Update() { if (_onUpdate) SetSignalValue(); }
+        void LateUpdate() { if (_onLateUpdate) SetSignalValue(); }
+        void FixedUpdate() { if (_onFixedUpdate) SetSignalValue(); }
+
+        void SetSignalValue() { if (_signal) _signal.Value = _local ? transform.localRotation : transform.rotation; }
     }
 }
