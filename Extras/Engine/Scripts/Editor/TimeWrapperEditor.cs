@@ -4,7 +4,7 @@ using UnityEditor;
 namespace Signals.Extras.Engine
 {
     [CustomEditor(typeof(TimeWrapper))]
-    public class TimeWrapperEditor : WrapperEditor<TimeWrapper>
+    public class TimeWrapperEditor : EngineWrapperEditor<TimeWrapper>
     {
         protected override void OnPlayingInspectorGUI(TimeWrapper wrapper)
         {

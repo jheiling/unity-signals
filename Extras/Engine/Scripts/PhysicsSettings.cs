@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Signals.Extras.Engine
 {
     [Serializable]
-    public class PhysicsSettings : ISettings
+    public class PhysicsSettings : IEngineSettings
     {
         [SerializeField] Vector3 _gravity = new Vector3(0f, -9.81f, 0f);
         [SerializeField] float _bounceThreshold = 2f;

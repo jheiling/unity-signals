@@ -3,8 +3,8 @@ using UnityEngine.Events;
 
 namespace Signals.Extras.Engine
 {
-    public abstract class SettingsSignal<T, ET> : Signal<T, ET>, ISettings 
-        where T : ISettings, new() 
+    public abstract class EngineSettingsSignal<T, ET> : Signal<T, ET>, IEngineSettings 
+        where T : IEngineSettings, new() 
         where ET : UnityEvent<T>, new()
     {
         public void SetToCurrent()
@@ -13,6 +13,6 @@ namespace Signals.Extras.Engine
             Value.SetToCurrent();
         }
 
-        public void Apply() { if (Value != null) Value.Apply(); }
+        public void Apply() => Value?.Apply();
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Signals.Extras.Engine
 {
     [Serializable]
-    public class TimeSettings : ISettings
+    public class TimeSettings : IEngineSettings
     {
         [SerializeField] float _fixedDeltaTime = .02f;
         [SerializeField] float _maximumDeltaTime = .3333333f;

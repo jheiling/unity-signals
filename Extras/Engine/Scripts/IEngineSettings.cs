@@ -1,6 +1,6 @@
 ﻿namespace Signals.Extras.Engine
 {
-    public interface ISettings
+    public interface IEngineSettings
     {
         void SetToCurrent();
         void Apply();

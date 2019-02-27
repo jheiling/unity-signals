@@ -3,16 +3,16 @@ using UnityEngine.Events;
 
 namespace Signals.Extras.Engine
 {
-    public abstract class Setup<T, ET, ST, VT> : MonoBehaviour, ISettings 
-        where T : ISettings, new()
+    public abstract class EngineSetup<T, ET, ST, VT> : MonoBehaviour, IEngineSettings 
+        where T : IEngineSettings, new()
         where ET : UnityEvent<T>, new() 
         where ST : ISignal<T, ET> 
         where VT : ValueReference<T, ET, ST>
     {
 #pragma warning disable 649
         [SerializeField] VT _settings;
-#pragma warning restore 649
         [SerializeField] bool _applyOnStart = true;
+#pragma warning restore 649
 
         public VT Settings => _settings;
 
@@ -22,14 +22,14 @@ namespace Signals.Extras.Engine
             set => _applyOnStart = value;
         }
 
-        void Start() { if (_applyOnStart) Apply(); }
-
         public void SetToCurrent()
         {
             if (_settings.Value == null) _settings.Value = new T();
             _settings.Value.SetToCurrent();
         }
 
-        public void Apply() { if (_settings.Value != null) _settings.Value.Apply(); }
+        public void Apply() => _settings.Value?.Apply();
+
+        void Start() { if (_applyOnStart) Apply(); }
     }
 }

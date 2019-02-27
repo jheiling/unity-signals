@@ -3,7 +3,7 @@
 namespace Signals.Extras.Engine
 {
     [CustomEditor(typeof(PhysicsWrapper))]
-    public class PhysicsWrapperEditor : WrapperEditor<PhysicsWrapper>
+    public class PhysicsWrapperEditor : EngineWrapperEditor<PhysicsWrapper>
     {
         protected override void OnPlayingInspectorGUI(PhysicsWrapper wrapper)
         {

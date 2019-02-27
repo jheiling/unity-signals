@@ -5,7 +5,7 @@ using UnityEditor;
 namespace Signals.Extras.Engine
 {
     [CustomEditor(typeof(ApplicationWrapper))]
-    public class ApplicationWrapperEditor : WrapperEditor<ApplicationWrapper>
+    public class ApplicationWrapperEditor : EngineWrapperEditor<ApplicationWrapper>
     {
         protected override void OnPlayingInspectorGUI(ApplicationWrapper wrapper)
         {

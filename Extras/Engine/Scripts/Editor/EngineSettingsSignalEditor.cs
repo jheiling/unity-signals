@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
-using UnityEditor;
+using UnityEngine.Events;
 
 namespace Signals.Extras.Engine
 {
-    public abstract class SetupEditor<T> : Editor where T : class, ISettings
+    public abstract class EngineSettingsSignalEditor<T, ET> : SignalEditor<T, ET> 
+        where T : class, IEngineSettings 
+        where ET : UnityEvent<T>, new()
     {
         public override void OnInspectorGUI()
         {

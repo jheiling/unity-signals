@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Signals.Extras.Engine
 {
     [Serializable]
-    public class ApplicationSettings : ISettings
+    public class ApplicationSettings : IEngineSettings
     {
         [SerializeField] int _targetFrameRate = -1;
         [SerializeField] bool _runInBackground;
