@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Diagnostics.CodeAnalysis;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Signals
@@ -44,14 +45,17 @@ namespace Signals
 
         void AddListenerToSignal()
         {
-            if (_signal)
+            if (_signal != null)
             {
                 _signal.AddListener(_onUpdated.Invoke);
                 if (_invokeImmediately) _onUpdated.Invoke();
             }
         }
 
-        void RemoveListenerFromSignal() => _signal?.RemoveListener(_onUpdated.Invoke);
+        void RemoveListenerFromSignal()
+        {
+            if(_signal != null) _signal.RemoveListener(_onUpdated.Invoke);
+        }
     }
 
 
@@ -108,6 +112,10 @@ namespace Signals
             }
         }
 
-        void RemoveListenerFromSignal() => _signal?.RemoveListener(_onUpdated.Invoke);
+        [SuppressMessage("Style", "IDE0031:Use null propagation", Justification = "_signal is a Unity Object")]
+        void RemoveListenerFromSignal()
+        {
+            if (_signal != null) _signal.RemoveListener(_onUpdated.Invoke);
+        }
     }
 }

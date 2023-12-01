@@ -47,18 +47,7 @@ namespace Signals
         /// <summary>The <see cref="Signal.Value"/> of the <see cref="Signal"/> if <see cref="UseLocalValue"/> is false, the <see cref="LocalValue"/> otherwise.</summary>
         public T Value
         {
-            get
-            {
-                if (_useLocalValue)
-                {
-                    return _localValue;
-                }
-                else
-                {
-                    if (_signal == null) throw new NullReferenceException();
-                    return _signal.Value;
-                }
-            }
+            get => _useLocalValue ? _localValue : _signal == null ? throw new NullReferenceException() : _signal.Value;
             set
             {
                 if (_useLocalValue)
