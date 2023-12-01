@@ -8,9 +8,7 @@ namespace Signals
         where ST : ISignal<T, ET>
         where VT : ValueReference<T, ET, ST>
     {
-#pragma warning disable 649, IDE0044 // Add readonly modifier
         [SerializeField] VT _reference;
-#pragma warning restore 649, IDE0044 // Add readonly modifier
 
         public VT Reference => _reference;
 

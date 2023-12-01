@@ -7,12 +7,10 @@ namespace Signals
     [CreateAssetMenu(menuName = nameof(Signals) + "/" + nameof(Signal))]
     public class Signal : ScriptableObject, ISignal
     {
-#pragma warning disable 649, IDE0044 // Add readonly modifier
 #if UNITY_EDITOR
         [SerializeField, Multiline] string _description;
 #endif
         [SerializeField] UnityEvent _onUpdated;
-#pragma warning restore 649, IDE0044 // Add readonly modifier
 
         public void AddListener(UnityAction listener) => _onUpdated.AddListener(listener);
         public void RemoveListener(UnityAction listener) => _onUpdated.RemoveListener(listener);
@@ -29,7 +27,6 @@ namespace Signals
     /// <typeparam name="ET">The type of the underlying UnityEvent.</typeparam>
     public abstract class Signal<T, ET> : ScriptableObject, ISignal<T, ET> where ET : UnityEvent<T>, new()
     {
-#pragma warning disable 649, IDE0044 // Add readonly modifier
 #if UNITY_EDITOR
         [SerializeField, Multiline] string _description;
         [SerializeField] bool _serializeChanges;
@@ -37,7 +34,6 @@ namespace Signals
         [SerializeField] T _initialValue;
         [SerializeField] ET _onUpdated;
         [SerializeField] bool _useValidation = true;
-#pragma warning restore 649, IDE0044 // Add readonly modifier
         T _value;
 
         /// <summary>The initial value of the Signal.</summary>

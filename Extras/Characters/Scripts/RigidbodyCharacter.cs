@@ -8,9 +8,7 @@ namespace Signals.Extras.Characters
     [RequireComponent(typeof(CapsuleCollider))]
     public class RigidbodyCharacter : MonoBehaviour
     {
-#pragma warning disable
         [SerializeField] RigidbodyCharacterSettingsValueReference _settings;
-#pragma warning restore
         [SerializeField] Transform _cameraPivot;
         [SerializeField] CharacterMoveSignal _moveSignal;
         [SerializeField] BoolSignal _runSignal;

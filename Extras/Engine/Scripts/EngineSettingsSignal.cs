@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine.Events;
 
 namespace Signals.Extras.Engine
 {

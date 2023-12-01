@@ -7,14 +7,12 @@ namespace Signals
     [AddComponentMenu("Signals/SignalListener")]
     public class SignalListener : MonoBehaviour
     {
-#pragma warning disable 649, IDE0044 // Add readonly modifier
 #if UNITY_EDITOR
         [SerializeField, Multiline] string _description;
 #endif
         [SerializeField] Signal _signal;
         [SerializeField] UnityEvent _onUpdated;
         [SerializeField] bool _invokeImmediately;
-#pragma warning restore 649, IDE0044 // Add readonly modifier
 
         /// <summary>The <see cref="Signal"/>.</summary>
         public Signal Signal
@@ -66,14 +64,12 @@ namespace Signals
         where ET : UnityEvent<T>, new() 
         where ST : ISignal<T, ET>
     {
-#pragma warning disable 649, IDE0044 // Add readonly modifier
 #if UNITY_EDITOR
         [SerializeField] [Multiline] string _description;
 #endif
         [SerializeField] ST _signal;
         [SerializeField] ET _onUpdated;
         [SerializeField] bool _invokeImmediately;
-#pragma warning restore 649, IDE0044 // Add readonly modifier
 
         /// <summary>The <see cref="Signal"/>.</summary>
         public ST Signal

@@ -8,7 +8,7 @@ namespace Signals
     {
         static readonly string[] _popupOptions = { "Use Signal Value", "Use Local Value" };
 
-        static readonly GUIStyle _popupStyle = new GUIStyle(GUI.skin.GetStyle("PaneOptions"))
+        static readonly GUIStyle _popupStyle = new(GUI.skin.GetStyle("PaneOptions"))
         {
             imagePosition = ImagePosition.ImageOnly
         };

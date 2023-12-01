@@ -14,7 +14,7 @@ namespace Signals.Extras.Engine
         [SerializeField] int _defaultSolverVelocityIterations = 1;
         [SerializeField] bool _queriesHitBackfaces;
         [SerializeField] bool _queriesHitTriggers = true;
-        [SerializeField] bool _autoSimulation = true;
+        [SerializeField] SimulationMode _simulationMode = SimulationMode.FixedUpdate;
         [SerializeField] bool _autoSyncTransforms = true;
         [SerializeField] float _interCollisionDistance;
         [SerializeField] float _interCollisionStiffness;
@@ -67,10 +67,10 @@ namespace Signals.Extras.Engine
             set => _queriesHitTriggers = value;
         }
 
-        public bool AutoSimulation
+        public SimulationMode SimulationMode
         {
-            get => _autoSimulation;
-            set => _autoSimulation = value;
+            get => _simulationMode;
+            set => _simulationMode = value;
         }
 
         public bool AutoSyncTransforms
@@ -101,7 +101,7 @@ namespace Signals.Extras.Engine
             _defaultSolverVelocityIterations = Physics.defaultSolverVelocityIterations;
             _queriesHitBackfaces = Physics.queriesHitBackfaces;
             _queriesHitTriggers = Physics.queriesHitTriggers;
-            _autoSimulation = Physics.autoSimulation;
+            _simulationMode = Physics.simulationMode;
             _autoSyncTransforms = Physics.autoSyncTransforms;
             _interCollisionDistance = Physics.interCollisionDistance;
             _interCollisionStiffness = Physics.interCollisionStiffness;
@@ -117,7 +117,7 @@ namespace Signals.Extras.Engine
             Physics.defaultSolverVelocityIterations = _defaultSolverVelocityIterations;
             Physics.queriesHitBackfaces = _queriesHitBackfaces;
             Physics.queriesHitTriggers = _queriesHitTriggers;
-            Physics.autoSimulation = _autoSimulation;
+            Physics.simulationMode = _simulationMode;
             Physics.autoSyncTransforms = _autoSyncTransforms;
             Physics.interCollisionDistance = _interCollisionDistance;
             Physics.interCollisionStiffness = _interCollisionStiffness;

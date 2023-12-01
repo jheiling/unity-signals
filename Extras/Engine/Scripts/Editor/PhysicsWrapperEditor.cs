@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using UnityEngine;
+using UnityEditor;
 
 namespace Signals.Extras.Engine
 {
@@ -15,7 +16,7 @@ namespace Signals.Extras.Engine
             wrapper.DefaultSolverVelocityIterations = EditorGUILayout.IntField("Default Solver Velocity Iterations", wrapper.DefaultSolverVelocityIterations);
             wrapper.QueriesHitBackfaces = EditorGUILayout.Toggle("Queries Hit Backfaces", wrapper.QueriesHitBackfaces);
             wrapper.QueriesHitTriggers = EditorGUILayout.Toggle("Queries Hit Triggers", wrapper.QueriesHitTriggers);
-            wrapper.AutoSimulation = EditorGUILayout.Toggle("Auto Simulation", wrapper.AutoSimulation);
+            wrapper.SimulationMode = (SimulationMode)EditorGUILayout.EnumPopup("Simulation Mode", wrapper.SimulationMode);
             wrapper.AutoSyncTransforms = EditorGUILayout.Toggle("Auto Sync Transforms", wrapper.AutoSyncTransforms);
             wrapper.InterCollisionDistance = EditorGUILayout.FloatField("Inter Collision Distance", wrapper.InterCollisionDistance);
             wrapper.InterCollisionStiffness = EditorGUILayout.FloatField("Inter Collision Stiffness", wrapper.InterCollisionStiffness);

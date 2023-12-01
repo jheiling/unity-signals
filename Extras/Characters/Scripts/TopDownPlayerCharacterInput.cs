@@ -32,7 +32,10 @@ namespace Signals.Extras.Characters
         }
 
         protected virtual void OnMouseOverUI() { }
+
+#pragma warning disable UNT0006 // Incorrect message signature
         protected virtual void OnMouseOver(ref RaycastHit target) { }
+#pragma warning restore UNT0006 // Incorrect message signature
 
         protected virtual void OnMouseButtonDown(ref RaycastHit target)
         {

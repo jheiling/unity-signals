@@ -59,10 +59,10 @@ namespace Signals.Extras.Engine
             set => Physics.queriesHitTriggers = value;
         }
 
-        public bool AutoSimulation
+        public SimulationMode SimulationMode
         {
-            get => Physics.autoSimulation;
-            set => Physics.autoSimulation = value;
+            get => Physics.simulationMode;
+            set => Physics.simulationMode = value;
         }
 
         public bool AutoSyncTransforms

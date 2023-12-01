@@ -11,7 +11,7 @@ namespace Signals.Extras.Engine
         {
             wrapper.TargetFrameRate = EditorGUILayout.IntField("Target Frame Rate", wrapper.TargetFrameRate);
             wrapper.RunInBackground = EditorGUILayout.Toggle("Run In Background", wrapper.RunInBackground);
-            wrapper.BackgroundLoadingPriority = (ThreadPriority)EditorGUILayout.EnumPopup("Background Loading Priority", wrapper.BackgroundLoadingPriority as Enum);
+            wrapper.BackgroundLoadingPriority = (ThreadPriority)EditorGUILayout.EnumPopup("Background Loading Priority", wrapper.BackgroundLoadingPriority);
         }
     }
 }
