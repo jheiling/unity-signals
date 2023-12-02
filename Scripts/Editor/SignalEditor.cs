@@ -6,8 +6,7 @@ namespace Signals
 {
     /// <summary>Abstract base class for custom editors for classes inheriting from <see cref="Signal"/>.</summary>
     /// <typeparam name="T">The type of the <see cref="Signal.Value"/>.</typeparam>
-    /// <typeparam name="ET">The type of the <see cref="Signal.OnChanged"/> event.</typeparam>
-    public abstract class SignalEditor<T, ET> : Editor where ET : UnityEvent<T>, new()
+    public abstract class SignalEditor<T> : Editor
     {
         static readonly GUIContent _descriptionLabel = new("Description");
         static readonly GUIContent _onUpdatedLabel = new("On Updated");
@@ -27,7 +26,7 @@ namespace Signals
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
-            var signal = target as Signal<T, ET>;
+            var signal = target as Signal<T>;
 
             EditorGUILayout.PropertyField(_description, _descriptionLabel);
 

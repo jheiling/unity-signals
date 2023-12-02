@@ -3,7 +3,7 @@ using UnityEditor;
 namespace Signals.Common
 {
     [CustomEditor(typeof(CharSignal), true)]
-    public class CharSignalEditor : SignalEditor<char, CharEvent>
+    public class CharSignalEditor : SignalEditor<char>
     {
         protected override char ValueField(char value)
         {

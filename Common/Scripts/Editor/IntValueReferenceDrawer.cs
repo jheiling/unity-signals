@@ -2,6 +2,6 @@ using UnityEditor;
 
 namespace Signals.Common
 {
-    [CustomPropertyDrawer(typeof(IntValueReference))]
+    [CustomPropertyDrawer(typeof(ValueReference<int>))]
     public class IntValueReferenceDrawer : ValueReferenceDrawer { }
 }

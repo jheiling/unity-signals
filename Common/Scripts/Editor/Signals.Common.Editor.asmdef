@@ -1,6 +1,7 @@
 {
     "name": "Signals.Common.Editor",
     "references": [
+        "Signals",
         "Signals.Editor",
         "Signals.Common"
     ],

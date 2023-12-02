@@ -3,5 +3,5 @@
 namespace Signals.Common
 {
     [AddComponentMenu(nameof(Signals) + "/" + nameof(Vector3SignalListener))]
-    public class Vector3SignalListener : SignalListener<Vector3, Vector3Event, Vector3Signal> { }
+    public class Vector3SignalListener : SignalListener<Vector3> { }
 }

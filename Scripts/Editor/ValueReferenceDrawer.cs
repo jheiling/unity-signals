@@ -8,13 +8,15 @@ namespace Signals
     {
         static readonly string[] _popupOptions = { "Use Signal Value", "Use Local Value" };
 
-        static readonly GUIStyle _popupStyle = new(GUI.skin.GetStyle("PaneOptions"))
-        {
-            imagePosition = ImagePosition.ImageOnly
-        };
+        static GUIStyle _popupStyle;
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
+            _popupStyle ??= new(GUI.skin.GetStyle("PaneOptions"))
+            {
+                imagePosition = ImagePosition.ImageOnly
+            };
+
             label = EditorGUI.BeginProperty(position, label, property);
             position = EditorGUI.PrefixLabel(position, label);
 

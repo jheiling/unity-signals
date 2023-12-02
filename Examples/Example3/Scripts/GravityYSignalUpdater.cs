@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
-using Signals.Common;
 
 namespace Signals.Examples
 {
     [AddComponentMenu(nameof(Signals) + "/" + nameof(Examples) + "/" + nameof(GravityYSignalUpdater))]
     public class GravityYSignalUpdater : MonoBehaviour
     {
-        public FloatSignal Signal;
+        public Signal<float> Signal;
 
         void OnEnable() => UpdateSignal();
         void Update() => UpdateSignal();

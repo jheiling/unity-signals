@@ -2,6 +2,6 @@ using UnityEditor;
 
 namespace Signals.Common
 {
-    [CustomPropertyDrawer(typeof(BoolValueReference))]
+    [CustomPropertyDrawer(typeof(ValueReference<bool>))]
     public class BoolValueReferenceDrawer : ValueReferenceDrawer { }
 }

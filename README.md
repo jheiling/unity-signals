@@ -1,4 +1,4 @@
-# Signals For Unity3D v2.2.0
+# Signals For Unity3D v3.0.0
 Tested with Unity 2022.3.14f1 LTS
 ## Documentation
 You can find the API documentation [here](https://jheiling.github.io/unity-signals/).
@@ -16,16 +16,10 @@ Signals are a solution for both use cases.
 Copy everything somewhere into your project's Asset folder.
 ## Usage
 ### Implementing A Signal
-First you need to create a class for the signal's OnChanged event:
-```c#
-[System.Serializable]
-public class FloatEvent : UnityEvent<float> { }
-```
-
-Next create a class for the signal:
+Create a class for the signal:
 ```c#
 [UnityEngine.CreateAssetMenu]
-public class FloatSignal : Signal<float, FloatEvent> { }
+public class FloatSignal : Signal<float> { }
 ```
 By default signals will trigger the OnChanged event whenever a new value is assigned.
 By overriding the ValidateValue method you can validate the value and/or add a check to avoid unnecessarily triggering the event.
@@ -33,38 +27,17 @@ By default ValidateValue will use the Equals method for this check.
 
 If you want to have a nice inspector create an editor class for your signal and override the ValueField method:
 ```c#
-[UnityEditor.CustomEditor(typeof(FloatSignal))]
-public class FloatSignalEditor : SignalEditor<float, FloatEvent>
+[UnityEditor.CustomEditor(typeof(Signal<float>))]
+public class FloatSignalEditor : SignalEditor<float>
 {
-    protected override float ValueField(float value)
-    {
-        return EditorGUILayout.DelayedFloatField(value);
-    }
+    protected override float ValueField(float value) => EditorGUILayout.DelayedFloatField(value);
 }
 ```
 ### Implementing A SignalListener
 By inheriting from SignalListener you can create a Component that listens to a signal's OnChanged event and propagates it:
 ```c#
-public class FloatSignalListener : SignalListener<float, FloatEvent, FloatSignal> { }
+public class FloatSignalListener : SignalListener<float> { }
 ```
-### Implementing A ValueReference
-By inheriting from ValueReference you can use serializable fields in your scripts that can either hold a local value or a reference to a signal's value:
-```c#
-[System.Serializable]
-public class FloatValueReference : ValueReference<float, FloatEvent, FloatSignal> 
-{
-    public FloatValueReference() { }
-    public FloatValueReference(float localValue) : base(localValue) { }
-}
-```
-
-And to make it look nice in the editor:
-```c#
-[UnityEditor.CustomPropertyDrawer(typeof(FloatValueReference))]
-public class FloatValueReferenceDrawer : ValueReferenceDrawer { }
-```
-### Code Generation
-You can find a simple code generator that can save you a lot of work [here](https://github.com/jheiling/unity-signals-generator).
 ### Examples
 See Examples folder.
 ## Credits

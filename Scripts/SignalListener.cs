@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace Signals
@@ -62,21 +61,18 @@ namespace Signals
 
     /// <summary>Abstract base class for SignalListeners.</summary>
     /// <typeparam name="T">The type of the <see cref="Signal.Value"/>.</typeparam>
-    /// <typeparam name="ET">The type of the <see cref="Signal.OnUpdated"/> event.</typeparam>
     /// <typeparam name="ST">The type of the Signal.</typeparam>
-    public abstract class SignalListener<T, ET, ST> : MonoBehaviour 
-        where ET : UnityEvent<T>, new() 
-        where ST : ISignal<T, ET>
+    public abstract class SignalListener<T> : MonoBehaviour 
     {
 #if UNITY_EDITOR
         [SerializeField] [Multiline] string _description;
 #endif
-        [SerializeField] ST _signal;
-        [SerializeField] ET _onUpdated;
+        [SerializeField] Signal<T> _signal;
+        [SerializeField] UnityEvent<T> _onUpdated;
         [SerializeField] bool _invokeImmediately;
 
         /// <summary>The <see cref="Signal"/>.</summary>
-        public ST Signal
+        public Signal<T> Signal
         {
             get => _signal;
             set
@@ -112,7 +108,6 @@ namespace Signals
             }
         }
 
-        [SuppressMessage("Style", "IDE0031:Use null propagation", Justification = "_signal is a Unity Object")]
         void RemoveListenerFromSignal()
         {
             if (_signal != null) _signal.RemoveListener(_onUpdated.Invoke);

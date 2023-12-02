@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Signals.Common;
 using Signals.Extras.Characters;
 
 namespace Signals.Examples
@@ -7,7 +6,7 @@ namespace Signals.Examples
     [AddComponentMenu(nameof(Signals) + "/" + nameof(Examples) + "/" + nameof(ExamplePlayerCharacterInput))]
     public class ExamplePlayerCharacterInput : TopDownPlayerCharacterInput
     {
-        [SerializeField] StringSignal _lookingAtSignal;
+        [SerializeField] Signal<string> _lookingAtSignal;
 
         protected override void OnMouseOverUI() => _lookingAtSignal.Value = "";
 

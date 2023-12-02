@@ -2,6 +2,6 @@
 
 namespace Signals.Common
 {
-    [CustomPropertyDrawer(typeof(FloatValueReference))]
+    [CustomPropertyDrawer(typeof(ValueReference<float>))]
     public class FloatValueReferenceDrawer : ValueReferenceDrawer { }
 }

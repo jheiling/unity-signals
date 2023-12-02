@@ -1,7 +1,8 @@
-﻿using UnityEditor;
+﻿using UnityEngine;
+using UnityEditor;
 
 namespace Signals.Common
 {
-    [CustomPropertyDrawer(typeof(Vector3ValueReference))]
+    [CustomPropertyDrawer(typeof(ValueReference<Vector3>))]
     public class Vector3ValueReferenceDrawer : ValueReferenceDrawer { }
 }

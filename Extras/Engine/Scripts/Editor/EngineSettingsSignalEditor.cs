@@ -3,9 +3,8 @@ using UnityEngine.Events;
 
 namespace Signals.Extras.Engine
 {
-    public abstract class EngineSettingsSignalEditor<T, ET> : SignalEditor<T, ET> 
+    public abstract class EngineSettingsSignalEditor<T> : SignalEditor<T> 
         where T : class, IEngineSettings 
-        where ET : UnityEvent<T>, new()
     {
         public override void OnInspectorGUI()
         {

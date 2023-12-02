@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using Signals.Common;
 
 namespace Signals.Extras.Characters
 {
     [AddComponentMenu(nameof(Signals) + "/" + nameof(Extras) + "/" + nameof(Characters) + "/" + nameof(TopDownPlayerCharacterInput))]
     public class TopDownPlayerCharacterInput : MonoBehaviour
     {
-        [SerializeField] Vector3Signal _destinationSignal;
+        [SerializeField] Signal<Vector3> _destinationSignal;
 
-        public Vector3Signal DestinationSignal
+        public Signal<Vector3> DestinationSignal
         {
             get => _destinationSignal;
             set => _destinationSignal = value;

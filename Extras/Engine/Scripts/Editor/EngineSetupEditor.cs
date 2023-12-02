@@ -3,7 +3,8 @@ using UnityEditor;
 
 namespace Signals.Extras.Engine
 {
-    public abstract class EngineSetupEditor<T> : Editor where T : class, IEngineSettings
+    public abstract class EngineSetupEditor<T> : Editor 
+        where T : class, IEngineSettings
     {
         public override void OnInspectorGUI()
         {

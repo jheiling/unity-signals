@@ -1,19 +1,15 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Signals
 {
-    /// <summary>Abstract base class for serializable classes referencing either a <see cref="LocalValue"/> or a <see cref="Signal.Value"/>.</summary>
+    /// <summary>Serializable class referencing either a <see cref="LocalValue"/> or a <see cref="Signal.Value"/>.</summary>
     /// <typeparam name="T">The type of the <see cref="Signal.Value"/>.</typeparam>
-    /// <typeparam name="ET">The type of the <see cref="Signal.OnChanged"/> event.</typeparam>
-    /// <typeparam name="ST">The type of the Signal.</typeparam>
-    public abstract class ValueReference<T, ET, ST> 
-        where ET : UnityEvent<T>, new() 
-        where ST : ISignal<T, ET>
+    [Serializable]
+    public class ValueReference<T> 
     {
         [SerializeField] bool _useLocalValue = true;
-        [SerializeField] ST _signal;
+        [SerializeField] Signal<T> _signal;
         [SerializeField] T _localValue;
 
         /// <summary>Default constructor.</summary>
@@ -31,7 +27,7 @@ namespace Signals
         }
 
         /// <summary>The Signal whose <see cref="Signal.Value"/> is used if <see cref="UseLocalValue"/> is false.</summary>
-        public ST Signal
+        public Signal<T> Signal
         {
             get => _signal;
             set => _signal = value;
@@ -64,6 +60,6 @@ namespace Signals
 
         /// <summary>Implicit cast from the <see cref="ValueReference"/> to it's <see cref="Value"/>.</summary>
         /// <param name="reference">The <see cref="ValueReference"/>.</param>
-        public static implicit operator T(ValueReference<T, ET, ST> reference) => reference.Value;
+        public static implicit operator T(ValueReference<T> reference) => reference.Value;
     }
 }

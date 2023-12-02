@@ -10,7 +10,7 @@ namespace Signals.Extras.Characters
         [SerializeField] float _backwardForce = 20f;
         [SerializeField] float _strafeForce = 20f;
         [SerializeField] float _runMultiplier = 2f;
-        [SerializeField] AnimationCurve _slopeModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
+        [SerializeField] AnimationCurve _slopeModifier = new(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
         [SerializeField] float _jumpForce = 400f;
         [SerializeField] bool _airControl;
         [SerializeField] float _groundDrag = 5f;

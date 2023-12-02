@@ -4,7 +4,7 @@ using UnityEditor;
 namespace Signals.Common
 {
     [CustomEditor(typeof(QuaternionSignal), true)]
-    public class QuaternionSignalEditor : SignalEditor<Quaternion, QuaternionEvent>
+    public class QuaternionSignalEditor : SignalEditor<Quaternion>
     {
         protected override Quaternion ValueField(Quaternion value)
         {

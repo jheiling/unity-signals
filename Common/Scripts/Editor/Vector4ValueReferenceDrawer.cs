@@ -3,7 +3,7 @@ using UnityEditor;
 
 namespace Signals.Common
 {
-    [CustomPropertyDrawer(typeof(Vector4ValueReference))]
+    [CustomPropertyDrawer(typeof(ValueReference<Vector4>))]
     public class Vector4ValueReferenceDrawer : ValueReferenceDrawer
     {
         protected override void LocalValueField(Rect position, SerializedProperty localValue) => 

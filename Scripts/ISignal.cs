@@ -19,8 +19,7 @@ namespace Signals
 
     /// <summary>The Signal interface.</summary>
     /// <typeparam name="T">The type of the <see cref="Value"/>.</typeparam>
-    /// <typeparam name="ET">The type of the <see cref="OnUpdated"/> event.</typeparam>
-    public interface ISignal<T, ET> where ET : UnityEvent<T>, new()
+    public interface ISignal<T>
     {
         /// <summary>
         /// The current value of the <see cref="Signal"/>. 

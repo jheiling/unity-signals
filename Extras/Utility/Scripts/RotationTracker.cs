@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Signals.Common;
 
 namespace Signals.Extras.Utility
 {
@@ -9,14 +8,14 @@ namespace Signals.Extras.Utility
     [AddComponentMenu(nameof(Signals) + "/" + nameof(Extras) + "/" + nameof(Utility) + "/" + nameof(RotationTracker))]
     public class RotationTracker : MonoBehaviour
     {
-        [SerializeField] QuaternionSignal _signal;
+        [SerializeField] Signal<Quaternion> _signal;
         [SerializeField] bool _local;
         [SerializeField] bool _trackOnUpdate = true;
         [SerializeField] bool _trackOnLateUpdate;
         [SerializeField] bool _trackOnFixedUpdate;
 
         /// <summary>The signal that keeps track of the rotation.</summary>
-        public QuaternionSignal Signal { get => _signal; set => _signal = value; }
+        public Signal<Quaternion> Signal { get => _signal; set => _signal = value; }
 
         /// <summary>True to track local instead of global rotation.</summary>
         public bool Local { get => _local; set => _local = value; }

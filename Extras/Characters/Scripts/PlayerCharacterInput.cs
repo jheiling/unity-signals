@@ -6,7 +6,7 @@ namespace Signals.Extras.Characters
     [AddComponentMenu(nameof(Signals) + "/" + nameof(Extras) + "/" + nameof(Characters) + "/" + nameof(PlayerCharacterInput))]
     public class PlayerCharacterInput : MonoBehaviour
     {
-        [SerializeField] PlayerCharacterInputSettingsValueReference _settings;
+        [SerializeField] ValueReference<PlayerCharacterInputSettings> _settings;
         [SerializeField] CharacterMoveSignal _moveSignal;
         [SerializeField] BoolSignal _runSignal;
         [SerializeField] BoolSignal _jumpSignal;

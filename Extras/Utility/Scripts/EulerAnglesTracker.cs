@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Signals.Common;
 
 namespace Signals.Extras.Utility
 {
@@ -7,14 +6,14 @@ namespace Signals.Extras.Utility
     [AddComponentMenu(nameof(Signals) + "/" + nameof(Extras) + "/" + nameof(Utility) + "/" + nameof(EulerAnglesTracker))]
     public class EulerAnglesTracker : MonoBehaviour
     {
-        [SerializeField] Vector3Signal _signal;
+        [SerializeField] Signal<Vector3> _signal;
         [SerializeField] bool _local;
         [SerializeField] bool _trackOnUpdate = true;
         [SerializeField] bool _trackOnLateUpdate;
         [SerializeField] bool _trackOnFixedUpdate;
 
         /// <summary>The signal that keeps track of the rotation.</summary>
-        public Vector3Signal Signal { get => _signal; set => _signal = value; }
+        public Signal<Vector3> Signal { get => _signal; set => _signal = value; }
 
         /// <summary>True to track local instead of global rotation.</summary>
         public bool Local { get => _local; set => _local = value; }

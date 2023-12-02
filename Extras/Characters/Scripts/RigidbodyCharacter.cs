@@ -8,7 +8,7 @@ namespace Signals.Extras.Characters
     [RequireComponent(typeof(CapsuleCollider))]
     public class RigidbodyCharacter : MonoBehaviour
     {
-        [SerializeField] RigidbodyCharacterSettingsValueReference _settings;
+        [SerializeField] ValueReference<RigidbodyCharacterSettings> _settings;
         [SerializeField] Transform _cameraPivot;
         [SerializeField] CharacterMoveSignal _moveSignal;
         [SerializeField] BoolSignal _runSignal;
@@ -21,7 +21,7 @@ namespace Signals.Extras.Characters
         Quaternion _targetRotationX = Quaternion.identity, _targetRotationY = Quaternion.identity;
         bool _isGrounded, _isJumping;
 
-        public RigidbodyCharacterSettingsValueReference Settings => _settings;
+        public RigidbodyCharacterSettings Settings => _settings;
 
         public Transform CameraPivot
         {

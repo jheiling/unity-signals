@@ -6,7 +6,7 @@ namespace Signals.Extras.Engine
     [Serializable]
     public class PhysicsSettings : IEngineSettings
     {
-        [SerializeField] Vector3 _gravity = new Vector3(0f, -9.81f, 0f);
+        [SerializeField] Vector3 _gravity = new(0f, -9.81f, 0f);
         [SerializeField] float _bounceThreshold = 2f;
         [SerializeField] float _sleepThreshold = .005f;
         [SerializeField] float _defaultContactOffset = .01f;

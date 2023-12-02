@@ -24,15 +24,14 @@ namespace Signals
     /// Implements the <see cref="ISignal"/> interface.
     /// </summary>
     /// <typeparam name="T">The type of the <see cref="Value"/>.</typeparam>
-    /// <typeparam name="ET">The type of the underlying UnityEvent.</typeparam>
-    public abstract class Signal<T, ET> : ScriptableObject, ISignal<T, ET> where ET : UnityEvent<T>, new()
+    public abstract class Signal<T> : ScriptableObject, ISignal<T>
     {
 #if UNITY_EDITOR
         [SerializeField, Multiline] string _description;
         [SerializeField] bool _serializeChanges;
 #endif
         [SerializeField] T _initialValue;
-        [SerializeField] ET _onUpdated;
+        [SerializeField] UnityEvent<T> _onUpdated;
         [SerializeField] bool _useValidation = true;
         T _value;
 
@@ -91,6 +90,6 @@ namespace Signals
 
         /// <summary>Implicit cast from the <see cref="Signal"/> to it's <see cref="Value"/>.</summary>
         /// <param name="signal">The <see cref="Signal"/>.</param>
-        public static implicit operator T(Signal<T, ET> signal) => signal._value;
+        public static implicit operator T(Signal<T> signal) => signal._value;
     }
 }
