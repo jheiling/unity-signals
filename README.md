@@ -1,4 +1,5 @@
 # Signals For Unity3D v2.2.0
+Tested with Unity 2022.3.14f1 LTS
 ## Documentation
 You can find the API documentation [here](https://jheiling.github.io/unity-signals/).
 ## What Are Signals?
