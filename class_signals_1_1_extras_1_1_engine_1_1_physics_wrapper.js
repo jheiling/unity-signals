@@ -1,6 +1,5 @@
 var class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper =
 [
-    [ "AutoSimulation", "class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#af46afca6744fe8a5acce69fe1458e281", null ],
     [ "AutoSyncTransforms", "class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#acc5f771dd3d0f6f5d3ca76bd1bff3260", null ],
     [ "BounceThreshold", "class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#a960a92f82c75a10658e349221dcd6af4", null ],
     [ "DefaultContactOffset", "class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#a03335f16904d71d7e27ce96fa21b5004", null ],
@@ -12,5 +11,6 @@ var class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper =
     [ "InterCollisionStiffness", "class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#af16648bd9433cf57ad3aa5995bfc84bb", null ],
     [ "QueriesHitBackfaces", "class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#aa57cf72520abf9fb87c4621165ce976b", null ],
     [ "QueriesHitTriggers", "class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#a878531ad0b1740f1152aa78327a6d885", null ],
+    [ "SimulationMode", "class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#ac9999bf541de9f37188b6d18300632e8", null ],
     [ "SleepThreshold", "class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#a41a35bb5f5eafcdec9b558f492e4ed0a", null ]
 ];

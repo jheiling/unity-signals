@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['onchanged',['OnChanged',['../interface_signals_1_1_i_signal.html#a0abb60b09f36c38579a848b666c89a50',1,'Signals.ISignal.OnChanged()'],['../class_signals_1_1_signal.html#af38c81101db272fd83d5443542908e38',1,'Signals.Signal.OnChanged()'],['../class_signals_1_1_signal_listener.html#a1b92d2b94746bc8bea06cbc7f7e2b879',1,'Signals.SignalListener.OnChanged()']]]
+  ['querieshitbackfaces_0',['querieshitbackfaces',['../class_signals_1_1_extras_1_1_engine_1_1_physics_settings.html#a05b03f1615ac2118e04b05c24fead8e8',1,'Signals.Extras.Engine.PhysicsSettings.QueriesHitBackfaces'],['../class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#aa57cf72520abf9fb87c4621165ce976b',1,'Signals.Extras.Engine.PhysicsWrapper.QueriesHitBackfaces']]],
+  ['querieshittriggers_1',['querieshittriggers',['../class_signals_1_1_extras_1_1_engine_1_1_physics_settings.html#af5343b0009caeda893961ff397e128a5',1,'Signals.Extras.Engine.PhysicsSettings.QueriesHitTriggers'],['../class_signals_1_1_extras_1_1_engine_1_1_physics_wrapper.html#a878531ad0b1740f1152aa78327a6d885',1,'Signals.Extras.Engine.PhysicsWrapper.QueriesHitTriggers']]]
 ];

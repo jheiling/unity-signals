@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['charvaluereference',['CharValueReference',['../class_signals_1_1_common_1_1_char_value_reference.html#afb3b2e54397fe781dec553338633e1c9',1,'Signals.Common.CharValueReference.CharValueReference()'],['../class_signals_1_1_common_1_1_char_value_reference.html#a08d2f37e15340c94b31efb0afc2c0c42',1,'Signals.Common.CharValueReference.CharValueReference(char localValue)']]]
+  ['getlocalvaluefieldheight_0',['GetLocalValueFieldHeight',['../class_signals_1_1_value_reference_drawer.html#a90d3b30a4e83f367343f5fa86ca4e27d',1,'Signals::ValueReferenceDrawer']]],
+  ['getpropertyheight_1',['GetPropertyHeight',['../class_signals_1_1_value_reference_drawer.html#a04be4f6bd7ee8e18bc585885f2df326c',1,'Signals::ValueReferenceDrawer']]]
 ];

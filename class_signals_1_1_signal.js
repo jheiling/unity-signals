@@ -1,11 +1,15 @@
 var class_signals_1_1_signal =
 [
-    [ "Awake", "class_signals_1_1_signal.html#ad0e8da29f25f1b90e574daabe30f2e16", null ],
-    [ "ForceChange", "class_signals_1_1_signal.html#a6a6f49c8a8a73823a735e4b53fd3c651", null ],
-    [ "ProcessValue", "class_signals_1_1_signal.html#ac121a1ff3f9f42ce5e6bf18d540ce811", null ],
-    [ "ValidateValue", "class_signals_1_1_signal.html#a07590b21b45a62069eb961c9a21dc7a6", null ],
-    [ "InitialValue", "class_signals_1_1_signal.html#a148979537499270fbf2a4f47ad9218c0", null ],
-    [ "OnChanged", "class_signals_1_1_signal.html#af38c81101db272fd83d5443542908e38", null ],
-    [ "UseValidation", "class_signals_1_1_signal.html#af7d32cc52571c05f38fd144bcad421ae", null ],
-    [ "Value", "class_signals_1_1_signal.html#acf78067b4588b6105f160140970fe754", null ]
+    [ "AddListener", "class_signals_1_1_signal.html#a2dbf65a3ba0fde7cee212dfbe546aa07", null ],
+    [ "AddListener", "class_signals_1_1_signal.html#a4dc5295aab6e7098da47e28ba25eb651", null ],
+    [ "OnEnable", "class_signals_1_1_signal.html#af7f75956badf3fb0f4dae80fa8bbbba5", null ],
+    [ "ProcessValue", "class_signals_1_1_signal.html#a5fc4b43daf7f4cea36afed63847f6aae", null ],
+    [ "RemoveListener", "class_signals_1_1_signal.html#a22881bafa66df9e11adf167938e5362d", null ],
+    [ "RemoveListener", "class_signals_1_1_signal.html#aee2ca2f8c42ec3328cb24455c4efcb20", null ],
+    [ "TriggerUpdate", "class_signals_1_1_signal.html#a10d123b8a23d4b0a436107c9efc9c6d9", null ],
+    [ "TriggerUpdate", "class_signals_1_1_signal.html#a10d123b8a23d4b0a436107c9efc9c6d9", null ],
+    [ "ValidateValue", "class_signals_1_1_signal.html#a6faad34c37266ca6d4a4756b62fc4b87", null ],
+    [ "InitialValue", "class_signals_1_1_signal.html#a98565ed6283fd814e21cd6b56eee546e", null ],
+    [ "UseValidation", "class_signals_1_1_signal.html#a33ccd106d055b9b7d98d06f241814620", null ],
+    [ "Value", "class_signals_1_1_signal.html#a4cd40f1101b0d47ebf8a4e3abb059ba9", null ]
 ];

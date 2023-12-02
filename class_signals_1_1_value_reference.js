@@ -1,9 +1,9 @@
 var class_signals_1_1_value_reference =
 [
-    [ "ValueReference", "class_signals_1_1_value_reference.html#a8a0dafba045dd04fe725d11996609991", null ],
-    [ "ValueReference", "class_signals_1_1_value_reference.html#a8ed56344d649767c4e50f6695c5dc81a", null ],
-    [ "LocalValue", "class_signals_1_1_value_reference.html#a808dd76a24496562849bca822417e7c9", null ],
-    [ "Signal", "class_signals_1_1_value_reference.html#a6922eded9fd500ef51bb32cfb00a3e14", null ],
-    [ "UseLocalValue", "class_signals_1_1_value_reference.html#a9495e74a357acfe058024c7ed75cf713", null ],
-    [ "Value", "class_signals_1_1_value_reference.html#a7c9b7f5863495c6d6638b845120ab5fe", null ]
+    [ "ValueReference", "class_signals_1_1_value_reference.html#a906e5268a0ecdc17af3214e376e13cc6", null ],
+    [ "ValueReference", "class_signals_1_1_value_reference.html#aca7b7ae1b94e61a1e19b078a6f025467", null ],
+    [ "LocalValue", "class_signals_1_1_value_reference.html#aa4ed17cce6c6c4a44d51c6ec0021b8a7", null ],
+    [ "Signal", "class_signals_1_1_value_reference.html#a55a8041a0bfac7340f68f70c8d0db685", null ],
+    [ "UseLocalValue", "class_signals_1_1_value_reference.html#a7dbe80b2495034b42a6d8af19f8f894f", null ],
+    [ "Value", "class_signals_1_1_value_reference.html#ab39f1be86b864bb61e53ff889fbf1c98", null ]
 ];
